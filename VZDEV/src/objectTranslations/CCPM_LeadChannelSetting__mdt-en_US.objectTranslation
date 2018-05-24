@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lead Channel Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lead Channel Settings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Lead Channel Value --></label>
+        <name>CCPM_LeadChannelValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source Values --></label>
+        <name>CCPM_LeadSourceValues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Status Values --></label>
+        <name>CCPM_leadStatusValues__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- SMS Journey Message Lookup --></help>
+        <label><!-- Campaign Journey Message --></label>
+        <name>CCPM_campaignJourneyMessage__c</name>
+        <relationshipLabel><!-- Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaign key --></label>
+        <name>CCPM_campaignkey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Collateral ID --></label>
+        <name>CCPM_collateralID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Collateral Name --></label>
+        <name>CCPM_collateralNm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Communication ID --></label>
+        <name>CCPM_communicationId__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is the text value of the field &apos;Event End&apos;. Please enter the date in &quot;YYYY-MM-DD HH:MM:SS&quot; format. --></help>
+        <label><!-- Event End Date --></label>
+        <name>CCPM_eventEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Label --></label>
+        <name>CCPM_eventLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Order --></label>
+        <name>CCPM_eventOrder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the date in &quot;YYYY-MM-DD HH:MM:SS&quot; format. --></help>
+        <label><!-- Event SMS Follow Up End Date --></label>
+        <name>CCPM_eventSMSFollowUpEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the date in &quot;YYYY-MM-DD HH:MM:SS&quot; format. --></help>
+        <label><!-- Event SMS Follow Up Start Date --></label>
+        <name>CCPM_eventSMSFollowUpStartDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is the text value of the field &apos;Event Start Date&apos; . Please enter the date in &quot;YYYY-MM-DD HH:MM:SS&quot; format. --></help>
+        <label><!-- Event Start Date --></label>
+        <name>CCPM_eventStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Customer Type --></label>
+        <name>CCPM_leadCustomerType__c</name>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Type --></label>
+        <name>CCPM_leadType__c</name>
+        <picklistValues>
+            <masterLabel>Customer Abandoned Cart Digital</masterLabel>
+            <translation><!-- Customer Abandoned Cart Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Abandoned Cart Retail</masterLabel>
+            <translation><!-- Customer Abandoned Cart Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Abandoned Visit</masterLabel>
+            <translation><!-- Customer Abandoned Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Quotes</masterLabel>
+            <translation><!-- Customer Quotes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect Abandoned Cart Digital</masterLabel>
+            <translation><!-- Prospect Abandoned Cart Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect Abandoned Cart Retail</masterLabel>
+            <translation><!-- Prospect Abandoned Cart Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Record Type Name --></label>
+        <name>CCPM_recordTypeName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Name --></label>
+        <name>CCPM_uniqueName__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- CRM Campaign --></label>
+        <name>CCPM_CRMCampaign</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Event Type --></label>
+        <name>CCPM_EventCampaign</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Other Lead Type --></label>
+        <name>CCPM_otherLeadType</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Send_Text_To_Campaign_Members --></label>
+        <name>LiveText__Send_Text_To_Campaign_Members</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewAllCampaignMembers --></label>
+        <name>ViewAllCampaignMembers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>et4ae5__ViewCampaignInfluenceReport</name>
+    </webLinks>
+</CustomObjectTranslation>

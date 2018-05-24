@@ -1,0 +1,80 @@
+<apex:page controller="CCPM_RERecordController" tabStyle="CCPM_RERecord__c">
+<apex:pageMessages escape="false"/>
+
+<apex:form id="mainform">
+    
+    <apex:pageBlock id="mainBlock" rendered="{!strRecordID <> ''}">
+        <apex:pageBlockButtons location="Top">
+            <apex:commandButton value="Edit" action="{!edit}"/>
+            <apex:commandButton value="Clone" action="{!cloneRecordPackage}"/>
+        </apex:pageBlockButtons>
+    
+        <apex:pageBlockSection title="Record Details">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Record Name"/>
+                <apex:outputField value="{!recordPackage.objRecord.Name}" style="width:230px"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Active"/>
+                <apex:outputField value="{!recordPackage.objRecord.CCPM_active__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Primary Object"/>
+                <apex:outputField value="{!recordPackage.objRecord.CCPM_primaryObject__c}" style="width:230px"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+            </apex:pageBlockSectionItem> 
+            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Created By"/>
+                <apex:outputPanel >
+                    <apex:outputLink value="/{!recordPackage.objRecord.CreatedById}">{!recordPackage.objRecord.CreatedBy.Name}</apex:outputLink>, <apex:outputField value="{!recordPackage.objRecord.CreatedDate}"/> 
+                </apex:outputPanel>
+                
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Last Modified By"/>
+                <apex:outputPanel >
+                    <apex:outputLink value="/!{recordPackage.objRecord.LastModifiedById}">{!recordPackage.objRecord.LastModifiedBy.Name}</apex:outputLink>, <apex:outputField value="{!recordPackage.objRecord.LastModifiedDate}"/>              
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+        </apex:pageBlockSection>
+        
+        
+        <apex:pageBlockSection title="Criteria" columns="1" id="criteriaPanel"> 
+            <apex:pageBlockTable value="{!recordPackage.mapCriteria}" var="objCri" id="criteriaTable">
+                <apex:column headerValue="Action" style="width:10%;text-align:center">
+                    <apex:commandLink value="Del" style="color:red" action="{!removeCriteriaRow}" reRender="criteriaPanel" immediate="true">
+                        <apex:param value="{!objCri}" name="intCRowNum" assignTo="{!intCRowNum}"/>
+                    </apex:commandLink> 
+                </apex:column>
+                <apex:column headerValue="Field Name" style="width:15%;text-align:left">
+                    <apex:outputField value="{!recordPackage.mapCriteria[objCri].CCPM_fieldName__c}" style="width:80%" />
+                </apex:column>
+                
+                <apex:column headerValue="Operator" style="width:15%;text-align:left">
+                    <apex:outputField value="{!recordPackage.mapCriteria[objCri].CCPM_operator__c}" style="width:80%" />
+                </apex:column>
+                <apex:column headerValue="Field Value" style="width:15%;text-align:left">
+                    <apex:outputPanel rendered="{!AND(recordPackage.mapCriteria[objCri].CCPM_operator__c <> 'Is Null', recordPackage.mapCriteria[objCri].CCPM_operator__c <> 'Is Not Null')}">
+                    <apex:outputField value="{!recordPackage.mapCriteria[objCri].CCPM_valueText__c}" style="width:70%;" rendered="{!recordPackage.mapCriteria[objCri].CCPM_fieldType__c <> 'Double'}"/>
+                    <apex:outputField value="{!recordPackage.mapCriteria[objCri].CCPM_valueDouble__c}" style="width:70%;" rendered="{!recordPackage.mapCriteria[objCri].CCPM_fieldType__c == 'Double'}"/>
+                    <apex:outputField value="{!recordPackage.mapCriteria[objCri].CCPM_valueDate__c	}" rendered="{!recordPackage.mapCriteria[objCri].CCPM_fieldType__c == 'Date'}"/>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column headerValue="Active" style="width:5%">
+                    <apex:outputField value="{!recordPackage.mapCriteria[objCri].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+</apex:form>
+</apex:page>

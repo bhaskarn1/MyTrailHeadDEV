@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND (5 OR 6)</booleanFilter>
+        <criteriaItems>
+            <column>CCPM_SMSMessage__c.CCPM_smssentactualtime__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_SMSMessage__c.CCPM_MessageStatus__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sent,Queued</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_SMSMessage__c.CCPM_ScheduleDateTime__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>10/27/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_SMSMessage__c.CCPM_BDParsed__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_SMSMessage__c.CCPM_ScheduleDateTime__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>10/27/2017 8:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_SMSMessage__c.CCPM_ScheduleDateTime__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>10/27/2017 5:00 PM</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Lead.CCPM_StoreTimeZone__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Lead.CCPM_eventType__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CCPM_SMSMessage__c.CCPM_messageType__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SMS Message Queue Status Matrix</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$CCPM_SMSMessage__c@CCPM_SMSMessage__c.CCPM_leadRecord__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CCPM_SMSMessage__c.CCPM_addedtoqueueDateTime__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

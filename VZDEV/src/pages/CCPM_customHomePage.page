@@ -1,0 +1,67 @@
+<!--
+*@name          CCPM_customHomePage.vfp
+*@author        Paras Shah (Deloitte)
+*@date          04/03/2017
+*@description   Visualforce page for displaying custom HomePage
+
+Modification    Log:
+************************************************************************************
+Developer                        Date                                Description
+************************************************************************************
+Paras Shah(Deloitte)             04/03/2017                          Original Version
+-->
+
+<apex:page controller="CCPM_customHomePageController" cache="false" expires="0">
+    <apex:stylesheet value="{!URLFOR($Resource.SLDS0102, 'assets/styles/salesforce-lightning-design-system.css')}"/>
+    <center>   
+        <a style="font-size: 15px;" href="#" onclick="window.location.reload(true);">Refresh</a>
+   </center>
+    <br/>
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+        <thead>
+            <tr class="slds-text-title--caps slds-text-heading--small">
+                <th scope="col">
+                    <div class="slds-truncate" title="Lead Name"><apex:outputText value="LEAD NAME" /></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Customer Response"><apex:outputText value="CUSTOMER RESPONSE" /></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Response Date"><apex:outputText value="RESPONSE DATE" /></div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Lead Owner"><apex:outputText rendered="{!OR(boolStrProfileSystemAdministrator,boolStrUserStoreRoleName,boolStrUserRoleName)}" value="LEAD OWNER" /></div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <apex:repeat value="{!LeadsThatResponded}" var="leads" id="leads">
+                <apex:repeat value="{!leads.Tasks}" var="task">
+                    <apex:outputPanel rendered="{! IF(task.Description != '',true,false)}">
+                        <tr class="slds-text-heading--small">
+                            <th scope="row" data-label="Lead Name">
+                                <apex:outputPanel rendered="{!$User.UIThemeDisplayed == 'Theme4t'}">
+									<div class="slds-truncate" title="Lead Name"><apex:outputlink value="/{!leads.Id}" target="_parent" ><apex:outputText value="{!leads.Name}" /></apex:outputlink></div>
+                                </apex:outputPanel>
+                                  
+								<apex:outputPanel rendered="{!$User.UIThemeDisplayed == 'Theme4d'}">
+									<div class="slds-truncate" title="Lead Name"><apex:outputlink value="/one/one.app?source=aloha#/sObject/{!leads.Id}/view" target="_top" ><apex:outputText value="{!leads.Name}" /></apex:outputlink></div>
+                                </apex:outputPanel>
+                            </th>
+                            <td data-label="SMS Message">
+                                <div class="slds-truncate" title="Description"><apex:outputText value="{!task.Description}" /></div>
+                            </td>
+                            <td data-label="Time of Response">
+                                <div class="slds-truncate" title="Time of Response"> <apex:outputField value="{!task.createdDate}" id="responseDate"/></div>
+                            </td>
+                            
+                            <td data-label="Lead Owner">
+                                <div class="slds-truncate" title="Lead Owner"><apex:outputText rendered="{!OR(boolStrProfileSystemAdministrator,boolStrUserStoreRoleName,boolStrUserRoleName)}" value="{!leads.CCPM_leadOwner__c}" /></div>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </apex:repeat>
+            </apex:repeat>
+        </tbody>
+    </table>  
+</apex:page>

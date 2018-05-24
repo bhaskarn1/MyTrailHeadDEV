@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Call Details</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Call Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- IVR ID --></label>
+        <name>CCPM_IVRID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Duration(In Minutes) --></label>
+        <name>CCPM_callDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call End Time --></label>
+        <name>CCPM_callEndTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Log --></label>
+        <name>CCPM_callLog__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Start Time --></label>
+        <name>CCPM_callStartTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Status --></label>
+        <name>CCPM_callStatus__c</name>
+        <picklistValues>
+            <masterLabel>Call Complete</masterLabel>
+            <translation><!-- Call Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call In-Progress</masterLabel>
+            <translation><!-- Call In-Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Response Failed</masterLabel>
+            <translation><!-- Response Failed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Correlation ID --></label>
+        <name>CCPM_correlationID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>CCPM_lead__c</name>
+        <relationshipLabel><!-- Call Details --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Call Details Layout</layout>
+        <sections>
+            <label><!-- Call Information --></label>
+            <section>Call Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

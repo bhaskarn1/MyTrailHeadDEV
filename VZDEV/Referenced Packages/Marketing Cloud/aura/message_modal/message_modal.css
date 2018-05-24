@@ -1,0 +1,36 @@
+.THIS .label {
+  font-size: 100%;    
+}
+
+.THIS .uiButton {
+    height: 35px;
+    width: 10%;
+    min-width: 100px;
+    bottom: 5%;
+    text-shadow: none;
+    box-shadow: none;
+    margin-left:5px;
+}
+
+.THIS .uiButton:enabled {
+    background: #0070D2!important;
+    margin-bottom: 0;
+}
+
+.THIS .uiButton:hover:enabled {
+  background-color: #005197!important;
+}
+
+.THIS .uiButton.default .label {
+    color: #F2F2F2!important
+}
+
+.THIS .btn-default {
+  background-color: #0070D2;
+  color: #FFFFFF;
+}
+
+.THIS .btn-default:hover {
+  background-color: #005197;
+  color: #FFFFFF;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This populate record type based on Lead type</description>
+    <fields>
+        <fullName>CCPM_Record_Type__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Record Type</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Lead Recordtype setting</label>
+    <pluralLabel>CCPM_LeadRecordTypeSetting</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

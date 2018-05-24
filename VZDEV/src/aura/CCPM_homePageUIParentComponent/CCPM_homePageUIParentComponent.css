@@ -1,0 +1,29 @@
+.cCCPM_homePageUIParentComponent .ld-rep-select select {
+    height:23px;
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist; 
+    appearance: menulist; 
+}
+
+.cCCPM_homePageUIParentComponent .ld-rep-select .slds-select_container::before {
+    border-bottom:0px;
+    display:none;
+}
+
+.cCCPM_homePageUIParentComponent .ld-rep-select .slds-select_container::after {
+    border-top:0px;
+    display:none;
+}
+
+.cCCPM_homePageUIParentComponent .ld-action-table  span.dtr-title {
+		display: inline-block;
+		min-width: 130px;
+		font-weight: bold;
+		font-size: 13px;
+		line-height: 30px;	
+	}
+	
+.cCCPM_homePageUIParentComponent .ld-action-table  span.dtr-data {
+		font-size: 13px;
+		display:inline-block;
+	}

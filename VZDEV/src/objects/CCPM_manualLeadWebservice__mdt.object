@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Metadata contains all fields required to be parsed from the request</description>
+    <fields>
+        <fullName>CCPM_fieldPOS__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>FieldPOS</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_fieldtobeUpdated__c</fullName>
+        <description>This refers to the field that needs to be updated</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Field</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_isActive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field determines if the specific field is active to be queried and updated</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Active?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_isRequired__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>CCPM_isRequired</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_object__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Object</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Manual Lead Webservice</label>
+    <pluralLabel>Manual Lead Webservice</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

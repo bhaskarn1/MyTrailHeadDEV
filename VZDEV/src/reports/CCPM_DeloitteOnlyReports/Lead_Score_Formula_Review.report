@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_4475145</developerName>
+        <masterLabel>Average Margin</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account$CCPM_averageMargin__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>50</to>
+            </sourceValues>
+            <value>Less than 50</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>50</from>
+                <to>75</to>
+            </sourceValues>
+            <value>50 to 75</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>75</from>
+            </sourceValues>
+            <value>greater than 75</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_82529611</developerName>
+        <masterLabel>Closed Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account.Leads__r$Status</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Converted</sourceValue>
+            </sourceValues>
+            <value>Converted</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Expired</sourceValue>
+            </sourceValues>
+            <value>Not Converted</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_84494881</developerName>
+        <masterLabel>Type of Preferences</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account$CCPM_channelPreference__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>CARE, STORE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CARE, STORE, MOBILE FIRST</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CARE, STORE, WEB</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CARE, WEB</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CARE, WEB, MOBILE FIRST</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>NO EVENT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>STORE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>STORE, MOBILE FIRST</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>STORE, WEB</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>STORE, WEB, MOBILE FIRST</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>WEB</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>WEB, MOBILE FIRST</sourceValue>
+            </sourceValues>
+            <value>Store, No Event, Web</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_95167341</developerName>
+        <masterLabel>Upgrade Propensity</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Account$CCPM_upgradePropensity__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>50</to>
+            </sourceValues>
+            <value>less than 50</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>50</from>
+                <to>74</to>
+            </sourceValues>
+            <value>50 to 74</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>74</from>
+            </sourceValues>
+            <value>greater than 74</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account.Leads__r$Id</field>
+    </columns>
+    <columns>
+        <field>BucketField_82529611</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$Status</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$CCPM_customerAndLeadCombinedScoreFormula__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_84494881</field>
+    </columns>
+    <columns>
+        <field>Account$CCPM_channelPreference__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_95167341</field>
+    </columns>
+    <columns>
+        <field>Account$CCPM_upgradePropensity__c</field>
+    </columns>
+    <columns>
+        <field>Account$CCPM_isOutOfContract__c</field>
+    </columns>
+    <columns>
+        <field>Account$CCPM_isPaymentOverdue__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$CCPM_SKU__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$CCPM_createdDate__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_4475145</field>
+    </columns>
+    <columns>
+        <field>Account$CCPM_averageMargin__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$CCPM_isFollowUpSMSSent__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$CCPM_isSMSResponseReceived__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Leads__r$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Converted,Dismissed,Expired</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r$CCPM_isInitialSMSSent__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Lead Score Formula Review</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CCPM_leadWithCustomers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

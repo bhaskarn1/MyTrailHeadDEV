@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_mobileNumber__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_accountNumber__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_Type__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_isProspectSMSsent__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Lead.CCPM_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Prospect,Manual Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_eventType__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>iPhone X</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Prospect Data</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Lead.CCPM_Type__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

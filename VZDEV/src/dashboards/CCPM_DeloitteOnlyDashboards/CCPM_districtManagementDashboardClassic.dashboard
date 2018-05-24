@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Manahawkin</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Market Street East</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Egg Harbor</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Vineland</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>UPenn</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Walnut St</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Deptford Mall</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Atlantic City</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Williamstown / Turnersville</values>
+        </dashboardFilterOptions>
+        <name>Store</name>
+    </dashboardFilters>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>false</isGridLayout>
+    <leftSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <dashboardFilterColumns>
+                <column>FK_NAME</column>
+            </dashboardFilterColumns>
+            <displayUnits>Integer</displayUnits>
+            <footer>This includes leads that have been sent the initial SMS</footer>
+            <header>Total Contacted Leads</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Number of leads with initial SMS sent</metricLabel>
+            <report>Verizon_Market_Leads_Reports/CCPM_contactedLeadsByStore</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Funnel</componentType>
+            <dashboardFilterColumns>
+                <column>FK_NAME</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Current status of leads that have received an initial SMS.</footer>
+            <header>Contacted Conversion Funnel (Contacted Leads)</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Verizon_Market_Leads_Reports/CCPM_engagedLeadsFunnel</report>
+            <showPercentage>true</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <dashboardFilterColumns>
+                <column>Account$CCPM_store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Total abandonment / leads received from each channel, and whether they are eligible to be contacted.</footer>
+            <header>Total Leads / Abandonment Received</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Verizon_Market_Leads_Reports/CCPM_contactedLeadsByChannel</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Displays the channel the lead was initially created in vs. the channel it was closed in.</footer>
+            <header>Created In vs Converted In Channel (Contacted Leads)</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Old_Report_Folder/CCPM_createdInVersusConvertedInChannel1</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <dashboardFilterColumns>
+                <column>Account$CCPM_store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Integer</displayUnits>
+            <footer>Number of SMS responses received not containing X</footer>
+            <header>Non Opt-Out Responses Received</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>SMS response does not contain X</metricLabel>
+            <report>Verizon_Market_Leads_Reports/CCPM_nonOptOutResponsesReceived</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarStacked</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Total leads segmented into Status buckets.</footer>
+            <header>Lead Summary</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Verizon_Market_Leads_Reports/CCPM_leadStatusByStore</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Includes leads in a status of Contacted, Responded and Qualified</footer>
+            <header>Active Leads by Status</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Verizon_Market_Leads_Reports/CCPM_activeLeadsByStatus</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Donut</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Qualified leads segmented by Sub Status</footer>
+            <header>Qualified Leads</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Verizon_Market_Leads_Reports/CCPM_qualifiedLeadsContacted</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>false</showTotal>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <dashboardFilterColumns>
+                <column>FK_NAME</column>
+            </dashboardFilterColumns>
+            <displayUnits>Integer</displayUnits>
+            <footer>Number of leads that have been contacted with a lead status of Converted</footer>
+            <header>Converted Leads</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Number of converted leads</metricLabel>
+            <report>Verizon_Market_Leads_Reports/CCPM_contactedLeadsConverted</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>BarStacked</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Includes the number of leads that require action segmented by week</footer>
+            <groupingColumn>Lead.Store__c</groupingColumn>
+            <groupingColumn>Lead.CCPM_lastInteraction__c</groupingColumn>
+            <header>Leads Requiring Action by Week</header>
+            <legendPosition>Right</legendPosition>
+            <report>Verizon_Market_Leads_Reports/CCPM_leadsRequiringActionByWeek</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <chartSummary>
+                <axisBinding>y</axisBinding>
+                <column>RowCount</column>
+            </chartSummary>
+            <componentType>Bar</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Leads requiring action that have not been modified in greater than 1 day</footer>
+            <groupingColumn>Lead.Store__c</groupingColumn>
+            <header>Aging Leads Requiring Action</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Verizon_Market_Leads_Reports/CCPM_agingLeadsRequiringAction</report>
+            <showPercentage>false</showPercentage>
+            <showPicturesOnCharts>false</showPicturesOnCharts>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <dashboardFilterColumns>
+                <column>Account$CCPM_store__c</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <footer>Number of SMS responses received containing X</footer>
+            <header>Opt Out Responses Received</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>SMS response contains X</metricLabel>
+            <report>CCPM_DeloitteOnlyReports/MkL_Leads_Responded_X</report>
+        </components>
+    </rightSection>
+    <runningUser>matkoenig@verizonwireless.com.vzwretail.prod</runningUser>
+    <textColor>#000000</textColor>
+    <title>District Management Dashboard - Classic</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

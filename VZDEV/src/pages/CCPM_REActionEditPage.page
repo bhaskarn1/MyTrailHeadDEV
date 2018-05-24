@@ -1,0 +1,256 @@
+<apex:page controller="CCPM_REActionController" tabStyle="CCPM_Action__c">
+<apex:pageMessages escape="false"/>
+
+<style type="text/css">
+     #actionHelp { vertical-align: top; height:auto !important; }
+     #helplist {display:none; }
+     .show {display: none; }
+     .hide:target + .show {display: inline; }
+     .hide:target {display: none; }
+     .hide:target ~ #helplist {display:inline; }
+     .fVTextButton {padding:0;font-size:11px;}
+     .operatorButton{padding:0px 10px;font-size:11px;}
+     @media print { .hide, .show { display: none; } }
+    
+    
+</style>
+<script type="text/javascript">
+function insert(el,ins) {
+window.lstText={};
+    
+    if (el.setSelectionRange){
+        el.value = el.value.substring(0,el.selectionStart) + ins + el.value.substring(el.selectionEnd,el.value.length);
+    }
+    else if (document.selection && document.selection.createRange) {
+        el.focus();
+        var range = document.selection.createRange();
+        range.text = ins;
+    }
+}
+</script>
+<apex:form id="mainform">
+    
+    <apex:pageBlock id="mainBlock">
+        <apex:pageBlockButtons id="mainButtonsBlock">
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Action Details" id="actionDetailsSectionOne" rendered="{!actionPackage.objAction.RecordType.Name <> 'Related Object Action'}">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Action Name"/>
+                <apex:outputPanel >
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        <apex:inputField value="{!actionPackage.objAction.Name}" style="width:230px"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+	            <apex:outputLabel value="Record Type Name"/>
+	            <apex:outputField value="{!actionPackage.objAction.RecordType.Name}" style="width:230px"/>
+	        </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Master Object"/ > 
+                <apex:inputField value="{!actionPackage.objAction.CCPM_masterObject__c}" style="width:230px" html-disabled="true"/> 
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+	            <apex:outputLabel value="Action Number"/>
+	            <apex:outputField value="{!actionPackage.objAction.CCPM_actionNumber__c}" style="width:230px"/>
+	        </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Type"/>
+                <apex:outputField value="{!actionPackage.objAction.CCPM_type__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Active"/>
+                <apex:inputField value="{!actionPackage.objAction.CCPM_active__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Action Object"/ > 
+                <apex:outputField value="{!actionPackage.objAction.CCPM_actionObject__c}" style="width:230px"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Start Date"/>
+                <apex:outputPanel >
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        <apex:inputField value="{!actionPackage.objAction.CCPM_startDate__c}"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>     
+                 
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Description"/>
+                <apex:inputField value="{!actionPackage.objAction.CCPM_description__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="End Date"/>
+                <apex:inputField value="{!actionPackage.objAction.CCPM_endDate__c}"/>
+            </apex:pageBlockSectionItem>
+                                    
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Action Details" id="actionDetailsSectionTwo" rendered="{!actionPackage.objAction.RecordType.Name = 'Related Object Action'}">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Action Name"/>
+                <apex:outputPanel >
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        <apex:inputField value="{!actionPackage.objAction.Name}" style="width:230px"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+	            <apex:outputLabel value="Record Type Name"/>
+	            <apex:outputField value="{!actionPackage.objAction.RecordType.Name}" style="width:230px"/>
+	        </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Master Object"/ > 
+                <apex:inputField value="{!actionPackage.objAction.CCPM_masterObject__c}" style="width:230px" html-disabled="true"/> 
+            </apex:pageBlockSectionItem>
+             
+            <apex:pageBlockSectionItem >
+	            <apex:outputLabel value="Action Number"/>
+	            <apex:outputField value="{!actionPackage.objAction.CCPM_actionNumber__c}" style="width:230px"/>
+	        </apex:pageBlockSectionItem>
+            
+           <apex:pageBlockSectionItem >
+	            <apex:outputLabel value="Related Object"/>
+	            <apex:inputField value="{!actionPackage.objAction.CCPM_relatedObject__c}"/>
+	        </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Active"/>
+                <apex:inputField value="{!actionPackage.objAction.CCPM_active__c}"/>
+            </apex:pageBlockSectionItem>
+                        
+            <apex:pageBlockSectionItem >
+	            <apex:outputLabel value="Related Object Action"/>
+	            <apex:inputField value="{!actionPackage.objAction.CCPM_relatedObjectAction__c}"/>
+	        </apex:pageBlockSectionItem>
+        
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Start Date"/>
+                <apex:outputPanel >
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        <apex:inputField value="{!actionPackage.objAction.CCPM_startDate__c}"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Description"/>
+                <apex:inputField value="{!actionPackage.objAction.CCPM_description__c}"/>
+            </apex:pageBlockSectionItem>
+                    
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="End Date"/>
+                <apex:inputField value="{!actionPackage.objAction.CCPM_endDate__c}"/>
+            </apex:pageBlockSectionItem>
+                                
+        </apex:pageBlockSection>
+        
+        
+        <apex:pageBlockSection title="Action Component Details : Set Action Object Fields" columns="1" id="actionPanel" rendered="{!actionPackage.objAction.RecordType.Name <> 'Related Object Action'}">  
+            <span style="text-decoration: underline;color : red;">Please read HELP before creating Action Components.</span>
+            <div id="actionHelp">
+            <a href="#hide1" class="hide" id="hide1">Help : Expand</a>
+            <a href="#show1" class="show" id="show1">Help : Collapse</a>
+            <div id="helplist"><code style="font-size:12px;font-weight: bold;">
+            <ul>
+            <li><span style="text-decoration: underline;">Click on the Button to insert template in Field value at cursor position.</span></li>
+            <li><span style="text-decoration: underline;">Make sure to include only one space, before and after the OPERATOR, if not this will lead to errors.</span></li>
+            <li><span style="text-decoration: underline; ">Please make sure that you do not use " + ", " - ", " * ", " / ", " % " in the Field Value.</span></li>
+            <li>Operators available for numbers :  
+                <input class="operatorButton" type="button" value="+" onclick="insert(window.lstText,'insertN1 + insertN2')"></input> 
+                <input class="operatorButton" type="button" value="-" onclick="insert(window.lstText,'insertN1 - insertN2')"></input> 
+                <input class="operatorButton" type="button" value="*" onclick="insert(window.lstText,'insertN1 * insertN2')"></input> 
+                <input class="operatorButton" type="button" value="/" onclick="insert(window.lstText,'insertN1 / insertN2')"></input> 
+                <input class="operatorButton" type="button" value="%" onclick="insert(window.lstText,'insertN1 % insertN2')"></input>
+            </li>
+            <li>To concatenate text use: 
+                <input class="operatorButton" type="button" value="<conStr></conStr>" onclick="insert(window.lstText,'<conStr>s1,s2,s3...</conStr>')"></input> 
+            </li>
+            <li>Reference tags: 
+                <input class="fVTextButton" type="button" value="<w></w>" onclick="insert(window.lstText,'<w></w>')"></input>
+    			<input class="fVTextButton" type="button" value="<l></l>" onclick="insert(window.lstText,'<l></l>')"></input>
+                <input class="fVTextButton" type="button" value="<s></s>" onclick="insert(window.lstText,'<s></s>')"></input>
+                <input class="fVTextButton" type="button" value="<v></v>" onclick="insert(window.lstText,'<v></v>')"></input>
+            </li>
+            <li>Use <input class="fVTextButton" type="button" value="<Today>" onclick="insert(window.lstText,'<Today>')"></input> for current date. <input class="fVTextButton" type="button" value="Add Days" onclick="insert(window.lstText,'<Today> + n')"></input> <input class="fVTextButton" type="button" value="Reduse Days" onclick="insert(window.lstText,'<Today> - n')"></input> where n is Number of days.</li>
+            </ul></code>
+            </div>
+            </div>
+            <apex:outputPanel id="mObjAPIName">
+                <code style="font-size:13px;font-weight: bold;">Available Field API Name : &nbsp;&nbsp;&nbsp;&nbsp;</code>
+                <apex:selectList value="{!strMergeRec}" size="1" >
+                    <apex:actionSupport event="onchange" reRender="mObjAPIName" />
+                    <apex:selectOption itemValue="Winner" itemLabel="Winner"/>
+                    <apex:selectOption itemValue="Loser" itemLabel="Loser"/>
+                </apex:selectList>&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:selectList value="{!strFieldAPIName}" size="1" >
+                    <apex:actionSupport event="onchange" reRender="mObjAPIName" />
+                    <apex:selectOption itemValue="" itemLabel="--NONE--"/>
+                    <apex:selectOptions value="{!FieldTypes}" />
+                </apex:selectList>&nbsp;&nbsp;&nbsp;&nbsp;
+                <code style="font-size:14px;font-weight: bold;"><span style="color:#0174DF">{!strFieldAPIName}</span></code>
+            </apex:outputPanel>
+            
+            <apex:pageBlockTable style="width:100%" value="{!actionPackage.mapActionComponents}" var="objAC" id="actionTable" >
+                <apex:column headerValue="Action" >
+                    <apex:commandLink value="Del" style="color:red" action="{!removeVCRow}" reRender="actionPanel" immediate="true">
+                        <apex:param value="{!objAC}" name="intACRowNum" assignTo="{!intACRowNum}"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="Order" title="Must be unique number">
+                	<apex:outputPanel >
+	                    <div class="requiredInput">
+	                        <div class="requiredBlock"></div>
+	                        <apex:inputField value="{!actionPackage.mapActionComponents[objAC].CCPM_order__c}" />
+	                    </div>
+	                </apex:outputPanel>
+                </apex:column>
+                <apex:column headerValue="Field Name" style="width:30%">
+                    <apex:selectList value="{!actionPackage.mapActionComponents[objAC].CCPM_fieldAPIName__c}" size="1" >  
+                        <apex:actionSupport event="onchange" reRender="actionTable" >
+                        </apex:actionSupport>
+                        <apex:selectOptions value="{!ACFieldTypes}" />
+                    </apex:selectList><br/>
+                    <apex:outputPanel rendered="{!actionPackage.mapActionComponents[objAC].CCPM_fieldAPIName__c == 'Variable'}">
+                        <apex:inputField value="{!actionPackage.mapActionComponents[objAC].CCPM_variableName__c}" html-placeholder="Enter Variable Name"/>
+                        <span style="color:#0174DF"><code>(Must be unique)</code></span>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column style="width:100px" headerValue="Merge Copy If Null Or Blank" rendered="{!strActionRecordName == 'Merge Insert Or Update Action'}">
+                    <apex:inputField value="{!actionPackage.mapActionComponents[objAC].CCPM_mergeCopyIfNullOrBlank__c}"/>
+                </apex:column>
+                <apex:column headerValue="Merge Copy" rendered="{!strActionRecordName == 'Merge Insert Or Update Action'}">
+                    <apex:inputField value="{!actionPackage.mapActionComponents[objAC].CCPM_mergeCopy__c}"/>
+                </apex:column>
+                <apex:column headerValue="Field Value" style="width:30%;text-align:center">
+                    <apex:inputField value="{!actionPackage.mapActionComponents[objAC].CCPM_fieldValue__c}" style="width:80%" onfocus="window.lstText=this;"/>
+                </apex:column>
+                <apex:column headerValue="Active" style="width:30%">
+                    <apex:inputField value="{!actionPackage.mapActionComponents[objAC].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:commandButton value="Add" action="{!actionPackage.addACRow}" reRender="actionPanel"/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:form>
+
+</apex:page>

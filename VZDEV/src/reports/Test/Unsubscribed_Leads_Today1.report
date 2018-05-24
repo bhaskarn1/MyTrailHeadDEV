@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$Name</field>
+    </columns>
+    <columns>
+        <field>Lead.Activities$Subject</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Lead$CCPM_isInitialSMSSent__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Activities$Description</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Here from Verizon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Activities$CCPM_activityCreationDateTime__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$CCPM_SMSOptOut__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead$CCPM_SMSOptOut__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Unsubscribed Leads Today</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CCPM_leadsWithActivities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Lead$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-07-11</startDate>
+    </timeFrameFilter>
+</Report>

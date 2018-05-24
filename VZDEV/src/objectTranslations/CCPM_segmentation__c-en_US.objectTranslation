@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Segmentation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Segmentations</value>
+    </caseValues>
+    <fields>
+        <help><!-- This field will capture which Territories’ Sales Rep will have this Event type available to them --></help>
+        <label><!-- Campaign --></label>
+        <name>CCPM_campaign__c</name>
+        <relationshipLabel><!-- Segmentations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field will capture a value if the Event type should be available based on the Channel nation-wide when Market, District and Territory are left blank. --></help>
+        <label><!-- Channels --></label>
+        <name>CCPM_channels__c</name>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telesales</masterLabel>
+            <translation><!-- Telesales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field will capture which District’s Sales Rep will have this Event type available to them --></help>
+        <label><!-- Districts 1 --></label>
+        <name>CCPM_districts1__c</name>
+        <picklistValues>
+            <masterLabel>AK01</masterLabel>
+            <translation><!-- AK01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAR01-Coastal Carolinas</masterLabel>
+            <translation><!-- CAR01-Coastal Carolinas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAR02-Eastern NC</masterLabel>
+            <translation><!-- CAR02-Eastern NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAR03-NC Triad</masterLabel>
+            <translation><!-- CAR03-NC Triad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAR04-SC Central</masterLabel>
+            <translation><!-- CAR04-SC Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAR05-SCSE Coast</masterLabel>
+            <translation><!-- CAR05-SCSE Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAR06-Triangle North</masterLabel>
+            <translation><!-- CAR06-Triangle North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAR07-Triangle South</masterLabel>
+            <translation><!-- CAR07-Triangle South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC01</masterLabel>
+            <translation><!-- CC01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC02</masterLabel>
+            <translation><!-- CC02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC03</masterLabel>
+            <translation><!-- CC03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC04</masterLabel>
+            <translation><!-- CC04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC05</masterLabel>
+            <translation><!-- CC05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC06</masterLabel>
+            <translation><!-- CC06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP01</masterLabel>
+            <translation><!-- CP01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP02</masterLabel>
+            <translation><!-- CP02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP03</masterLabel>
+            <translation><!-- CP03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP04</masterLabel>
+            <translation><!-- CP04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP05</masterLabel>
+            <translation><!-- CP05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP06</masterLabel>
+            <translation><!-- CP06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CP07</masterLabel>
+            <translation><!-- CP07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS01-Las Vegas West</masterLabel>
+            <translation><!-- DS01-Las Vegas West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS02-Phoenix North</masterLabel>
+            <translation><!-- DS02-Phoenix North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS03-Phoenix West</masterLabel>
+            <translation><!-- DS03-Phoenix West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS04-Scottsdale</masterLabel>
+            <translation><!-- DS04-Scottsdale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS05-Phoenix East</masterLabel>
+            <translation><!-- DS05-Phoenix East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS06-Phoenix South</masterLabel>
+            <translation><!-- DS06-Phoenix South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS07-Tucson West</masterLabel>
+            <translation><!-- DS07-Tucson West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS08-Tucson East</masterLabel>
+            <translation><!-- DS08-Tucson East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS09-Albuquerque</masterLabel>
+            <translation><!-- DS09-Albuquerque --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS10-El Paso</masterLabel>
+            <translation><!-- DS10-El Paso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS11-Las Vegas East</masterLabel>
+            <translation><!-- DS11-Las Vegas East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLNW1-Fort Myers</masterLabel>
+            <translation><!-- FLNW1-Fort Myers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLNW2-Sarasota St Pete</masterLabel>
+            <translation><!-- FLNW2-Sarasota St Pete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLNW3-Tampa Lakeland</masterLabel>
+            <translation><!-- FLNW3-Tampa Lakeland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLNW4-North Tampa</masterLabel>
+            <translation><!-- FLNW4-North Tampa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLNW5-Tally Gainesville</masterLabel>
+            <translation><!-- FLNW5-Tally Gainesville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLNW6-Jacksonville</masterLabel>
+            <translation><!-- FLNW6-Jacksonville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSE1-Miami</masterLabel>
+            <translation><!-- FLSE1-Miami --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSE2-Ft Lauderdale</masterLabel>
+            <translation><!-- FLSE2-Ft Lauderdale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSE3-Palm Beach</masterLabel>
+            <translation><!-- FLSE3-Palm Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSE4-Orlando South</masterLabel>
+            <translation><!-- FLSE4-Orlando South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSE5-Orlando North</masterLabel>
+            <translation><!-- FLSE5-Orlando North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN01-Central Alabama</masterLabel>
+            <translation><!-- GAN01-Central Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN02-East Atlanta</masterLabel>
+            <translation><!-- GAN02-East Atlanta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN03-East Georgia</masterLabel>
+            <translation><!-- GAN03-East Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN04-North Alabama</masterLabel>
+            <translation><!-- GAN04-North Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN05-NorthEast Alabama</masterLabel>
+            <translation><!-- GAN05-NorthEast Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN06-North Georgia</masterLabel>
+            <translation><!-- GAN06-North Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAN07-West Atlanta</masterLabel>
+            <translation><!-- GAN07-West Atlanta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS01-Central Georgia</masterLabel>
+            <translation><!-- GAS01-Central Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS02-NC Atlanta</masterLabel>
+            <translation><!-- GAS02-NC Atlanta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS03-SC Alabama</masterLabel>
+            <translation><!-- GAS03-SC Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS04-SE Georgia</masterLabel>
+            <translation><!-- GAS04-SE Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS05-SW Georgia</masterLabel>
+            <translation><!-- GAS05-SW Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS06-WCentral Georgia</masterLabel>
+            <translation><!-- GAS06-WCentral Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAS07-West Georgia</masterLabel>
+            <translation><!-- GAS07-West Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL01-New Orleans</masterLabel>
+            <translation><!-- GL01-New Orleans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL02-Baton Rouge</masterLabel>
+            <translation><!-- GL02-Baton Rouge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL03-Beaumont-Lafayette</masterLabel>
+            <translation><!-- GL03-Beaumont-Lafayette --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL04-Shreveport</masterLabel>
+            <translation><!-- GL04-Shreveport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL05-Memphis</masterLabel>
+            <translation><!-- GL05-Memphis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL06-Mississippi</masterLabel>
+            <translation><!-- GL06-Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL07-Mobile-Pensacola</masterLabel>
+            <translation><!-- GL07-Mobile-Pensacola --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC01-Central Detroit</masterLabel>
+            <translation><!-- GLC01-Central Detroit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC02-NW Detroit</masterLabel>
+            <translation><!-- GLC02-NW Detroit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC03-NE Detroit</masterLabel>
+            <translation><!-- GLC03-NE Detroit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC04-Central Michigan</masterLabel>
+            <translation><!-- GLC04-Central Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC05-Mid Michigan</masterLabel>
+            <translation><!-- GLC05-Mid Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC06-Northern Michigan</masterLabel>
+            <translation><!-- GLC06-Northern Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC07-Toledo</masterLabel>
+            <translation><!-- GLC07-Toledo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLC08-Northwest Ohio</masterLabel>
+            <translation><!-- GLC08-Northwest Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE01-Penn Ohio Central</masterLabel>
+            <translation><!-- GLE01-Penn Ohio Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE02-SW Pittsburgh</masterLabel>
+            <translation><!-- GLE02-SW Pittsburgh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE03-Pittsburgh Central</masterLabel>
+            <translation><!-- GLE03-Pittsburgh Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE04-Central PA</masterLabel>
+            <translation><!-- GLE04-Central PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE05-Southern OH Valley</masterLabel>
+            <translation><!-- GLE05-Southern OH Valley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE06-Canton-Akron</masterLabel>
+            <translation><!-- GLE06-Canton-Akron --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE07-North Central Ohio</masterLabel>
+            <translation><!-- GLE07-North Central Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE08-Cleveland West</masterLabel>
+            <translation><!-- GLE08-Cleveland West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLE09-Lake Erie East</masterLabel>
+            <translation><!-- GLE09-Lake Erie East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN01-N IL Milwaukee</masterLabel>
+            <translation><!-- GLN01-N IL Milwaukee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN02-NW Milwaukee</masterLabel>
+            <translation><!-- GLN02-NW Milwaukee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN03-North Central IL</masterLabel>
+            <translation><!-- GLN03-North Central IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN04-Schaumburg Suburbs</masterLabel>
+            <translation><!-- GLN04-Schaumburg Suburbs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN05-North Chicago</masterLabel>
+            <translation><!-- GLN05-North Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN07-Western Wisconsin</masterLabel>
+            <translation><!-- GLN07-Western Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN08-Downtown Chicago</masterLabel>
+            <translation><!-- GLN08-Downtown Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLN09-NE Wisconsin</masterLabel>
+            <translation><!-- GLN09-NE Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS01-Indy South</masterLabel>
+            <translation><!-- GLS01-Indy South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS02-Indy West</masterLabel>
+            <translation><!-- GLS02-Indy West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS03-Kentucky</masterLabel>
+            <translation><!-- GLS03-Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS04-Indy East</masterLabel>
+            <translation><!-- GLS04-Indy East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS05-Cincinnati West</masterLabel>
+            <translation><!-- GLS05-Cincinnati West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS06-Cincinnati East</masterLabel>
+            <translation><!-- GLS06-Cincinnati East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS07-Dayton</masterLabel>
+            <translation><!-- GLS07-Dayton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS08-Columbus West</masterLabel>
+            <translation><!-- GLS08-Columbus West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLS09-Columbus East</masterLabel>
+            <translation><!-- GLS09-Columbus East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLW01-Central IL</masterLabel>
+            <translation><!-- GLW01-Central IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLW02-Northern IN-SW MI</masterLabel>
+            <translation><!-- GLW02-Northern IN-SW MI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field will capture which District’s Sales Rep will have this Event type available to them --></help>
+        <label><!-- Districts 2 --></label>
+        <name>CCPM_districts2__c</name>
+        <picklistValues>
+            <masterLabel>GLW04-Far West Chicago</masterLabel>
+            <translation><!-- GLW04-Far West Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLW05-South Chicago-NW IN</masterLabel>
+            <translation><!-- GLW05-South Chicago-NW IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLW06-Peoria-Davenport</masterLabel>
+            <translation><!-- GLW06-Peoria-Davenport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLW07-SW Chicago</masterLabel>
+            <translation><!-- GLW07-SW Chicago --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLW08-W MI-Grand Rapids</masterLabel>
+            <translation><!-- GLW08-W MI-Grand Rapids --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLW09-NE Indiana</masterLabel>
+            <translation><!-- GLW09-NE Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HI01</masterLabel>
+            <translation><!-- HI01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HI02</masterLabel>
+            <translation><!-- HI02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HQ-Telesales</masterLabel>
+            <translation><!-- HQ-Telesales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM01-Southern IL</masterLabel>
+            <translation><!-- KM01-Southern IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM02-St Louis</masterLabel>
+            <translation><!-- KM02-St Louis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM03-Southern MO</masterLabel>
+            <translation><!-- KM03-Southern MO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM04-KC East</masterLabel>
+            <translation><!-- KM04-KC East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM05-KC West</masterLabel>
+            <translation><!-- KM05-KC West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM06-Central KS</masterLabel>
+            <translation><!-- KM06-Central KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA01</masterLabel>
+            <translation><!-- LA01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA02</masterLabel>
+            <translation><!-- LA02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA03</masterLabel>
+            <translation><!-- LA03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA04</masterLabel>
+            <translation><!-- LA04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA05</masterLabel>
+            <translation><!-- LA05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA06</masterLabel>
+            <translation><!-- LA06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA07</masterLabel>
+            <translation><!-- LA07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA08</masterLabel>
+            <translation><!-- LA08 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS01</masterLabel>
+            <translation><!-- MS01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS02</masterLabel>
+            <translation><!-- MS02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS03</masterLabel>
+            <translation><!-- MS03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS04</masterLabel>
+            <translation><!-- MS04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS05</masterLabel>
+            <translation><!-- MS05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS06</masterLabel>
+            <translation><!-- MS06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT01-Northern CO-WY</masterLabel>
+            <translation><!-- MT01-Northern CO-WY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT02-Southern CO</masterLabel>
+            <translation><!-- MT02-Southern CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT03-Southern Denver</masterLabel>
+            <translation><!-- MT03-Southern Denver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT04-Central Denver</masterLabel>
+            <translation><!-- MT04-Central Denver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT05-Northern Denver</masterLabel>
+            <translation><!-- MT05-Northern Denver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT06-Northern UT</masterLabel>
+            <translation><!-- MT06-Northern UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT07-Southern UT</masterLabel>
+            <translation><!-- MT07-Southern UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT08-Idaho</masterLabel>
+            <translation><!-- MT08-Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ01</masterLabel>
+            <translation><!-- NJ01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ02</masterLabel>
+            <translation><!-- NJ02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ03</masterLabel>
+            <translation><!-- NJ03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ04</masterLabel>
+            <translation><!-- NJ04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ05</masterLabel>
+            <translation><!-- NJ05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ06</masterLabel>
+            <translation><!-- NJ06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NN01</masterLabel>
+            <translation><!-- NN01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NN02</masterLabel>
+            <translation><!-- NN02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NN03</masterLabel>
+            <translation><!-- NN03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NN04</masterLabel>
+            <translation><!-- NN04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NN05</masterLabel>
+            <translation><!-- NN05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NN06</masterLabel>
+            <translation><!-- NN06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT01-West Texas</masterLabel>
+            <translation><!-- NT01-West Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT02-DFW West</masterLabel>
+            <translation><!-- NT02-DFW West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT03-DFW Northwest</masterLabel>
+            <translation><!-- NT03-DFW Northwest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT04-DFW Northeast</masterLabel>
+            <translation><!-- NT04-DFW Northeast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT05-DFW East</masterLabel>
+            <translation><!-- NT05-DFW East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT06-San Angelo-Ft Worth</masterLabel>
+            <translation><!-- NT06-San Angelo-Ft Worth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT07-Austin North-Waco</masterLabel>
+            <translation><!-- NT07-Austin North-Waco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT08-Austin South</masterLabel>
+            <translation><!-- NT08-Austin South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW01</masterLabel>
+            <translation><!-- NW01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW02</masterLabel>
+            <translation><!-- NW02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW03</masterLabel>
+            <translation><!-- NW03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW04</masterLabel>
+            <translation><!-- NW04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW05</masterLabel>
+            <translation><!-- NW05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW06</masterLabel>
+            <translation><!-- NW06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW07</masterLabel>
+            <translation><!-- NW07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NW08</masterLabel>
+            <translation><!-- NW08 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY01</masterLabel>
+            <translation><!-- NY01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY02</masterLabel>
+            <translation><!-- NY02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY03</masterLabel>
+            <translation><!-- NY03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY04</masterLabel>
+            <translation><!-- NY04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY05</masterLabel>
+            <translation><!-- NY05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY06</masterLabel>
+            <translation><!-- NY06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY07</masterLabel>
+            <translation><!-- NY07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH01</masterLabel>
+            <translation><!-- PH01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH02</masterLabel>
+            <translation><!-- PH02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH03</masterLabel>
+            <translation><!-- PH03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH04</masterLabel>
+            <translation><!-- PH04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH05</masterLabel>
+            <translation><!-- PH05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH06</masterLabel>
+            <translation><!-- PH06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN01-Mpls-St Paul MN</masterLabel>
+            <translation><!-- PN01-Mpls-St Paul MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN02-S Minnesota</masterLabel>
+            <translation><!-- PN02-S Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN03-Mpls-St Cloud MN</masterLabel>
+            <translation><!-- PN03-Mpls-St Cloud MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN04-St Paul-NE Minn</masterLabel>
+            <translation><!-- PN04-St Paul-NE Minn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN05-N Dakota-NW Minn</masterLabel>
+            <translation><!-- PN05-N Dakota-NW Minn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN06-Montana</masterLabel>
+            <translation><!-- PN06-Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS01-Central IA</masterLabel>
+            <translation><!-- PS01-Central IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS02-Southern NE-Lincoln</masterLabel>
+            <translation><!-- PS02-Southern NE-Lincoln --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS03-SD-NW IA</masterLabel>
+            <translation><!-- PS03-SD-NW IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS04-Eastern IA</masterLabel>
+            <translation><!-- PS04-Eastern IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS05-Omaha-Council Bluff</masterLabel>
+            <translation><!-- PS05-Omaha-Council Bluff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS06-Central-West NE</masterLabel>
+            <translation><!-- PS06-Central-West NE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS07-Southwest KS</masterLabel>
+            <translation><!-- PS07-Southwest KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC01</masterLabel>
+            <translation><!-- SC01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC02</masterLabel>
+            <translation><!-- SC02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC03</masterLabel>
+            <translation><!-- SC03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC04</masterLabel>
+            <translation><!-- SC04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC05</masterLabel>
+            <translation><!-- SC05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC06</masterLabel>
+            <translation><!-- SC06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC07</masterLabel>
+            <translation><!-- SC07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC08</masterLabel>
+            <translation><!-- SC08 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SN01</masterLabel>
+            <translation><!-- SN01 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field will capture which District’s Sales Rep will have this Event type available to them --></help>
+        <label><!-- Districts 3 --></label>
+        <name>CCPM_districts3__c</name>
+        <picklistValues>
+            <masterLabel>SN02</masterLabel>
+            <translation><!-- SN02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SN03</masterLabel>
+            <translation><!-- SN03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SN04</masterLabel>
+            <translation><!-- SN04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SN05</masterLabel>
+            <translation><!-- SN05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SN06</masterLabel>
+            <translation><!-- SN06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST01-San Antonio</masterLabel>
+            <translation><!-- ST01-San Antonio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST02-RGV</masterLabel>
+            <translation><!-- ST02-RGV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST03-Houston Southwest</masterLabel>
+            <translation><!-- ST03-Houston Southwest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST04-Houston West</masterLabel>
+            <translation><!-- ST04-Houston West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST05-Houston North</masterLabel>
+            <translation><!-- ST05-Houston North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST06-Houston East</masterLabel>
+            <translation><!-- ST06-Houston East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST07-Houston Southeast</masterLabel>
+            <translation><!-- ST07-Houston Southeast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST08-Houston Central</masterLabel>
+            <translation><!-- ST08-Houston Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA01-East Texas</masterLabel>
+            <translation><!-- TA01-East Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA02-South Oklahoma</masterLabel>
+            <translation><!-- TA02-South Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA03-North Oklahoma</masterLabel>
+            <translation><!-- TA03-North Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA04-West Arkansas</masterLabel>
+            <translation><!-- TA04-West Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA05-East Arkansas</masterLabel>
+            <translation><!-- TA05-East Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA06-South Arkansas</masterLabel>
+            <translation><!-- TA06-South Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW01-Charlotte North</masterLabel>
+            <translation><!-- TCW01-Charlotte North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW02-Charlotte South</masterLabel>
+            <translation><!-- TCW02-Charlotte South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW03-Nashville</masterLabel>
+            <translation><!-- TCW03-Nashville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW04-Chattanooga</masterLabel>
+            <translation><!-- TCW04-Chattanooga --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW05-Knoxville</masterLabel>
+            <translation><!-- TCW05-Knoxville --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW06-Tri-Cities</masterLabel>
+            <translation><!-- TCW06-Tri-Cities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW07-Upstate SC</masterLabel>
+            <translation><!-- TCW07-Upstate SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TCW08-Western NC</masterLabel>
+            <translation><!-- TCW08-Western NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UP01</masterLabel>
+            <translation><!-- UP01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UP02</masterLabel>
+            <translation><!-- UP02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UP03</masterLabel>
+            <translation><!-- UP03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UP04</masterLabel>
+            <translation><!-- UP04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UP05</masterLabel>
+            <translation><!-- UP05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UP06</masterLabel>
+            <translation><!-- UP06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIR01-Southeast Virginia</masterLabel>
+            <translation><!-- VIR01-Southeast Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIR02-Virginia Beach</masterLabel>
+            <translation><!-- VIR02-Virginia Beach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIR03-Northwest Virginia</masterLabel>
+            <translation><!-- VIR03-Northwest Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIR04-Central West Virginia</masterLabel>
+            <translation><!-- VIR04-Central West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIR05-Southwest Virginia</masterLabel>
+            <translation><!-- VIR05-Southwest Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV02-DC Metro</masterLabel>
+            <translation><!-- WBV02-DC Metro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV1</masterLabel>
+            <translation><!-- WBV1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV2</masterLabel>
+            <translation><!-- WBV2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV3</masterLabel>
+            <translation><!-- WBV3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV4</masterLabel>
+            <translation><!-- WBV4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV5</masterLabel>
+            <translation><!-- WBV5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV6</masterLabel>
+            <translation><!-- WBV6 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_isActive__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will capture which Market’s Sales Rep will have this Event type available to them --></help>
+        <label><!-- Markets --></label>
+        <name>CCPM_markets__c</name>
+        <picklistValues>
+            <masterLabel>Great Lakes</masterLabel>
+            <translation><!-- Great Lakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HQ-Telesales</masterLabel>
+            <translation><!-- HQ-Telesales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Central</masterLabel>
+            <translation><!-- North Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North East</masterLabel>
+            <translation><!-- North East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pacific</masterLabel>
+            <translation><!-- Pacific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Central</masterLabel>
+            <translation><!-- South Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South East</masterLabel>
+            <translation><!-- South East --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Segmenation Key --></label>
+        <name>CCPM_segmentationKey__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will capture which Territories’ Sales Rep will have this Event type available to them --></help>
+        <label><!-- Territories --></label>
+        <name>CCPM_territories__c</name>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carolinas East</masterLabel>
+            <translation><!-- Carolinas East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central California</masterLabel>
+            <translation><!-- Central California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Pacific</masterLabel>
+            <translation><!-- Central Pacific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Desert</masterLabel>
+            <translation><!-- Desert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL Northwest</masterLabel>
+            <translation><!-- FL Northwest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL Southeast</masterLabel>
+            <translation><!-- FL Southeast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA/AL North</masterLabel>
+            <translation><!-- GA/AL North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA/AL South</masterLabel>
+            <translation><!-- GA/AL South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes Central</masterLabel>
+            <translation><!-- Great Lakes Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes East</masterLabel>
+            <translation><!-- Great Lakes East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes North</masterLabel>
+            <translation><!-- Great Lakes North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes South</masterLabel>
+            <translation><!-- Great Lakes South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Lakes West</masterLabel>
+            <translation><!-- Great Lakes West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Plains North</masterLabel>
+            <translation><!-- Great Plains North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Plains South</masterLabel>
+            <translation><!-- Great Plains South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater LA</masterLabel>
+            <translation><!-- Greater LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gulf</masterLabel>
+            <translation><!-- Gulf --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HQ-Telesales</masterLabel>
+            <translation><!-- HQ-Telesales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas/Missouri</masterLabel>
+            <translation><!-- Kansas/Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid-State</masterLabel>
+            <translation><!-- Mid-State --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mountain</masterLabel>
+            <translation><!-- Mountain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY East</masterLabel>
+            <translation><!-- NY East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey North</masterLabel>
+            <translation><!-- New Jersey North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York City</masterLabel>
+            <translation><!-- New York City --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Texas</masterLabel>
+            <translation><!-- North Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern New England</masterLabel>
+            <translation><!-- Northern New England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northwest</masterLabel>
+            <translation><!-- Northwest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Philadelphia Tri-State</masterLabel>
+            <translation><!-- Philadelphia Tri-State --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Texas</masterLabel>
+            <translation><!-- South Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southern California</masterLabel>
+            <translation><!-- Southern California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southern New England</masterLabel>
+            <translation><!-- Southern New England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN/Carolinas West</masterLabel>
+            <translation><!-- TN/Carolinas West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temp</masterLabel>
+            <translation><!-- Temp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Territory</masterLabel>
+            <translation><!-- Test Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texarhoma</masterLabel>
+            <translation><!-- Texarhoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upstate New York</masterLabel>
+            <translation><!-- Upstate New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV</masterLabel>
+            <translation><!-- WBV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBV North</masterLabel>
+            <translation><!-- WBV North --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>CCPM_Segmentation Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Segmentation Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Districts cannot be left blank. --></errorMessage>
+        <name>CCPM_District_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

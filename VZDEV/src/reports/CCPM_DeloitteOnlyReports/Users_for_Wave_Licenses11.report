@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User$UserRole</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>User$IsActive</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Title</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sr. Analyst,Sr Analyst-Marketing,Sr Analyst-Sales Ops,Sr Analyst-Sales Ops-Retail,Sr Mgr-Sales Ops,Sr Mgr-Sales Ops-Retail</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Title</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Users with Wave Licenses</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <endDate>2017-08-16</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

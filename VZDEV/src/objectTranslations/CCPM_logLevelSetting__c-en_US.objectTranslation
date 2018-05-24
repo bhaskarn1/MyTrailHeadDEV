@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Log Level Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Log Level Settings</value>
+    </caseValues>
+    <fields>
+        <help><!-- If True, log debug-level message in the Org --></help>
+        <label><!-- Log Debug --></label>
+        <name>CCPM_IsDebugLogged__c</name>
+    </fields>
+    <fields>
+        <help><!-- If True, log error-level messages in this Org --></help>
+        <label><!-- Log Error --></label>
+        <name>CCPM_isErrorLogged__c</name>
+    </fields>
+    <fields>
+        <help><!-- If True, log info-level messages in this Org --></help>
+        <label><!-- Log Info --></label>
+        <name>CCPM_isInfoLogged__c</name>
+    </fields>
+    <fields>
+        <help><!-- If True, log trace messages in this Org --></help>
+        <label><!-- Trace Logged --></label>
+        <name>CCPM_isTraceLogged__c</name>
+    </fields>
+    <fields>
+        <help><!-- If True, log warning-level messages in this Org --></help>
+        <label><!-- Log Warning --></label>
+        <name>CCPM_isWarnLogged__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that log are keep in this Org. Logs are automatically deleted if the
+Apex Batch is setup --></help>
+        <label><!-- Purge Log After --></label>
+        <name>CCPM_purgeLogAfter__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

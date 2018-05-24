@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RE Record</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RE Records</value>
+    </caseValues>
+    <fields>
+        <label><!-- RE Record ID --></label>
+        <name>CCPM_RE_Record_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Object --></label>
+        <name>CCPM_primaryObject__c</name>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This field is to make sure the Name is Unique. This field is filled in by a workflow with the Name of the Record. --></help>
+        <label><!-- Record Name Unique --></label>
+        <name>CCPM_recordNameUnique__c</name>
+    </fields>
+    <layouts>
+        <layout>Record Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Feild Details --></label>
+            <section>Feild Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- CCPM_viewInRuleEngine --></label>
+        <name>CCPM_viewInRuleEngine</name>
+    </webLinks>
+</CustomObjectTranslation>

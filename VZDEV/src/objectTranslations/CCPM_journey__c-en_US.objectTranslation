@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Journey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Journey</value>
+    </caseValues>
+    <fields>
+        <label><!-- Suppress SMS --></label>
+        <name>CCPM_SMSOptOut__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>CCPM_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>CCPM_account__c</name>
+        <relationshipLabel><!-- Journey --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active? --></label>
+        <name>CCPM_active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>CCPM_channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>CCPM_contact__c</name>
+        <relationshipLabel><!-- Journey --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>CCPM_createdDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Double Opt Out Sent --></label>
+        <name>CCPM_doubleOptOutSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Follow-Up SMS Sent? --></label>
+        <name>CCPM_isFollowUpSMSSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial SMS Sent? --></label>
+        <name>CCPM_isInitialSMSSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merged? --></label>
+        <name>CCPM_isMerged__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event SMS sent? --></label>
+        <name>CCPM_isProspectSMSsent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>CCPM_leadSource__c</name>
+        <picklistValues>
+            <masterLabel>ACSS</masterLabel>
+            <translation><!-- ACSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-DESK</masterLabel>
+            <translation><!-- ATG-ECOM-DESK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGDESK</masterLabel>
+            <translation><!-- ATG-ECOM-GGDESK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGMOB</masterLabel>
+            <translation><!-- ATG-ECOM-GGMOB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGTAB</masterLabel>
+            <translation><!-- ATG-ECOM-GGTAB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MAPP</masterLabel>
+            <translation><!-- ATG-ECOM-MAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MDOT</masterLabel>
+            <translation><!-- ATG-ECOM-MDOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MIPP</masterLabel>
+            <translation><!-- ATG-ECOM-MIPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-TDOT</masterLabel>
+            <translation><!-- ATG-ECOM-TDOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRM</masterLabel>
+            <translation><!-- CRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOTCOM</masterLabel>
+            <translation><!-- DOTCOM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EROES</masterLabel>
+            <translation><!-- EROES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MFRAPP</masterLabel>
+            <translation><!-- MFRAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NETACE</masterLabel>
+            <translation><!-- NETACE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-APDT</masterLabel>
+            <translation><!-- NR-APDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-APPL</masterLabel>
+            <translation><!-- NR-APPL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-BBDT</masterLabel>
+            <translation><!-- NR-BBDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-BEST</masterLabel>
+            <translation><!-- NR-BEST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-TARG</masterLabel>
+            <translation><!-- NR-TARG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONEPOS</masterLabel>
+            <translation><!-- ONEPOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POS</masterLabel>
+            <translation><!-- POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POS-Store Visit</masterLabel>
+            <translation><!-- POS-Store Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote-Retail</masterLabel>
+            <translation><!-- Quote-Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote-Telesales</masterLabel>
+            <translation><!-- Quote-Telesales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALESFORCE</masterLabel>
+            <translation><!-- SALESFORCE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Status --></label>
+        <name>CCPM_leadStatus__c</name>
+        <picklistValues>
+            <masterLabel>Contacted</masterLabel>
+            <translation><!-- Contacted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Converted</masterLabel>
+            <translation><!-- Converted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eligible</masterLabel>
+            <translation><!-- Eligible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified</masterLabel>
+            <translation><!-- Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Responded</masterLabel>
+            <translation><!-- Responded --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MTN --></label>
+        <name>CCPM_mobileNumber__c</name>
+    </fields>
+    <layouts>
+        <layout>CCPM Journey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Send Details --></label>
+            <section>SMS Send Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

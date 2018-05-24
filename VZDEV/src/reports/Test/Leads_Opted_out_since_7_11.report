@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$Id</field>
+    </columns>
+    <columns>
+        <field>Account$CCPM_mobileNumber__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r.Activities$Subject</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r.Activities$Description</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$Subject</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Text Message Received</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$Description</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>x,X</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r$CCPM_SMSResponseReceivedDateTime__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>7/11/2017 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$CCPM_SMSOptOut__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$CCPM_SMSOptOut__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Leads__r$CCPM_SMSOptOut__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Leads Opted out since 7/11</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CCPM_AccountsWithLeadsAndActivities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

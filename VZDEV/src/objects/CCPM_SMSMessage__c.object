@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>An custom SMS message to store the details of sms messages sent</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CCPM_BDParsed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is BDParsed?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_IsBDParsedConsumer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field determines whether the Consumer has processed the template</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field determines whether the Consumer has processed the template</inlineHelpText>
+        <label>Is BDParsed Consumer?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_LiveTextNumber__c</fullName>
+        <description>Stores the Live Text Number Used.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the Live Text Number Used.</inlineHelpText>
+        <label>Live Text Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_MessageStatus__c</fullName>
+        <description>Refers to the status of the Message sent based on response code.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the status of the Message sent based on response code.</inlineHelpText>
+        <label>Message Status</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Queued</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Resend Failed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Removed</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CCPM_SMSFailCounter__c</fullName>
+        <defaultValue>&apos;0&apos;</defaultValue>
+        <description>Counter that holds the number of times the SMS failed to be sent.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>SMS Fail Counter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_ScheduleDateTime__c</fullName>
+        <description>Refers to the Date/Time the SMS is to be sent.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the Date/Time the SMS is to be sent.</inlineHelpText>
+        <label>Schedule Date/Time</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_addedToQueuePostGres__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is an indication of whether a record has been added to the Queue in Heroku.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is an indication of whether a record has been added to the Queue in Heroku.</inlineHelpText>
+        <label>Added To Queue PostGres</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_addedtoqueueDateTime__c</fullName>
+        <description>This field stores the date/time when the SMS is added to the queue in Heroku</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field stores the date/time when the SMS is added to the queue in Heroku</inlineHelpText>
+        <label>Addded to queue Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_communicationDirection__c</fullName>
+        <description>Refers tot the communication Direction.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers tot the communication Direction.</inlineHelpText>
+        <label>Communication Direction</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inbound</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Outbound</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CCPM_dynamicDate__c</fullName>
+        <description>Stores the dynamic date value to be entered into the SMS Message</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the dynamic date value to be entered into the SMS Message</inlineHelpText>
+        <label>Dynamic Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_dynamicECODE__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Dynamic ECODE</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_dynamicLeadOwnerName__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Dynamic Lead Owner Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_dynamicStoreName__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Dynamic Store Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_dynamicStoreRecommendedHrs__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Dynamic Store Recommended Hours</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_dynamicURL__c</fullName>
+        <description>field to populate URL to send messages to IphoneX</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>field to populate URL to send messages to IphoneX</inlineHelpText>
+        <label>Dynamic URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_formattedSMSBody__c</fullName>
+        <description>Formats the body of SMS, by replacing SPACE with PLUS (+) sign</description>
+        <externalId>false</externalId>
+        <formula>&apos;Hi&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Formatted SMS Body</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_formattedtoPhone__c</fullName>
+        <externalId>false</externalId>
+        <formula>SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE( 
+SUBSTITUTE( CCPM_toPhoneNumber__c, &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;)</formula>
+        <label>Formatted To Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_internalCommunication__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Refers whether the communication is within Verizon network.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers whether the communication is within Verizon network.</inlineHelpText>
+        <label>Internal Communication</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_journeyMessage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Journey Message</label>
+        <referenceTo>CCPM_journeyMessage__c</referenceTo>
+        <relationshipLabel>SMS Messages</relationshipLabel>
+        <relationshipName>CCPM_SMSMessages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadRecord__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Refers to the associated lead.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the associated lead.</inlineHelpText>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>SMS Messages</relationshipLabel>
+        <relationshipName>SMS_Message_Sent</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadType__c</fullName>
+        <description>Lead type from lead record</description>
+        <externalId>false</externalId>
+        <formula>TEXT(CCPM_leadRecord__r.CCPM_leadType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lead Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_messageType__c</fullName>
+        <description>Indicates the type of SMS being sent.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the type of SMS being sent.</inlineHelpText>
+        <label>Message Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_message__c</fullName>
+        <description>Message body to be sent.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Message body to be sent.</inlineHelpText>
+        <label>Message</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_priority__c</fullName>
+        <externalId>false</externalId>
+        <label>priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Immediate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>As Scheduled</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CCPM_referenceId__c</fullName>
+        <description>Reference ID for each of the SMS sent.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Reference ID for each of the SMS sent.</inlineHelpText>
+        <label>Reference Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_removedByLocationSetting__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Removed By Location Setting</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_requestID__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>RequestID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_responseCode__c</fullName>
+        <description>Response codes recorded for each API call made</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Response Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_responseMessage__c</fullName>
+        <description>Captures the Response Message for the Heywire API callout made.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Captures the Response Message for the Heywire API callout made.</inlineHelpText>
+        <label>Response Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_sentTo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Provides the User to whom the SMS is sent(If user is internal Verizon User).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provides the User to whom the SMS is sent(If user is internal Verizon User).</inlineHelpText>
+        <label>Sent To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CCPM_SMSMessagesSentTo</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_smsTemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SMS Template</label>
+        <referenceTo>CCPM_smsTemplate__c</referenceTo>
+        <relationshipLabel>SMS Messages</relationshipLabel>
+        <relationshipName>CCPM_smsMessages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_smssentactualtime__c</fullName>
+        <description>This field stores the time the SMS was actually sent out from Heroku</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field stores the time the SMS was actually sent out from Heroku</inlineHelpText>
+        <label>SMS Sent Actual Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_toPhoneNumber__c</fullName>
+        <description>Refers to the number the SMS should be sent.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the number the SMS should be sent.</inlineHelpText>
+        <label>To Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>ccpm_smstimezone__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(TEXT(CCPM_leadRecord__r.Store__r.CCPM_TimeZone__c)!=null,TEXT(CCPM_leadRecord__r.Store__r.CCPM_TimeZone__c),&apos;EST&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SMS TimeZone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>SMS Message</label>
+    <listViews>
+        <fullName>CCPM_allFailedSMSMessages</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_LiveTextNumber__c</columns>
+        <columns>CCPM_toPhoneNumber__c</columns>
+        <columns>CCPM_leadRecord__c</columns>
+        <columns>CCPM_message__c</columns>
+        <columns>CCPM_messageType__c</columns>
+        <columns>CCPM_communicationDirection__c</columns>
+        <columns>CCPM_MessageStatus__c</columns>
+        <columns>CCPM_responseCode__c</columns>
+        <columns>CCPM_ScheduleDateTime__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CCPM_MessageStatus__c</field>
+            <operation>equals</operation>
+            <value>Error</value>
+        </filters>
+        <label>04. All Failed SMS Messages</label>
+    </listViews>
+    <listViews>
+        <fullName>CCPM_allRemovedSMSMessages</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_LiveTextNumber__c</columns>
+        <columns>CCPM_toPhoneNumber__c</columns>
+        <columns>CCPM_leadRecord__c</columns>
+        <columns>CCPM_message__c</columns>
+        <columns>CCPM_messageType__c</columns>
+        <columns>CCPM_communicationDirection__c</columns>
+        <columns>CCPM_MessageStatus__c</columns>
+        <columns>CCPM_responseCode__c</columns>
+        <columns>CCPM_ScheduleDateTime__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CCPM_MessageStatus__c</field>
+            <operation>equals</operation>
+            <value>Removed</value>
+        </filters>
+        <label>05. All Removed SMS Messages</label>
+    </listViews>
+    <listViews>
+        <fullName>CCPM_allSendSMSMessages</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_LiveTextNumber__c</columns>
+        <columns>CCPM_toPhoneNumber__c</columns>
+        <columns>CCPM_leadRecord__c</columns>
+        <columns>CCPM_message__c</columns>
+        <columns>CCPM_messageType__c</columns>
+        <columns>CCPM_communicationDirection__c</columns>
+        <columns>CCPM_MessageStatus__c</columns>
+        <columns>CCPM_responseCode__c</columns>
+        <columns>CCPM_ScheduleDateTime__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CCPM_MessageStatus__c</field>
+            <operation>equals</operation>
+            <value>Sent</value>
+        </filters>
+        <label>03. All Sent SMS Messages</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SMS-{000000000}</displayFormat>
+        <label>SMS Message #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SMS Messages</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

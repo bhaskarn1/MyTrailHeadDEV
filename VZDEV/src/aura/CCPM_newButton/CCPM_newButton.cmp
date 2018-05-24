@@ -1,0 +1,25 @@
+<aura:component controller="CCPM_getLeadStatus" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId,force:lightningQuickAction,force:appHostable" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="iscurrentUserhavingPermission" type="boolean" default="true" />
+    <aura:if isTrue="{!v.iscurrentUserhavingPermission}">   
+        <div style="height: 28px;margin-top: -4px;">
+            <div aria-labelledby="newprospectform" class="slds-float_left">
+                <ui:button label="New Prospect"
+                           class="slds-button slds-button--neutral customclasscc"
+                           
+                           press="{!c.navigateToMyComponent}">
+                    
+                    <div class="subtextcc">(New Customer)</div>
+                </ui:button>
+                
+                <ui:button label="New Lead"
+                           class="slds-button slds-button--neutral customclasscc"
+                           
+                           press="{!c.navigateToMyComponent}">
+                    
+                    <div class="subtextcc">(Existing Customer)</div>
+                </ui:button>   
+            </div>        
+        </div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RE Criteria</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RE Criterias</value>
+    </caseValues>
+    <fields>
+        <label><!-- RE Criteria ID --></label>
+        <name>CCPM_RE_Criteria_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record --></label>
+        <name>CCPM_Record__c</name>
+        <relationshipLabel><!-- Criterias --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>CCPM_fieldName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Type --></label>
+        <name>CCPM_fieldType__c</name>
+        <picklistValues>
+            <masterLabel>Boolean</masterLabel>
+            <translation><!-- Boolean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Date</masterLabel>
+            <translation><!-- Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double</masterLabel>
+            <translation><!-- Double --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Text</masterLabel>
+            <translation><!-- Text --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Operator --></label>
+        <name>CCPM_operator__c</name>
+        <picklistValues>
+            <masterLabel>Contains</masterLabel>
+            <translation><!-- Contains --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does Not Contain</masterLabel>
+            <translation><!-- Does Not Contain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ends With</masterLabel>
+            <translation><!-- Ends With --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equals</masterLabel>
+            <translation><!-- Equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater Or Equal</masterLabel>
+            <translation><!-- Greater Or Equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater Than</masterLabel>
+            <translation><!-- Greater Than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Is Not Null</masterLabel>
+            <translation><!-- Is Not Null --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Is Null</masterLabel>
+            <translation><!-- Is Null --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less Or Equal</masterLabel>
+            <translation><!-- Less Or Equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less Than</masterLabel>
+            <translation><!-- Less Than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Equal To</masterLabel>
+            <translation><!-- Not Equal To --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starts With</masterLabel>
+            <translation><!-- Starts With --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rule --></label>
+        <name>CCPM_rule__c</name>
+        <relationshipLabel><!-- Criterias --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Value Date --></label>
+        <name>CCPM_valueDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value Double --></label>
+        <name>CCPM_valueDouble__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value Text --></label>
+        <name>CCPM_valueText__c</name>
+    </fields>
+    <layouts>
+        <layout>MF Criteria Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

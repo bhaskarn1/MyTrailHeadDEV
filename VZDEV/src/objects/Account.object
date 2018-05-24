@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnableCustomerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Customer_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewCustomerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>WebsiteHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>CCPM_customerCompactLayout</fullName>
+        <fields>OwnerId</fields>
+        <fields>Name</fields>
+        <fields>CCPM_accountNumber__c</fields>
+        <fields>ParentId</fields>
+        <fields>CCPM_storeID__c</fields>
+        <fields>BillingAddress</fields>
+        <fields>CCPM_mobileNumber__c</fields>
+        <fields>CCPM_email__c</fields>
+        <fields>CCPM_SMSOptOut__c</fields>
+        <label>CCPM Customer Compact Layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <fields>
+        <fullName>AccountNumber</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>AccountSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>AnnualRevenue</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BillingAddress</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CCPM_NPSCategory__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Based on the NPS score; Promoter, Passive, Detractor</inlineHelpText>
+        <label>Category</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_NPSComments__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Comments from the customer that filled out the NPS survey</inlineHelpText>
+        <label>NPS Comments</label>
+        <length>2000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_NPSDateSurveyCompleted__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Date Survey Completed</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_NPSScore__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Net Promoter Score last entered from the account</inlineHelpText>
+        <label>NPS Score</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_NPSmobileNumber__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>MTN of the line that completed the survey for the account</inlineHelpText>
+        <label>Survey MTN</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_SMSOptOut__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This individual has indicated they do not want to receive SMS communications from Verizon.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This individual has indicated they do not want to receive SMS communications from Verizon.</inlineHelpText>
+        <label>Do Not SMS</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_SalesforceOptOutDateTime__c</fullName>
+        <description>Salesforce Opt Out Date Time</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Salesforce Opt Out Date Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_accountNumber__c</fullName>
+        <encrypted>true</encrypted>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <length>20</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_accountUniqueID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique identifier of customer generated in Staging(Oracle) based on Account Number. Unique identifier of customer generated in staging(Oracle) based on account number. This unique identifier will always be same based on account number so that we can use this key for upsert logic</description>
+        <encrypted>false</encrypted>
+        <externalId>true</externalId>
+        <label>Account Unique ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_averageMargin__c</fullName>
+        <description>1-100 decile to indicate average margin</description>
+        <externalId>false</externalId>
+        <label>Average Margin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_channelPreference__c</fullName>
+        <description>Preferred channel of the customer</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Channel Preference</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_customerScore__c</fullName>
+        <description>This field contains the score of the customer</description>
+        <externalId>false</externalId>
+        <label>Customer Score</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_doNotSMSFlag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to track history of change to &quot;Do Not SMS&quot; field. When &quot;Do Not SMS&quot; is set to TRUE, this field will get populated with value of &quot;Do Not SMS&quot;</description>
+        <externalId>false</externalId>
+        <label>Do Not SMS Flag</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_email__c</fullName>
+        <encrypted>true</encrypted>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_hasOptedOutOfCall__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This individual has indicated they do not want to receive phone calls from Verizon.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This individual has indicated they do not want to receive phone calls from Verizon.</inlineHelpText>
+        <label>Do Not Call</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_hasOptedOutOfEmail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This individual has indicated they do not want to receive email communications from Verizon.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This individual has indicated they do not want to receive email communications from Verizon.</inlineHelpText>
+        <label>Do Not Email</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_isOutOfContract__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag to indicate customer is free from contract</description>
+        <externalId>false</externalId>
+        <label>Out of Contract</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_isPaymentOverdue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag to indicate payment overdue</description>
+        <externalId>false</externalId>
+        <label>Payment Overdue</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_isVisionAccount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>this box is checked when account is saved from Vision</description>
+        <externalId>false</externalId>
+        <label>VisionAccount?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_mobileNumber__c</fullName>
+        <encrypted>true</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Owner’s MTN</inlineHelpText>
+        <label>MTN</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_storeID__c</fullName>
+        <description>Unique ID of nearest store / outlet</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Nearest store ID to the account owner</inlineHelpText>
+        <label>Nearest Store ID</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_store__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Based on the individual&apos;s address, this is their geographically closest Verizon store.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Nearest store to the account owner</inlineHelpText>
+        <label>Nearest Store</label>
+        <referenceTo>CCPM_Store__c</referenceTo>
+        <relationshipLabel>Customers</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_upgradePropensity__c</fullName>
+        <description>1-100 decile to iddicate propensity to upgrade</description>
+        <externalId>false</externalId>
+        <label>Upgrade Propensity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Industry</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsCustomerPortal</fullName>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>LiveText__Active__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <encrypted>true</encrypted>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>NumberOfEmployees</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ownership</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Rating</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ShippingAddress</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Sic</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>SicDesc</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Site</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TickerSymbol</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Website</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>domain__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Domain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>CCPM_myCustomers</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CCPM_accountNumber__c</columns>
+        <columns>CCPM_mobileNumber__c</columns>
+        <columns>CCPM_email__c</columns>
+        <columns>CCPM_SMSOptOut__c</columns>
+        <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+        <columns>CCPM_store__c</columns>
+        <columns>CCPM_storeID__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Customers</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>ACCOUNT.SITE</columns>
+        <columns>ACCOUNT.ADDRESS1_STATE</columns>
+        <columns>ACCOUNT.PHONE1</columns>
+        <columns>ACCOUNT.TYPE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ACCOUNT.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CCPM_customerAccount</fullName>
+        <active>true</active>
+        <description>Customer Account - Individual / Household</description>
+        <label>Customer Account</label>
+        <picklistValues>
+            <picklist>AccountSource</picklist>
+            <values>
+                <fullName>ACSS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-DESK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-GGDESK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-GGMOB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-GGTAB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-MAPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-MDOT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-MIPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATG-ECOM-TDOT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOTCOM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EROES</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MFRAPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NETACE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NR-APDT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NR-APPL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NR-BBDT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NR-BEST</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NR-TARG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONEPOS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>POS-Store Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote-Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quote-Telesales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SALESFORCE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CCPM_daysOfWeek</picklist>
+            <values>
+                <fullName>Friday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saturday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sunday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Thursday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tuesday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wednesday</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CCPM_openingAndClosingTimeRange</picklist>
+            <values>
+                <fullName>01%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>01%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A00 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 AM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12%3A30 PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>17%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>19%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>21%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>22%3A30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23%3A00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>23%3A30</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biotechnology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Communications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Energy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food %26 Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recreation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transportation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ownership</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Subsidiary</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rating</picklist>
+            <values>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integrator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Investor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Press</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_accountNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_store__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_SMSOptOut__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_email__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_hasOptedOutOfEmail__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_hasOptedOutOfCall__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.ADDRESS1_CITY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.ADDRESS1_STATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.ADDRESS1_ZIP</customTabListAdditionalFields>
+        <excludedStandardButtons>DiscoveryGetAccountsAction</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_accountNumber__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_store__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_SMSOptOut__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_email__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_hasOptedOutOfEmail__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_hasOptedOutOfCall__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.ADDRESS1_CITY</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.ADDRESS1_STATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.ADDRESS1_ZIP</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_accountNumber__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_store__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_SMSOptOut__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_email__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_hasOptedOutOfEmail__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_hasOptedOutOfCall__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.ADDRESS1_CITY</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.ADDRESS1_STATE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.ADDRESS1_ZIP</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_accountNumber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_store__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_SMSOptOut__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_email__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_hasOptedOutOfEmail__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_hasOptedOutOfCall__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_CITY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_STATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.ADDRESS1_ZIP</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>CCPM_validateAccountUpdatePrivilege</fullName>
+        <active>true</active>
+        <description>Validation rules to prevent update of certain fields (Account Holder, Account Number &amp; SMS Opt From True to FALSE by reps &amp; managers</description>
+        <errorConditionFormula>AND(
+    OR( 
+       AND( 
+           ISCHANGED(CCPM_SMSOptOut__c), 
+           PRIORVALUE(CCPM_SMSOptOut__c ) = TRUE 
+       ), 
+       ISCHANGED(Name), 
+       ISCHANGED(CCPM_accountNumber__c)
+      ),
+      $Profile.Name = &apos;CCPM Sales Rep&apos; 
+)</errorConditionFormula>
+        <errorMessage>You cannot edit the &apos;Do Not SMS&apos; flag once it has been ticked, or change the values in any of the other fields. If required, please contact your System Administrator for assistance.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>AltavistaNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Altavista News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://news.altavista.com/search?nc=0&amp;q={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Account_BillingStreet}+{!Account_BillingCity}+{!Account_BillingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Account_Name}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>HooversProfile</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Hoovers Profile</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://search.hoovers.com/cgi-bin/hol_search?which=company&amp;query_string={!Account_Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LiveText__Opt_in_for_Text_Messages_list</fullName>
+        <availability>online</availability>
+        <description>This button is for List View</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Opt-in for Text Messages</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+			{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+			{!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)}; 
+
+			var records = {!GETRECORDIDS($ObjectType.Account)}; 
+			if (records[0] == null) 
+			{ 
+				alert(&quot;Please select at least one account&quot;) 
+			} 
+			else{ 
+				var packagePrefix = &quot;LiveText__&quot;; 
+				var recordType = &quot;account&quot;; 
+				var recordIds = &quot;&quot;; 
+				var optOutField = &apos;&apos;; 
+				var optOutDefaultValue = &apos;yes&apos;; 
+				var smsType = &apos;&apos;; 
+				var userId = &apos;{!$User.Id}&apos;; 
+				var elementIdVar = &apos;&apos;; 
+				var showUserDropDown = false; 
+				var dialogTitle = &apos;&apos;; 
+				var queryString = &apos;&apos;; 
+
+				for (var n in records) { 
+					if(n == &apos;remove&apos; || n == &apos;indexOf&apos;) continue; 
+					recordIds = recordIds + records[n]; 
+				
+					if (n != records.length-1) { 
+						recordIds = recordIds + &quot;,&quot;; 
+					} 
+				} 
+
+				var e = document.querySelector(&apos;select[name$=&quot;fcf&quot;]&apos;);
+				var selectedView = e.options[e.selectedIndex].value; 
+				
+				var returnURL = &apos;/001?fcf=&apos;+ selectedView + &apos;&amp;rolodexIndex=-1&amp;page=1&apos;; 
+
+				var urlStart =  &apos;https://&apos;+window.location.hostname+&apos;/apex/LiveText__LiveTextOptinStatusPage?recordType=&apos;+recordType +
+				 				&apos;&amp;records=&apos;+recordIds+&apos;&amp;retURL=&apos;+returnURL; 
+
+				if(sforce.console.isInConsole()) { 
+					sforce.console.openPrimaryTab(null,urlStart + &apos;&amp;inConsole=yes&amp;optType=1&apos;, true, &apos;Opt-in for Text Messages&apos;); 
+				}else{ 
+					window.top.location.href = urlStart + &apos;&amp;inConsole=no&amp;optType=1&apos;; 
+				} 
+			}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LiveText__Opt_out_for_Text_Messages_list</fullName>
+        <availability>online</availability>
+        <description>This button is for List View</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Opt-out for Text Messages</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+			{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+			{!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)}; 
+
+			var records = {!GETRECORDIDS($ObjectType.Account)}; 
+			if (records[0] == null) 
+			{ 
+				alert(&quot;Please select at least one account&quot;) 
+			} 
+			else{ 
+				var packagePrefix = &quot;LiveText__&quot;; 
+				var recordType = &quot;account&quot;; 
+				var recordIds = &quot;&quot;; 
+				var optOutField = &apos;&apos;; 
+				var optOutDefaultValue = &apos;yes&apos;; 
+				var smsType = &apos;&apos;; 
+				var userId = &apos;{!$User.Id}&apos;; 
+				var elementIdVar = &apos;&apos;; 
+				var showUserDropDown = false; 
+				var dialogTitle = &apos;&apos;; 
+				var queryString = &apos;&apos;; 
+
+				for (var n in records) { 
+					if(n == &apos;remove&apos; || n == &apos;indexOf&apos;) continue; 
+					recordIds = recordIds + records[n]; 
+				
+					if (n != records.length-1) { 
+						recordIds = recordIds + &quot;,&quot;; 
+					} 
+				} 
+
+				var e = document.querySelector(&apos;select[name$=&quot;fcf&quot;]&apos;);
+				var selectedView = e.options[e.selectedIndex].value; 
+				
+				var returnURL = &apos;/001?fcf=&apos;+ selectedView + &apos;&amp;rolodexIndex=-1&amp;page=1&apos;; 
+
+				var urlStart =  &apos;https://&apos;+window.location.hostname+&apos;/apex/LiveText__LiveTextOptinStatusPage?recordType=&apos;+recordType+
+				 				&apos;&amp;records=&apos;+recordIds+&apos;&amp;retURL=&apos;+returnURL; 
+				 				
+				if(sforce.console.isInConsole()) { 
+					sforce.console.openPrimaryTab(null, urlStart + &apos;&amp;inConsole=yes&amp;optType=0&apos;, true, &apos;Opt-out for Text Messages&apos;); 
+				}else{ 
+					window.top.location.href = urlStart + &apos;&amp;inConsole=no&amp;optType=0&apos;; 
+				} 
+			
+				console.log(&apos;Record Ids are &apos;+ recordIds); 
+			}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LiveText__Send_Bulk_SMS</fullName>
+        <availability>online</availability>
+        <description>Sends text message to selected records</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Text to List</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+           {!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+            {!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)}; 
+
+            var records = {!GETRECORDIDS($ObjectType.Contact)}; 
+            var hasShortCodeNumber = sforce.apex.execute(&quot;LiveText.RetrievePreferredPhoneNumber&quot;,&quot;agentHasShortcodeNumberAssigned&quot;,{});
+            if (records[0] == null){ 
+                alert(&quot;Please select at least one contact&quot;);
+            }else if((records.length &gt; 25) &amp;&amp; hasShortCodeNumber==&quot;false&quot;){ 
+                alert(&quot;A maximum of 25 text messages may be sent at once. Please select fewer recipients and try again.&quot;); 
+            } 
+            else{ 
+                var packagePrefix = &quot;LiveText__&quot;; 
+                var recordType = &quot;account&quot;; 
+                var recordIds = &quot;&quot;;
+
+                for (var n in records) { 
+                    if(n == &apos;remove&apos; || n == &apos;indexOf&apos;) continue; 
+                    recordIds = recordIds + records[n]; 
+                    
+                    if (n != records.length-1) { 
+                        recordIds = recordIds + &quot;,&quot;; 
+                    } 
+                }
+
+                var storageId = sforce.apex.execute(&quot;LiveText.RetrievePreferredPhoneNumber&quot;,&quot;saveToStorage&quot;,{stringToSave:recordIds});
+                var urlStart = &apos;https://&apos;+window.location.hostname+&apos;/apex/LiveText__LiveTextBulkSms?recordType=&apos;+recordType+&apos;&amp;storageId=&apos;+storageId; 
+                
+                if(sforce.console.isInConsole()) { 
+                    sforce.console.openPrimaryTab(null, urlStart, true);
+                } else { 
+                    window.top.location.href = urlStart; 
+                } 
+            }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Account_BillingCountry}&amp;csz={!Account_BillingCity}+{!Account_BillingState}+{!Account_BillingPostalCode}+&amp;addr={!Account_BillingAddress}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__ExactTarget_Resubscribe</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Marketing Cloud Resubscribe</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var pacId, didResub;
+try
+{
+pacId=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;}); 
+didResub=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;performResub&quot;, {subscriberKey:pacId,objectType:&quot;contact&quot;});
+}
+catch (e)
+{
+pacId=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;}); 
+didResub=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;performResub&quot;, {subscriberKey:pacId,objectType:&quot;contact&quot;});
+}
+if (didResub==&quot;connection error&quot;)
+{
+alert(&quot;The connection to Marketing Cloud is currently unavailable. Try your request again later. If the problem persists, please contact your system administrator.&quot;);
+}
+else if (didResub==&quot;not found&quot;)
+{
+alert(&quot;This subscriber could not be found in the All Subscriber List in Marketing Cloud. The Email Opt Out flag will not be updated.&quot;);
+}
+else if (didResub==&quot;other error&quot;)
+{
+alert(&quot;An unexpected error has been encountered. The Email Opt Out flag will not be updated.&quot;);
+}
+else if (didResub==&quot;not integrated&quot;)
+{
+alert(&quot;You must be integrated with Marketing Cloud to update an Marketing Cloud subscriber.&quot;);
+}
+else if (didResub==&quot;success&quot;)
+{
+alert(&quot;{!Account.Name} was resubscribed successfully.&quot;);
+} 
+var theUrl=&quot;/{!Account.Id}&quot;;
+parent.location.href=theUrl;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__ExactTarget_Unsubscribe</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Marketing Cloud Unsubscribe</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var pacId, didUnsub;
+try
+{
+pacId=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;}); 
+didUnsub=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;performUnsub&quot;, {subscriberKey:pacId,objectType:&quot;contact&quot;});
+}
+catch (e)
+{
+pacId=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;}); 
+didUnsub=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;performUnsub&quot;, {subscriberKey:pacId,objectType:&quot;contact&quot;});
+}
+if (didUnsub==&quot;connection error&quot;)
+{
+alert(&quot;The connection to Marketing Cloud is currently unavailable. Try your request again later. If the problem persists, please contact your system administrator.&quot;);
+}
+else if (didUnsub==&quot;not found&quot;)
+{
+alert(&quot;This subscriber could not be found in the All Subscriber List in Marketing Cloud. The Email Opt Out flag will not be updated.&quot;);
+}
+else if (didUnsub==&quot;other error&quot;)
+{
+alert(&quot;An unexpected error has been encountered. The Email Opt Out flag will not be updated.&quot;);
+}
+else if (didUnsub==&quot;not integrated&quot;)
+{
+alert(&quot;You must be integrated with Marketing Cloud to update an Marketing Cloud subscriber.&quot;);
+}
+else if (didUnsub==&quot;success&quot;)
+{
+alert(&quot;{!Account.Name} was unsubscribed successfully.&quot;);
+} 
+var theUrl=&quot;/{!Account.Id}&quot;;
+parent.location.href=theUrl;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__Send_ExactTarget_Email</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Marketing Cloud Email</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+try
+{
+var urlPrefix = sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;namespace&quot;, {});
+var pacId=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;});
+var theUrl = &quot;https://&quot;+urlPrefix+&quot;/apex/singleSendETEmail?contactId=&quot;+pacId;
+var npaUrl = parent.location.href;
+if(pacId==&quot;error&quot;)
+{
+parent.location.href = npaUrl;
+}
+else
+{
+parent.location.href = theUrl;
+}
+}
+catch(e)
+{
+var pacId=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;});
+var theUrl = &quot;/apex/singleSendETEmail?contactId=&quot;+pacId;
+var npaUrl = parent.location.href;
+if(pacId==&quot;error&quot;)
+{
+parent.location.href = npaUrl;
+}
+else
+{
+parent.location.href = theUrl;
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__View_ExactTarget_Analytics</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>View Marketing Cloud Analytics</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+try
+{
+var urlPrefix = sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;namespace&quot;, {});
+var pacId=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;});
+var theUrl = &quot;https://et4ae5.&quot;+urlPrefix+&quot;/apex/SubscriberAnalytics?id=&quot;+pacId+&quot;&amp;obj=contact&quot;;
+var npaUrl = parent.location.href;
+if(pacId==&quot;error&quot;)
+{
+parent.location.href = npaUrl;
+}
+else
+{
+parent.location.href = theUrl;
+}
+}
+catch(e)
+{
+var pacId=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;getPACId&quot;, {acctId:&quot;{!CASESAFEID( Account.Id )}&quot;});
+var theUrl = &quot;/apex/SubscriberAnalytics?id=&quot;+pacId+&quot;&amp;obj=contact&quot;;
+var npaUrl = parent.location.href;
+if(pacId==&quot;error&quot;)
+{
+parent.location.href = npaUrl;
+}
+else
+{
+parent.location.href = theUrl;
+}
+}</url>
+    </webLinks>
+</CustomObject>

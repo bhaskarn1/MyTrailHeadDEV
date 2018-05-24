@@ -1,0 +1,73 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride"
+                controller="CCPM_clickToCallController">
+    
+    <aura:attribute name="objTask"
+                    type="Task"
+                    access="public"/>
+    
+    <aura:attribute name="recordId"
+                    type="Id"/>
+    
+    <aura:attribute name="showCall"
+                    type="Boolean"
+                    default="false"/>
+    
+    <aura:attribute name="statusValues"
+                    type="List"/>
+    
+    <aura:attribute name="noteError"
+                    type="Boolean"
+                    default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+    <c:CCPM_notificationMessage aura:id="notificationMsg"/>
+    
+    <aura:if isTrue="{!v.showCall}">
+        <lightning:icon iconName="action:call" size="small" body="Call In-Progress"/>
+        <span>&nbsp;&nbsp;  Call In-Progress...</span>
+        <br/>
+        <div class="slds">
+            <br/>
+            <fieldset class="slds-form--compound">
+                <div class="form-element__group">
+                    <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size--1-of-2">
+                            <ui:inputDate aura:id="expdate" label="Follow-Up Date" class="form-control"
+                                              value="{!v.objTask.ActivityDate}" displayDatePicker="true"/>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="slds-form--compound">
+                <div class="form-element__group">
+                    <div class="slds-form-element__row">
+                        <div class="slds-form-element slds-size--1-of-2">
+                            <lightning:select name="Status" label="Status" value="{!v.objTask.Status}">
+                                <aura:iteration items="{!v.statusValues}" var="val">
+                                    <option text="{!val}" value="{!val}" label="{!val}" />
+                                </aura:iteration>
+                            </lightning:select>
+                        </div>
+                        <div class="slds-form-element slds-size--1-of-2">
+                            <lightning:input aura:id="subjectId" type="text" label="Subject" 
+                                             	value="{!v.objTask.Subject}" 
+                                              required="true" disabled="false"/>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <lightning:textarea label="Notes" value="{!v.objTask.CCPM_notes__c}" 
+                                 aura:id="notesId" required="true"/>
+            <lightning:textarea label="Next Steps" value="{!v.objTask.CCPM_nextSteps__c}"
+                                placeholder="{!$Label.c.CCPM_nextSteps}"/>
+
+            <lightning:button label="Save" name="save" variant="brand" onclick="{!c.updateTask}"
+                              class="slds-float_right"/>
+        </div>
+    </aura:if>
+    
+    <lightning:spinner aura:id="spinnerId" size="large" title="Connecting to Call" variant="brand"/>
+
+</aura:component>

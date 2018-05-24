@@ -1,0 +1,10 @@
+Dear {!Case.SuppliedName},   
+
+Your Case has been closed.
+
+Feel free to reply to this email if you have any question related to your issue.
+
+Thank you,   
+Customer Advocate Team  {!Organization.Name}
+
+{!Case.Thread_Id}

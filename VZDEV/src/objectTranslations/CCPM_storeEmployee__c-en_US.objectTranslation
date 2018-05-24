@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Store Employee</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Store Employees</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active ? --></label>
+        <name>CCPM_IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsUpdateFlag --></label>
+        <name>CCPM_IsUpdateFlag__c</name>
+    </fields>
+    <fields>
+        <label><!-- PreviousRole --></label>
+        <name>CCPM_PreviousRole__c</name>
+        <picklistValues>
+            <masterLabel>Assistant Manager</masterLabel>
+            <translation><!-- Assistant Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Rep</masterLabel>
+            <translation><!-- Sales Rep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Store Manager</masterLabel>
+            <translation><!-- Store Manager --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Store ID --></label>
+        <name>CCPM_StoreID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store --></label>
+        <name>CCPM_Store__c</name>
+        <relationshipLabel><!-- Store Employees --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Employee --></label>
+        <name>CCPM_employee__c</name>
+        <relationshipLabel><!-- Store Employees --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Is Store Active --></label>
+        <name>CCPM_isStoreActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- PreviousIsActive --></label>
+        <name>CCPM_previousactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>CCPM_role__c</name>
+        <picklistValues>
+            <masterLabel>Assistant Manager</masterLabel>
+            <translation><!-- Assistant Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Rep</masterLabel>
+            <translation><!-- Sales Rep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Store Manager</masterLabel>
+            <translation><!-- Store Manager --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Store Source --></label>
+        <name>CCPM_storeSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique ID --></label>
+        <name>CCPM_uniqueID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Store Employee ID --></label>
+        <name>CCPM_uniqueStoreEmployeeID__c</name>
+    </fields>
+    <fields>
+        <label><!-- isactivetest --></label>
+        <name>isactivetest__c</name>
+    </fields>
+    <layouts>
+        <layout>CCPM Store Employee Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

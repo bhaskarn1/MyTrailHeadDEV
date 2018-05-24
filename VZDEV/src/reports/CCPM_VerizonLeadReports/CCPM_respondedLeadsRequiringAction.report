@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>l</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Lead.CCPM_Name__c</field>
+        </columns>
+        <columns>
+            <field>Lead.CCPM_mobileNumber__c</field>
+        </columns>
+        <columns>
+            <field>DESCRIPTION</field>
+        </columns>
+        <columns>
+            <field>LEAD_OWNER</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>LEAD_STATUS</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Responded</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Lead.CCPM_leadSubStatus__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Action Required</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Activity.CCPM_communicationDirection__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Inbound</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Leads Requiring Action</name>
+        <params>
+            <name>closed</name>
+            <value>all</value>
+        </params>
+        <params>
+            <name>type</name>
+            <value>t</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>LeadActivity</reportType>
+        <scope>organization</scope>
+        <timeFrameFilter>
+            <dateColumn>DUE_DATE</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>l</joinTable>
+    </blockInfo>
+    <description>All leads where the status is Responded - Action Required, and require an action to move them to a qualified state.</description>
+    <format>MultiBlock</format>
+    <name>Responded Leads Requiring Action</name>
+    <reportType>LeadActivity</reportType>
+    <showDetails>true</showDetails>
+</Report>

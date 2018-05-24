@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Closed Lead Channel Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Closed Lead Channel Settings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Closed Lead Channel Value --></label>
+        <name>CCPM_closedLeadChannelValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed Lead Source Values --></label>
+        <name>CCPM_closedLeadSourceValues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Status Values --></label>
+        <name>CCPM_leadStatusValues__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

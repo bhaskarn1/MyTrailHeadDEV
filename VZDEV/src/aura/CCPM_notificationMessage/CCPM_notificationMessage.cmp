@@ -1,0 +1,22 @@
+<aura:component >
+	
+    <aura:attribute name="variant"
+                    type="String"
+                    access="public"
+                    required="false"/>
+    
+    <aura:attribute name="header"
+                    type="String"
+                    access="public"
+                    required="false"/>
+    
+    <aura:attribute name="message"
+                    type="String"
+                    access="public"
+                    required="false"/>
+    
+    <aura:method name="init" action="{!c.init}"/>
+    
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+
+</aura:component>

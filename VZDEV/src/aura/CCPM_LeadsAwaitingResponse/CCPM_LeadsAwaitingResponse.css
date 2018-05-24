@@ -1,0 +1,68 @@
+.cCCPM_LeadsAwaitingResponse .ld-rep-select {
+    width:65%;
+    display: inline-block;
+    max-width:200px;
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-rep-select .slds-form-element__label{
+    display: none;   
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-rep-button {
+    width:32%;
+    margin-left:3%;
+    line-height: 15px;
+    padding: 4px;
+    max-width:100px;
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-std-lineht {
+    line-height: 13px;
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-short-resp{
+    width:75%;
+    width: calc(100% - 36px);
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-short-resp-icon {
+    line-height: 13px;
+    margin-left:7px;
+    cursor:pointer;
+    position:relative;
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-fixed-transform-override tbody{
+       -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; 
+}
+
+.cCCPM_LeadsAwaitingResponse .slds-table td, .cCCPM_LeadsAwaitingResponse .slds-table th{
+    min-width:70px;
+    max-width:135px;
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-table-hd{
+	height:34px;
+    text-transform: uppercase;  
+    font-size:13px;
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-tbl-row{
+	height:34px; 
+}
+
+.cCCPM_LeadsAwaitingResponse .ld-sub-hdn-column{
+	padding-left:35px; 
+}
+
+.cCCPM_LeadsAwaitingResponse   .ld-header-column:hover{
+	/*color:rgb(0, 112, 210);*/
+}
+
+.cCCPM_LeadsAwaitingResponse   .ld-red-link{
+	color:rgb(0, 112, 210);
+}

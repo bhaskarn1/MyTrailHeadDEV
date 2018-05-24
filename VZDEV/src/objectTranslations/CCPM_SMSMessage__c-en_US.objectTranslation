@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SMS Message</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SMS Messages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Is BDParsed? --></label>
+        <name>CCPM_BDParsed__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field determines whether the Consumer has processed the template --></help>
+        <label><!-- Is BDParsed Consumer? --></label>
+        <name>CCPM_IsBDParsedConsumer__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the Live Text Number Used. --></help>
+        <label><!-- Live Text Number --></label>
+        <name>CCPM_LiveTextNumber__c</name>
+    </fields>
+    <fields>
+        <help><!-- Refers to the status of the Message sent based on response code. --></help>
+        <label><!-- Message Status --></label>
+        <name>CCPM_MessageStatus__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued</masterLabel>
+            <translation><!-- Queued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Removed</masterLabel>
+            <translation><!-- Removed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resend Failed</masterLabel>
+            <translation><!-- Resend Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SMS Fail Counter --></label>
+        <name>CCPM_SMSFailCounter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Refers to the Date/Time the SMS is to be sent. --></help>
+        <label><!-- Schedule Date/Time --></label>
+        <name>CCPM_ScheduleDateTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is an indication of whether a record has been added to the Queue in Heroku. --></help>
+        <label><!-- Added To Queue PostGres --></label>
+        <name>CCPM_addedToQueuePostGres__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field stores the date/time when the SMS is added to the queue in Heroku --></help>
+        <label><!-- Addded to queue Date/Time --></label>
+        <name>CCPM_addedtoqueueDateTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Refers tot the communication Direction. --></help>
+        <label><!-- Communication Direction --></label>
+        <name>CCPM_communicationDirection__c</name>
+        <picklistValues>
+            <masterLabel>Inbound</masterLabel>
+            <translation><!-- Inbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound</masterLabel>
+            <translation><!-- Outbound --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Stores the dynamic date value to be entered into the SMS Message --></help>
+        <label><!-- Dynamic Date --></label>
+        <name>CCPM_dynamicDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dynamic ECODE --></label>
+        <name>CCPM_dynamicECODE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dynamic Lead Owner Name --></label>
+        <name>CCPM_dynamicLeadOwnerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dynamic Store Name --></label>
+        <name>CCPM_dynamicStoreName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dynamic Store Recommended Hours --></label>
+        <name>CCPM_dynamicStoreRecommendedHrs__c</name>
+    </fields>
+    <fields>
+        <help><!-- field to populate URL to send messages to IphoneX --></help>
+        <label><!-- Dynamic URL --></label>
+        <name>CCPM_dynamicURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formatted SMS Body --></label>
+        <name>CCPM_formattedSMSBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Formatted To Phone --></label>
+        <name>CCPM_formattedtoPhone__c</name>
+    </fields>
+    <fields>
+        <help><!-- Refers whether the communication is within Verizon network. --></help>
+        <label><!-- Internal Communication --></label>
+        <name>CCPM_internalCommunication__c</name>
+    </fields>
+    <fields>
+        <label><!-- Journey Message --></label>
+        <name>CCPM_journeyMessage__c</name>
+        <relationshipLabel><!-- SMS Messages --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Refers to the associated lead. --></help>
+        <label><!-- Lead --></label>
+        <name>CCPM_leadRecord__c</name>
+        <relationshipLabel><!-- SMS Messages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead Type --></label>
+        <name>CCPM_leadType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the type of SMS being sent. --></help>
+        <label><!-- Message Type --></label>
+        <name>CCPM_messageType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Message body to be sent. --></help>
+        <label><!-- Message --></label>
+        <name>CCPM_message__c</name>
+    </fields>
+    <fields>
+        <label><!-- priority --></label>
+        <name>CCPM_priority__c</name>
+        <picklistValues>
+            <masterLabel>As Scheduled</masterLabel>
+            <translation><!-- As Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Immediate</masterLabel>
+            <translation><!-- Immediate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Reference ID for each of the SMS sent. --></help>
+        <label><!-- Reference Id --></label>
+        <name>CCPM_referenceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Removed By Location Setting --></label>
+        <name>CCPM_removedByLocationSetting__c</name>
+    </fields>
+    <fields>
+        <label><!-- RequestID --></label>
+        <name>CCPM_requestID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Code --></label>
+        <name>CCPM_responseCode__c</name>
+    </fields>
+    <fields>
+        <help><!-- Captures the Response Message for the Heywire API callout made. --></help>
+        <label><!-- Response Message --></label>
+        <name>CCPM_responseMessage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provides the User to whom the SMS is sent(If user is internal Verizon User). --></help>
+        <label><!-- Sent To --></label>
+        <name>CCPM_sentTo__c</name>
+        <relationshipLabel><!-- SMS Messages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SMS Template --></label>
+        <name>CCPM_smsTemplate__c</name>
+        <relationshipLabel><!-- SMS Messages --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field stores the time the SMS was actually sent out from Heroku --></help>
+        <label><!-- SMS Sent Actual Time --></label>
+        <name>CCPM_smssentactualtime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Refers to the number the SMS should be sent. --></help>
+        <label><!-- To Phone Number --></label>
+        <name>CCPM_toPhoneNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS TimeZone --></label>
+        <name>ccpm_smstimezone__c</name>
+    </fields>
+    <layouts>
+        <layout>CCPM SMSMessages Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dynamic field values --></label>
+            <section>Dynamic field values</section>
+        </sections>
+        <sections>
+            <label><!-- Message Information --></label>
+            <section>Message Information</section>
+        </sections>
+        <sections>
+            <label><!-- Status Information --></label>
+            <section>Status Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

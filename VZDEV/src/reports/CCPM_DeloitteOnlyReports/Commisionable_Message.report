@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>CCPM_SMSMessage__c.CCPM_message__c</field>
+    </columns>
+    <description>List of Messages with type CommissionableSMS</description>
+    <filter>
+        <criteriaItems>
+            <column>CCPM_SMSMessage__c.CCPM_messageType__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>CommissionableSMS</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Commisionable Message</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$CCPM_SMSMessage__c@CCPM_SMSMessage__c.CCPM_leadRecord__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_$Lead.CCPM_Converted_Date__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,7 @@
+<apex:page sidebar="false" showHeader="false" cache="false" id="pageID" title="Print Metadata Search Results" applyHtmlTag="false" readOnly="true">
+    <apex:stylesheet value="{!$Resource.MetaDataSearch__Print}"/>
+     <div class="printControls" style="float:right;margin-right:20px;margin-top:3px;">
+         <small><a href="javascript:window.close%28%29%3B">Close Window</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:window.print%28%29%3B">Print This Page</a></small>
+    </div>  
+    <c:SearchResultsComponentWithExport id="inlineComponentID" />
+</apex:page>

@@ -1,0 +1,183 @@
+<apex:page standardController="LiveText__OptInStatus__c" extensions="LiveText.LiveTextOptinStatusController" showHeader="true" sidebar="true">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <c:ScriptsComponent id="scmp" />
+    <apex:stylesheet value="{!URLFOR($Resource.LiveText__SLDS202, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <script type="text/javascript">
+        //This function is called when user clicks on done button on the page and it closes the primary tab if user is in console otherwise
+        // delegate the call to controller.
+        function doneCustomJS(){
+            if(sforce.console.isInConsole()){
+                sforce.console.getEnclosingPrimaryTabId(function(result){
+                        sforce.console.closeTab(result.id);
+                    }
+                );
+            }else{
+                doneCustomController();
+            }
+        }
+        //This function is called when user clicks on cancel button on the page and it closes the primary tab if user is in console otherwise
+        // delegate the call to controller.
+        function cancelCustomJS(){
+            if(sforce.console.isInConsole()){
+                sforce.console.getEnclosingPrimaryTabId(function(result){
+                        sforce.console.closeTab(result.id);
+                    }
+                );
+            }else{
+                cancelCustomController();
+            }
+        }
+
+        var numbers;
+        var recipientsIds = [];
+        var choosenChannels =[];
+        function showSpinner(){
+            j$('#spinner').show();
+        }
+        function hideSpinner(){
+            j$('#spinner').hide();
+        }
+        function showInfoPanel(titleMessage, theme){
+            j$('#titleInfoPanel').html(titleMessage);
+            if(theme === 'error'){
+                j$('#informationPanel').removeClass('slds-theme--info').removeClass('slds-theme--success').addClass('slds-theme--error');
+                j$('#infoIcon').hide();
+                j$('#successIcon').hide();
+                j$('#errorIcon').show();
+            }else if(theme === 'info'){
+                j$('#informationPanel').removeClass('slds-theme--error').removeClass('slds-theme--success').addClass('slds-theme--info');
+                j$('#errorIcon').hide();
+                j$('#successIcon').hide();
+                j$('#infoIcon').show();
+            }else if(theme === 'success'){
+                j$('#informationPanel').removeClass('slds-theme--error').removeClass('slds-theme--info').addClass('slds-theme--success');
+                j$('#errorIcon').hide();
+                j$('#infoIcon').hide();
+                j$('#successIcon').show();
+            }
+            j$('#informationPanel').show();
+        }
+
+        function createCheckboxes(){
+            showSpinner();
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.LiveTextOptinStatusController.getMyLTChannels}',
+                function(result, event){
+                    if(result){
+                        numbers = result;
+                        for (var i = numbers.length - 1; i >= 0; i--) {
+                            var content = '<label class="slds-checkbox" for="cb_'+numbers[i][0]+'">'+
+                                            '<input name="default" type="checkbox" id="cb_'+numbers[i][0]+'" objectid="'+numbers[i][0]+'" />'+
+                                            '<span class="slds-checkbox--faux"></span>'+
+                                            '<span class="slds-form-element__label">'+numbers[i][1]+'</span>'+
+                                          '</label>';
+                            j$('#checkboxes').append(content);
+                        }
+                    }
+                });
+        }
+
+        function confirmOpting(){
+            showSpinner();
+            j$('input:checkbox').each(function () {
+                if(this.checked){
+                    choosenChannels.push(j$(this).attr('objectid'));
+                }
+            });
+            if(choosenChannels.length == 0){
+                showInfoPanel('{!$Label.OptChannelSelectionErrorMsg}', 'error');
+            }else{
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.LiveTextOptinStatusController.confirmOpting}',
+                    choosenChannels,
+                    recipientsIds,
+                    {!JSENCODE(optinTypeString)},
+                    function(result, event){
+                        showInfoPanel(result, 'success');
+                        j$('#checkboxesDiv').hide();
+                        j$('#confirmSection').hide();
+                        j$('#doneSection').show();
+                    })
+            }
+            hideSpinner();
+        }
+
+        j$(document).ready(function(){
+            recipientsIds = JSON.parse(j$('[id$=hiddenrecordids]').text());
+            showSpinner();
+            createCheckboxes();
+            showInfoPanel('{!infoMessage}', 'info');
+            j$('#doneSection').hide();
+            hideSpinner();
+        })
+    </script>
+    <div class='live-text'>
+        <div class="slds-m-top--medium">
+            <div class="slds-media slds-media--center"  style="margin-bottom: 1.5rem;">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-campaign">
+                        <svg aria-hidden="true" class="slds-icon">
+                            <use xlink:href="{!URLFOR($Resource.SLDS202, 'assets/icons/standard-sprite/svg/symbols.svg#task')}"></use>
+                        </svg>
+                    </span>
+                </div>
+                <div class="slds-media__body" >
+                    <p class="slds-page-header__title slds-truncate slds-align-middle" title="{!headerLabel}">{!headerLabel}</p>
+                    <p class="slds-text-body--small page-header__info"> </p>
+                </div>
+            </div>
+            <div id="informationPanel" class="slds-box" style="margin-bottom: 1.5rem; ">
+                <span id="infoIcon" class="slds-icon_container" title="Info">
+                    <svg aria-hidden="true" class="slds-icon slds-icon--middle" style="width: 2rem;height: 2rem;">
+                        <use xlink:href="{!URLFOR($Resource.SLDS202, '/assets/icons/utility-sprite/svg/symbols.svg#info')}"></use>
+                    </svg>
+                </span>
+                <span id="errorIcon" class="slds-icon_container" title="Error">
+                    <svg aria-hidden="true" class="slds-icon slds-icon--middle" style="width: 2rem;height: 2rem;">
+                        <use xlink:href="{!URLFOR($Resource.SLDS202, '/assets/icons/utility-sprite/svg/symbols.svg#error')}"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Error</span>
+                </span>
+                <span id="successIcon" class="slds-icon_container" title="Info">
+                    <svg aria-hidden="true" class="slds-icon slds-icon--middle" style="width: 2rem;height: 2rem;">
+                        <use xlink:href="{!URLFOR($Resource.SLDS202, '/assets/icons/utility-sprite/svg/symbols.svg#success')}"></use>
+                    </svg>
+                </span>
+                <span id="titleInfoPanel" style="margin-left:10px;"></span>
+            </div>
+
+            <div class="slds-spinner_container" id="spinner">
+                <div class="slds-spinner--brand slds-spinner slds-spinner--large" aria-hidden="false" role="alert">
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+
+
+            <div class="slds-form--horizontal">
+                <div class="slds-form-element" id="checkboxesDiv">
+                    <fieldset class="slds-form-element is-required">
+                        <legend class="slds-form-element__legend slds-form-element__label">{!labelText}</legend>
+                        <div class="slds-form-element__control" id="checkboxes">
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="slds-form-element slds-align--absolute-center" style="margin:15px;width: 75%;" id="confirmSection">
+                    <button id="confirmRequest" onclick="confirmOpting();"  type="button" class="slds-button slds-button--brand">{!buttonText}</button>
+                    <button id="cancelRequest" onclick="cancelCustomJS();" type="button" class="slds-button slds-button--brand">{!$Label.BulkCancelButton}</button>
+                </div>
+                <div class="slds-form-element slds-align--absolute-center" style="margin:15px;width: 75%;" id="doneSection">
+                    <button id="finishProcess"  type="button" onclick="doneCustomJS();" class="slds-button slds-button--brand">{!$Label.BulkDoneButton}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <apex:form >
+        <apex:outputPanel >
+            <apex:outputText id="hiddenrecordids" value="{!recordIdsJSON}"  styleClass="display_none" />
+            <apex:actionFunction action="{!doneCustom}" name="doneCustomController"/>
+            <apex:actionFunction action="{!cancel}" name="cancelCustomController"/>
+        </apex:outputPanel>
+    </apex:form>
+</html>
+</apex:page>

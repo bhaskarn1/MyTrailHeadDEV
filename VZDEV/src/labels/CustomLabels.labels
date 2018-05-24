@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CCPM_AbandonedVisitInitialSMSPartII</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Abandoned Visit Initial SMS Part II</shortDescription>
+        <value>AbandonedVisitInitialSMSPartII</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_AbandonedVisitLead</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_AbandonedVisitLead</shortDescription>
+        <value>Customer Abandoned Visit</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_AbandonedVisitLeadCreatedType</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Abandoned Visit Lead Created Type</shortDescription>
+        <value>Abandoned Visit Lead</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_CampaignFollowUp</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_CampaignFollowUp</shortDescription>
+        <value>CampaignFollowUp</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_ClosedLeadChannelStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Closed Lead Channel Status</shortDescription>
+        <value>Converted</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_Contacted</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_Contacted</shortDescription>
+        <value>Contacted</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_CustomerAbandonedVisitlead</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Abandoned Visit</shortDescription>
+        <value>Customer Abandoned Visit</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_CustomerCampaign</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_CustomerCampaign</shortDescription>
+        <value>Customer Campaign</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_CustomerQuotes</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_CustomerQuotes</shortDescription>
+        <value>Customer Quotes</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_CustomerQuotesRT</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_CustomerQuotesRT</shortDescription>
+        <value>Customer Quotes</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_CustomerSFDCManual</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_CustomerSFDCManual</shortDescription>
+        <value>Customer SFDC Manual</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_CustomerTelesalesSFDCManual</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_CustomerTelesalesSFDCManual</shortDescription>
+        <value>Customer Telesales SFDC Manual</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_DistrictManagerLRAFollowup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DistrictManager LRA Followup</shortDescription>
+        <value>SELECT Id,CCPM_lastInteraction__c,RecordTypeId,OwnerId,store__c,store__r.Name,store__r.CCPM_market__c, store__r.CCPM_district__c, store__r.CCPM_territory__c, CCPM_sendLeadsRequiringActionSMS__c,CCPM_storeDistrict__c, CCPM_storeMarket__c,CCPM_storeTerritory__c FROM lead WHERE status = &apos;Responded&apos; AND CCPM_leadSubStatus__c = &apos;Action Required&apos; AND CCPM_lastInteraction__c &lt;&gt; null AND CCPM_sendDMLeadRequiringAction__c = false AND CCPM_lastInteraction__c &lt;=</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_EUPlabel</fullName>
+        <categories>Converted Cart Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_EUPlabel</shortDescription>
+        <value>EUP-</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_Hypen</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Hyphen</shortDescription>
+        <value>-</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_IphoneEventType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Iphone Event Type</shortDescription>
+        <value>iPhone X</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadCartDisinterested</fullName>
+        <categories>Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Substatus Cart</shortDescription>
+        <value>Cart-Disinterested</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadCustomerAbandonedCartRecordTypeID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LeadCustomerAbandonedCartRecordTypeID</shortDescription>
+        <value>Customer Cart</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadEligibleStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Eligible Status</shortDescription>
+        <value>Eligible</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadEventToExclude</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Event To Exclude</shortDescription>
+        <value>iPhone X,Out of Stock,Samsung Device Pre-Order,Pixel Promotion</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadNewStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead New Status</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadProspectRecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Prospect RecordType</shortDescription>
+        <value>Prospect</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadRetail</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Retail</shortDescription>
+        <value>Retail</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadSourceCRM</fullName>
+        <categories>Lead</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Source value as CRM</shortDescription>
+        <value>CRM</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadSourceNetace</fullName>
+        <categories>Lead</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Source value as Netace</shortDescription>
+        <value>Netace</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadSourceQuoteRetail</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_LeadSourceQuoteRetail</shortDescription>
+        <value>Quote – Retail</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadSourceQuoteTelesales</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_LeadSourceQuoteTelesales</shortDescription>
+        <value>Quote – Telesales</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadSourceSalesforce</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Source value as Salesforce</shortDescription>
+        <value>Salesforce</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadTypeSMSAssistantManagers</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Type SMSAssistantManagers</shortDescription>
+        <value>SMSAssistantManagers</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_LeadTypeSMSManagers</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Type SMSManagers</shortDescription>
+        <value>SMSManagers</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_MergeBatchDMLLimit</fullName>
+        <categories>Batch Job</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Merge Batch DML Limit</shortDescription>
+        <value>25</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_MessageTypeFollowUp</fullName>
+        <categories>Message type followup</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_MessageTypeFollowUp</shortDescription>
+        <value>FollowUp</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_MessageTypeInitialSMSPart1</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Type Initial SMS Part1</shortDescription>
+        <value>InitialSMSPart1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_MessageTypeProspectFirstSMSPart1</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Type Prospect First SMS Part1</shortDescription>
+        <value>NewProspectSMS1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_MessageTypeforDismissedLead</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_MessageTypeforDismissedLead</shortDescription>
+        <value>InitialSMSPart1,NewProspectSMS1,FollowUp,CampaignInitialSMSPart1,CampaignFollowUp,CustomerQuoteSMSPart1,AbandonedVisitInitialSMSPartI</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_NewEventTypeforManualLead</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Event Type for Manual Lead</shortDescription>
+        <value>TMP OE - Q2 2018</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_PRODUrl</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PROD Url</shortDescription>
+        <value>https://vzwretail.my.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_PixelEventType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pixel Event Type</shortDescription>
+        <value>Pixel - future device</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_Pixelfuturedevice</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Pixel - future device</shortDescription>
+        <value>Pixel - future device</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_PropsectNullCartUniqueIdQuery</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Propsect Null CartUniqueId Query</shortDescription>
+        <value>select id,CCPM_cartUniqueID__c,CCPM_mobileNumber__c from lead where (RecordTypeId=:strProspectRecordType OR CCPM_isManualLead__c=true) AND CCPM_cartUniqueID__c=null  AND status in :setOpenLeadStatus</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_ProspectManualLeadsBatchSize</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prospect Manual Leads Batch Size</shortDescription>
+        <value>1500</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_ProspectSFDCManual</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_ProspectSFDCManual</shortDescription>
+        <value>Prospect SFDC Manual</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_ProspectTelesalesSFDCManual</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_ProspectTelesalesSFDCManual</shortDescription>
+        <value>Prospect Telesales SFDC Manual</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_QuoteleadCreatedType</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_QuoteleadCreatedType</shortDescription>
+        <value>Quote Lead</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_SMSExcludeStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS Exclude Status</shortDescription>
+        <value>Expired,Responded,Qualified,Converted</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_SMSSchedulesToBeRemoved</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS Scheduled to be Removed</shortDescription>
+        <value>SMS Schedules To Be Removed</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_SMSStatusRemoved</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_SMSStatusRemoved</shortDescription>
+        <value>Removed</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_SMSTypesOnTask</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SMS Types on Tasks</shortDescription>
+        <value>InitialSMSPart1,InitialSMSPart2,FollowUp,NewProspectSMS1,NewProspectSMS2,PreDefinedSMS,CampaignInitialSMSPart1,CampaignInitialSMSPart2,AbandonedVisitInitialSMSPartI,AbandonedVisitInitialSMSPartII,CustomerQuoteSMSPart1,CustomerQuoteSMSPart2</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_SmsMessageTypeActionRequired</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_SmsMessageTypeActionRequired</shortDescription>
+        <value>SMSManagersActionRequired</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_SmsMessageTypeAssistantManagerActionRequired</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_SmsMessageTypeAssistantManagerActionRequired</shortDescription>
+        <value>SMSAssistantManagersActionRequired</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_StatusResponseFailed</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StatusResponseFailed</shortDescription>
+        <value>Response Failed</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_StoreEmployeeBatchSize</fullName>
+        <categories>Constant Store employee</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StoreEmployeeBatchSize</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_TMP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TMP</shortDescription>
+        <value>TMP</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_TimeoutforPROD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Timeout for PROD</shortDescription>
+        <value>10000</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_TimeoutforSandbox</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Timeout for Sandbox</shortDescription>
+        <value>20000</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_UIHomePageLARLabel</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Home page UI Leads Requiring Action</shortDescription>
+        <value>CCPM_UIHomePageLAR</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_UIHomePageMyActiveLeadsLabel</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_UI Home Page My Active Leads Label</shortDescription>
+        <value>CCPM_UIHomePageMyActiveLeads</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_abandonedVisitInitialSMS</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Abandoned Visit Initial SMS</shortDescription>
+        <value>AbandonedVisitInitialSMSPartI</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_accountUniqueIdBatchQuery</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account UniqueID Batch Query</shortDescription>
+        <value>select id, name, CCPM_accountNumber__c, CCPM_accountUniqueID__c, CCPM_isVisionAccount__c, CCPM_mobileNumber__c from Account where CCPM_accountUniqueID__c = null AND CCPM_isVisionAccount__c = true  limit 20000</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_allowedProfilesForFreeFormSMS</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_allowedProfilesForFreeFormSMS</shortDescription>
+        <value>CCPM Retail Store Management,System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_boolFalse</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_boolFalse</shortDescription>
+        <value>false</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_callDetStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_callDetStatus</shortDescription>
+        <value>Call In-Progress</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_callInProgError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_callInProgError</shortDescription>
+        <value>Another call in progress. Please try again later.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_callNowLeadStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_callNowLeadStatus</shortDescription>
+        <value>Responded,Qualified</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_callNowLeadSubStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_callNowLeadSubStatus</shortDescription>
+        <value>Action Required,In Discussion</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_callNowProfileError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_callNowProfileError</shortDescription>
+        <value>You do not have access to this feature. Please contact your administrator.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_callNowProfiles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_callNowProfiles</shortDescription>
+        <value>CCPM Retail Store Management,CCPM Retail Sales Rep,System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_campaignMessageTypes</fullName>
+        <categories>Batch Job</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Campaign Message Types</shortDescription>
+        <value>CampaignInitialSMSPart1:CampaignFollowUp</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_cartTypeJobChunks</fullName>
+        <categories>Converted Cart Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_cartTypeJobChunks</shortDescription>
+        <value>200</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_cartTypeOTHER</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cart Type OTHER</shortDescription>
+        <value>OTHER</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_cartTypeValues</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cart Type Values</shortDescription>
+        <value>AAL,EUP,ACC,NEW</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_clickToCallProdEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_clickToCallProdEndpoint</shortDescription>
+        <value>https://sfdc.verizonwireless.com/SFDCServices/ctiretail</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_clicktoCallEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>clicktoCallEndpoint</shortDescription>
+        <value>https://sfdc.verizonwireless.com/SFDCServices/ctiretail</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_commisionableCartType</fullName>
+        <categories>Converted Cart Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_commisionableCartType</shortDescription>
+        <value>AAL,NEW</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_commissionableSMS</fullName>
+        <categories>Converted Cart Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_commissionableSMS</shortDescription>
+        <value>Way to Go &lt;rep name&gt;! You have a conversion in Salesforce! Check your Salesforce Homepage for details.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_commissionableSMSType</fullName>
+        <categories>Converted Cart Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_commissionableSMSType</shortDescription>
+        <value>CommissionableSMS</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_customerQuoteSMSPart1</fullName>
+        <categories>SMS Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_customerQuoteSMSPart1</shortDescription>
+        <value>CustomerQuoteSMSPart1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_customerQuoteSMSPart2</fullName>
+        <categories>SMS Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_customerQuoteSMSPart2</shortDescription>
+        <value>CustomerQuoteSMSPart2</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_daysOfLeadExpiry</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Days of Lead Expiry</shortDescription>
+        <value>-30</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_defaultLabel</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default Label</shortDescription>
+        <value>Default</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_digitalChannelName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Digital Channel Name</shortDescription>
+        <value>Digital</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_districts1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_districts1</shortDescription>
+        <value>AK01;CAR01-Coastal Carolinas;CAR02-Eastern NC;CAR03-NC Triad;CAR04-SC Central;CAR05-SCSE Coast;CAR06-Triangle North;CAR07-Triangle South;CC01;CC02;CC03;CC04;CC05;CC06;CP01;CP02;CP03;CP04;CP05;CP06;CP07;DS01-Las Vegas West;DS02-Phoenix North;DS03-Phoenix West;DS04-Scottsdale;DS05-Phoenix East;DS06-Phoenix South;DS07-Tucson West;DS08-Tucson East;DS09-Albuquerque;DS10-El Paso;DS11-Las Vegas East;FLNW1-Fort Myers;FLNW2-Sarasota St Pete;FLNW3-Tampa Lakeland;FLNW4-North Tampa;FLNW5-Tally Gainesville;FLNW6-Jacksonville;FLSE1-Miami;FLSE2-Ft Lauderdale;FLSE3-Palm Beach;FLSE4-Orlando South;FLSE5-Orlando North;GAN01-Central Alabama;GAN02-East Atlanta;GAN03-East Georgia;GAN04-North Alabama;GAN05-NorthEast Alabama;GAN06-North Georgia;GAN07-West Atlanta;GAS01-Central Georgia;GAS02-NC Atlanta;GAS03-SC Alabama;GAS04-SE Georgia;GAS05-SW Georgia;GAS06-WCentral Georgia;GAS07-West Georgia;GL01-New Orleans;GL02-Baton Rouge;GL03-Beaumont-Lafayette;GL04-Shreveport;GL05-Memphis;GL06-Mississippi;GL07-Mobile-Pe</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_districts2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_districts2</shortDescription>
+        <value>GLW04-Far West Chicago;GLW05-South Chicago-NW IN;GLW06-Peoria-Davenport;GLW07-SW Chicago;GLW08-W MI-Grand Rapids;GLW09-NE Indiana;HI01;HI02;HQ-Telesales;KM01-Southern IL;KM02-St Louis;KM03-Southern MO;KM04-KC East;KM05-KC West;KM06-Central KS;LA01;LA02;LA03;LA04;LA05;LA06;LA07;LA08;MS01;MS02;MS03;MS04;MS05;MS06;MT01-Northern CO-WY;MT02-Southern CO;MT03-Southern Denver;MT04-Central Denver;MT05-Northern Denver;MT06-Northern UT;MT07-Southern UT;MT08-Idaho;NJ01;NJ02;NJ03;NJ04;NJ05;NJ06;NN01;NN02;NN03;NN04;NN05;NN06;NT01-West Texas;NT02-DFW West;NT03-DFW Northwest;NT04-DFW Northeast;NT05-DFW East;NT06-San Angelo-Ft Worth;NT07-Austin North-Waco;NT08-Austin South;NW01;NW02;NW03;NW04;NW05;NW06;NW07;NW08;NY01;NY02;NY03;NY04;NY05;NY06;NY07;PH01;PH02;PH03;PH04;PH05;PH06;PN01-Mpls-St Paul MN;PN02-S Minnesota;PN03-Mpls-St Cloud MN;PN04-St Paul-NE Minn;PN05-N Dakota-NW Minn;PN06-Montana;PS01-Central IA;PS02-Southern NE-Lincoln;PS03-SD-NW IA;PS04-Eastern IA;PS05-Omaha-Council Bluff;PS06-Central-West</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_districts3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_districts3</shortDescription>
+        <value>SN02;SN03;SN04;SN05;SN06;ST01-San Antonio;ST02-RGV;ST03-Houston Southwest;ST04-Houston West;ST05-Houston North;ST06-Houston East;ST07-Houston Southeast;ST08-Houston Central;TA01-East Texas;TA02-South Oklahoma;TA03-North Oklahoma;TA04-West Arkansas;TA05-East Arkansas;TA06-South Arkansas;TCW01-Charlotte North;TCW02-Charlotte South;TCW03-Nashville;TCW04-Chattanooga;TCW05-Knoxville;TCW06-Tri-Cities;TCW07-Upstate SC;TCW08-Western NC;UP01;UP02;UP03;UP04;UP05;UP06;VIR01-Southeast Virginia;VIR02-Virginia Beach;VIR03-Northwest Virginia;VIR04-Central West Virginia;VIR05-Southwest Virginia;WBV02-DC Metro;WBV1;WBV2;WBV3;WBV4;WBV5;WBV6</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_expiredLeadStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expired Lead Status</shortDescription>
+        <value>Expired</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_followUpSMSInterval</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Follow Up SMS Interval</shortDescription>
+        <value>3600</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_followupMessageTypes</fullName>
+        <categories>Batch Job</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Followup Message Types</shortDescription>
+        <value>FollowUp:prospectActionRequired:SMSAssistantManagers:SMSAssistantManagersActionRequired:SMSManagers:SMSManagersActionRequired:VzWLeadOwnerChangeSMS:VzWLeadOwnerSMSOnCustomerResponse</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_headquartersQueueName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Headquarters Queue Name</shortDescription>
+        <value>Headquarters</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_herokuLeadHeader</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_herokuLeadHeader</shortDescription>
+        <value>lead</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_herokuSMSHeader</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_herokuSMSHeader</shortDescription>
+        <value>sms message</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_herokuTaskPart1Header</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_herokuTaskPart1Header</shortDescription>
+        <value>TaskPart1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_herokuTaskPart2Header</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_herokuTaskPart2Header</shortDescription>
+        <value>TaskPart2</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_hqTelesalesQueueName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Telesales Headquarters Name</shortDescription>
+        <value>HQ-Telesales</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_inDiscussion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_inDiscussion</shortDescription>
+        <value>In Discussion</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_initialMessageTypes</fullName>
+        <categories>Batch Job</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Initial SMS Message Types</shortDescription>
+        <value>InitialSMSPart1:NewProspectSMS1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_initialSMSInterval</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Initial SMS Interval(In Min)</shortDescription>
+        <value>180</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_initialSMSIntervalforQuote</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Initial SMS Interval for quote(In Min)</shortDescription>
+        <value>720</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_integrationUserProfileName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Integration User Profile Name</shortDescription>
+        <value>CCPM Integration User</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadClosedStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Closed Status</shortDescription>
+        <value>Expired,Converted</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadCustomerCartRT</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Customer Cart RT</shortDescription>
+        <value>Customer Cart</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadMergeBatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Merge Prospect Cart Batch Query</shortDescription>
+        <value>Select Id, FirstName, LastName,Status,CCPM_leadSubStatus__c, CCPM_cartID__c,CCPM_cartUniqueID__c, CCPM_storeID__c, CCPM_mobileNumber__c, CCPM_email__c,CCPM_isManualLead__c, CCPM_cartlastHandledBy__c, CCPM_createdDate__c, CCPM_cartModifiedDate__c, LeadSource, CCPM_cartType__c, CCPM_SKU__c, Phone, PostalCode, RecordTypeID, CCPM_tobeMerged__c, CCPM_mergeMasterID__c, CCPM_creditApplicationNo__c, CCPM_creditClass__c, OwnerId, CCPM_leadChannel__c,CCPM_SMSOptOut__c,CCPM_accountUniqueID__c,CCPM_reasonForPurchase__c,CCPM_eventType__c,CCPM_SMSFollowUpDate__c,CCPM_currentCarrier__c,CCPM_whenIsTheirContractUp__c,CCPM_quickNotesDescription__c,CCPM_quickNotes__c,CCPM_communicationPreference__c,CCPM_itemInterestedIn__c,CCPM_Trans_Completion_Channel_Preference__c,Company,CCPM_createdChannel__c,CCPM_reminder__c,CCPM_Created_Lead_Source__c,CCPM_CreatedType__c,CCPM_leadType__c from lead where RecordTypeID IN :setRecordTypeIds AND CCPM_tobeMerged__c = true ORDER BY CreatedDate ASC limit 2000</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadMergeBatchQuery2</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Merge Prospect Cart Batch Query 2</shortDescription>
+        <value>Select Id, FirstName, LastName, CCPM_cartID__c, CCPM_storeID__c, CCPM_mobileNumber__c, CCPM_email__c,CCPM_isInformaticaMerge__c,
+CCPM_AutoResponseForDoubleOptOutSmsSent__c, CCPM_cartlastHandledBy__c, CCPM_createdDate__c, CCPM_cartModifiedDate__c, LeadSource, CCPM_cartType__c, CCPM_SKU__c, Phone, PostalCode, RecordTypeID, CCPM_tobeMerged__c, CCPM_mergeMasterID__c, CCPM_creditApplicationNo__c, CCPM_creditClass__c from lead where IsDeleted = false AND Id IN : setLeadProspects</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadMergeManualLeadsBatchQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Merge Lead Carts with Manual Leads</shortDescription>
+        <value>select Id, FirstName, LastName,Status,CCPM_leadSubStatus__c, CCPM_cartID__c,CCPM_cartUniqueID__c, CCPM_storeID__c, CCPM_mobileNumber__c, CCPM_email__c, CCPM_cartlastHandledBy__c, CCPM_createdDate__c, CCPM_cartModifiedDate__c, LeadSource, CCPM_cartType__c, CCPM_SKU__c, Phone, PostalCode, RecordTypeID, CCPM_tobeMerged__c, CCPM_leadType__c, CCPM_creditApplicationNo__c, CCPM_creditClass__c, OwnerId, CCPM_leadChannel__c,CCPM_isManualLead__c,CCPM_SMSOptOut__c,CCPM_accountUniqueID__c,CCPM_reasonForPurchase__c,CCPM_eventType__c,CCPM_SMSFollowUpDate__c,CCPM_currentCarrier__c,CCPM_whenIsTheirContractUp__c,CCPM_quickNotesDescription__c,CCPM_quickNotes__c,CCPM_communicationPreference__c,CCPM_itemInterestedIn__c,CCPM_Trans_Completion_Channel_Preference__c,Company,CCPM_createdChannel__c,CCPM_reminder__c,CCPM_Created_Lead_Source__c,CCPM_CreatedType__c  from lead where RecordTypeID IN :setRecordTypeIds AND IsDeleted = false AND CCPM_tobeMerged__c = true ORDER BY CreatedDate ASC limit 2000</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadMergeSOSLFieldSelection</fullName>
+        <categories>SOSL Query Field Selection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Merge Prospect SOSL Field Selection</shortDescription>
+        <value>(Id, FirstName, LastName,Status,CCPM_leadSubStatus__c,CCPM_cartID__c,CCPM_cartUniqueID__c, CCPM_storeID__c, CCPM_mobileNumber__c, CCPM_email__c, CCPM_cartlastHandledBy__c,CCPM_createdDate__c, CCPM_cartModifiedDate__c, LeadSource, CCPM_cartType__c, CCPM_SKU__c, Phone, PostalCode, RecordTypeID, CCPM_tobeMerged__c, CCPM_mergeMasterID__c, CCPM_creditApplicationNo__c, CCPM_creditClass__c, OwnerId, CCPM_leadChannel__c,CCPM_isManualLead__c,CCPM_type__c,CCPM_SMSOptOut__c,CCPM_accountUniqueID__c,CCPM_reasonForPurchase__c,CCPM_eventType__c,CCPM_SMSFollowUpDate__c,CCPM_currentCarrier__c,CCPM_whenIsTheirContractUp__c,CCPM_quickNotesDescription__c,CCPM_quickNotes__c,CCPM_communicationPreference__c,CCPM_itemInterestedIn__c,CCPM_Trans_Completion_Channel_Preference__c,Company,CCPM_createdChannel__c,CCPM_reminder__c,CCPM_Created_Lead_Source__c,CCPM_CreatedType__c,CCPM_leadType__c</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadMergeSOSLWhereClause</fullName>
+        <categories>SOSL Query Where Clause</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Merge Prospect SOSL Where Clause</shortDescription>
+        <value>WHERE RecordTypeID IN :setRecordTypeIds AND Status IN :setOpenLeadStatus AND CCPM_tobeMerged__c = false ORDER BY CreatedDate ASC )</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadOpenStatusValues</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Open Status Values</shortDescription>
+        <value>New,Eligible,Contacted,Responded,Qualified</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadOpenStatusWithoutNew</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Open Status Without New</shortDescription>
+        <value>Eligible,Contacted,Responded,Qualified</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadProspectCartRT</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Prospect Cart RT</shortDescription>
+        <value>Prospect Cart</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadProspectRT</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Prospect Record Type</shortDescription>
+        <value>Prospect</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadSMSfolupQuery</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Action Required SMS follow up</shortDescription>
+        <value>SELECT Id,CCPM_lastInteraction__c,RecordTypeId,OwnerId,store__c, store__r.CCPM_TimeZone__c, store__r.CCPM_market__c, store__r.CCPM_district__c, store__r.CCPM_territory__c, CCPM_sendLeadsRequiringActionSMS__c,CCPM_storeDistrict__c, CCPM_storeMarket__c,CCPM_storeTerritory__c FROM lead WHERE status = &apos;Responded&apos; AND CCPM_leadSubStatus__c = &apos;Action Required&apos; AND CCPM_lastInteraction__c &lt;&gt; null AND CCPM_sendLeadsRequiringActionSMS__c = false AND CCPM_lastInteraction__c &lt;=</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadSMSfolupQueryLimit</fullName>
+        <categories>Batch Query Limit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Action Required SMS Limit</shortDescription>
+        <value>Limit 100</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadStatusConverted</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Status Converted</shortDescription>
+        <value>Converted</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadStatusNew</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Status New</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadStatusQualified</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Status Qualified</shortDescription>
+        <value>Qualified</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadStatusResponded</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_leadStatusResponded</shortDescription>
+        <value>Responded</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadType</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_leadType</shortDescription>
+        <value>Lead</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadTypeCampaignInitialSMSPart1</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_leadTypeCampaignInitialSMSPart1</shortDescription>
+        <value>CampaignInitialSMSPart1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadTypeCampaignLead</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Type Campaign Lead</shortDescription>
+        <value>Campaign Lead</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadTypeLead</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead type manual lead</shortDescription>
+        <value>Lead</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadTypeManualLead</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Type Manual Lead</shortDescription>
+        <value>Manual Lead</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_leadTypeProspect</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead type Prospect</shortDescription>
+        <value>Prospect</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_liveTextNumberNonVerizon</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Live Text Number Non Verizon</shortDescription>
+        <value>+18446668390</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_liveTextPhoneNumber</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Live Text Phone Number</shortDescription>
+        <value>32098</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_manualLeadProspectLeadType</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_manualLeadProspectLeadType</shortDescription>
+        <value>Customer SFDC Manual,Prospect SFDC Manual,Customer Telesales SFDC Manual,Prospect Telesales SFDC Manual</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_mergeBatchSize</fullName>
+        <categories>Batch Query Limit</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Merge Batch Size</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_mergeFrameworkLeadTypes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Merge Framework Lead Types</shortDescription>
+        <value>Customer Quotes,Customer Abandoned Visit</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_mergeManualLeadsBatchSize</fullName>
+        <categories>Batch Query Size</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Manual Lead Merge Batch Size</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageSentStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Sent Status</shortDescription>
+        <value>Sent</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageStatusError</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_messageStatusError</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageStatusQueued</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Status Queued</shortDescription>
+        <value>Queued</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageTypeCampaignInitialSMSPart2</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Type Campaign Initial SMS Part2</shortDescription>
+        <value>CampaignInitialSMSPart2</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageTypeInitialSMSPart2</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Type Initial SMS Part2</shortDescription>
+        <value>InitialSMSPart2</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageTypePreDefinedSMS</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Type Pre Defined SMS</shortDescription>
+        <value>PreDefinedSMS</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageTypeProspectFirstSMSPart2</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message Type Prospect First SMS Part2</shortDescription>
+        <value>NewProspectSMS2</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_messageTypePwnerChangeSMS</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_messageTypePwnerChangeSMS</shortDescription>
+        <value>VzWLeadOwnerChangeSMS</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_mobilePhoneError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>mobilePhoneError</shortDescription>
+        <value>You do not have a mobile number on your profile. Please update your About You profile to use this feature.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_nextSteps</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next Steps</shortDescription>
+        <value>Please enter a summary of the next steps based on the completed outbound call.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_nondigits</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Non Digits</shortDescription>
+        <value>[^0-9]</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_none</fullName>
+        <categories>Static Constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoneValue</shortDescription>
+        <value>--None--</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_openLeadStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Open Lead Status</shortDescription>
+        <value>New,Eligible,Contacted,Responded,Qualified</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_openLeadsUpdateGap</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Open Leads Update Gap</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_optOutError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_optOutError</shortDescription>
+        <value>The customer you are attempting to call is on the Do Not Call list.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_processConvertedLeads</fullName>
+        <categories>Converted Cart Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Process Converted Leads</shortDescription>
+        <value>Select id,CCPM_isInitialSMSSent__c,CCPM_isRepEcodeMatching__c,CCPM_isProspectSMSsent__c,CCPM_conversionEligible__c,CCPM_cartlastHandledBy__c,CCPM_cartTypeProcessed__c,CCPM_StoreTimeZone__c,ownerid, CCPM_mobileNumber__c, CCPM_convertedCartType__c, CCPM_leadChannel__c, CCPM_Type__c, LeadSource, Status, CCPM_isMerged__c, CCPM_Account__c, CCPM_isFollowUpSMSSent__c, CCPM_DoubleOptOutSent__c, CCPM_SMSOptOut__c, CCPM_CreatedDate__c from lead where Status= &apos;Converted&apos; AND CCPM_cartTypeProcessed__c = false AND CCPM_convertedCartType__c != null limit 15000</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_processQueueBatch</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Process Queue Batch</shortDescription>
+        <value>select id, name, CCPM_accountUniqueID__c, CCPM_storeID__c, CCPM_Status__c, CCPM_queueType__c, CCPM_LeadID__c, CCPM_cartType__c,CCPM_InsertedDateTime__c from CCPM_processingQueue__c where CCPM_Status__c =</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_prodChannel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>prod Channel</shortDescription>
+        <value>SFCE_PROD</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_qualifiedSubStatus</fullName>
+        <categories>Static Constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Qualified SubStatus</shortDescription>
+        <value>In Discussion,Appointment Scheduled,Needs Store Reassignment,Service Issue,Disinterested</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_reminderCompleted</fullName>
+        <categories>Static Constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reminder Completed</shortDescription>
+        <value>Completed</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_reminderScheduled</fullName>
+        <categories>Static Constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reminder Scheduled</shortDescription>
+        <value>Scheduled</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_restrictedProfilesForSendSMS</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_restrictedProfilesForSendSMS</shortDescription>
+        <value>CCPM Telesales Rep,CCPM Telesales Supervisor,CCPM Telesales Management,CCPM Cross Channel Read Access,CCPM Retail Market Analysts</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_restrictedProfilesFromLeadCreation</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_restrictedProfilesFromLeadCreation</shortDescription>
+        <value>CCPM Retail District Management,CCPM Telesales Management,CCPM Cross Channel Read Access,CCPM Retail Market Analysts</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_restrictedProfilesFromLeadNotesUpdate</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_restrictedProfilesFromLeadNotesUpdate</shortDescription>
+        <value>CCPM Retail District Management,CCPM Cross Channel Read Access,CCPM Retail Market Analysts</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_restrictedProfilesFromLeadStatusUpdate</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_restrictedProfilesFromLeadStatusUpdate</shortDescription>
+        <value>CCPM Cross Channel Read Access,CCPM Retail Market Analysts</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_retailChannelName</fullName>
+        <categories>Static constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Retail Channel Name</shortDescription>
+        <value>Retail</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_retailMarketAnalysts</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_retailMarketAnalysts</shortDescription>
+        <value>CCPM Retail Market Analysts</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_sandboxChannel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_sandboxChannel</shortDescription>
+        <value>SFCE_PROD</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_setRectTypestoExpire</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>setRectTypestoExpire</shortDescription>
+        <value>Prospect,Customer Abandoned Visit,Customer Cart</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_statusCode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Status Code</shortDescription>
+        <value>77777</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_statusError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_statusError</shortDescription>
+        <value>The customer you are attempting to call does not have the appropriate lead status.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_storeAssistantManager</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Store Assistant Manager</shortDescription>
+        <value>Assistant Manager</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_storeAssistantManagerRoleName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Store Assistant Manager Role Name</shortDescription>
+        <value>Assistant Manager</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_storeEmployeeBatchQuery</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StoreEmployeeBatchQuery</shortDescription>
+        <value>SELECT CCPM_employee__c,CCPM_uniqueStoreEmployeeID__c,CCPM_uniqueID__c,CCPM_IsActive__c,isactivetest__c,CCPM_IsUpdateFlag__c,CCPM_previousactive__c,CCPM_PreviousRole__c,CCPM_role__c,CCPM_StoreID__c,CCPM_isStoreActive__c,CCPM_Store__c,Id,CCPM_Store__r.CCPM_source__c FROM CCPM_storeEmployee__c WHERE CCPM_IsUpdateFlag__c = True  order by lastModifiedDate limit 90</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_storeManagerRoleName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Store Manager Role Name</shortDescription>
+        <value>Store Manager</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_subStatusActionRequired</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_subStatusActionRequired</shortDescription>
+        <value>Action Required</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_subStatusDisinterested</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_subStatusDisinterested</shortDescription>
+        <value>Disinterested</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_successResponseCode</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success Response Code</shortDescription>
+        <value>204</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskCancelled</fullName>
+        <categories>Static Constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Cancelled</shortDescription>
+        <value>Cancelled</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskCommunicationOutbound</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Communication Outbound</shortDescription>
+        <value>Outbound</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskCompleted</fullName>
+        <categories>Static Constants</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Completed</shortDescription>
+        <value>Completed</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskInteractionHistoryRTName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Interaction History RT Name</shortDescription>
+        <value>Interaction History</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskNotes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Notes</shortDescription>
+        <value>This task has been created automatically due to an outbound call being placed successfully.</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskPriorityNormal</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task Priority Normal</shortDescription>
+        <value>Normal</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskStatus</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_taskStatus</shortDescription>
+        <value>In progress</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskStatusValues</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_taskStatusValues</shortDescription>
+        <value>In Progress, Completed, Cancelled</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_taskSubject</shortDescription>
+        <value>Outbound Call</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskSubjectTextMessageSent</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TaskSubjectTextMessageSent</shortDescription>
+        <value>Text Message Sent</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_taskToDoRT</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Task To Do RT</shortDescription>
+        <value>To Do</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_telesalesChannelName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Telesales Channel Name</shortDescription>
+        <value>Telesales</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_telesalesDefaultEventType</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Telesales Default Event Type</shortDescription>
+        <value>Reminder</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_telesalesManualPOStype</fullName>
+        <categories>POS Manual Webservice</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_telesalesManualPOStype</shortDescription>
+        <value>Customer Telesales POS Manual</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_telesalesTaskPriority</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Telesales Task Priority</shortDescription>
+        <value>Normal</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_telesalesTaskStatus</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Telesales Task Status</shortDescription>
+        <value>Not Started</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_telesalesTaskSubject</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Telesales Task Subject</shortDescription>
+        <value>Followup</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_telesalesUsersGroupName</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Telesales Users Group Name</shortDescription>
+        <value>CCPM_telesalesUsers</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_territories</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_territories</shortDescription>
+        <value>Alaska;Carolinas East;Central California;Central Pacific;Desert;FL Northwest;FL Southeast;GA/AL North;GA/AL South;Great Lakes Central;Great Lakes East;Great Lakes North;Great Lakes South;Great Lakes West;Great Plains North;Great Plains South;Greater LA;Gulf;Hawaii;HQ-Telesales;Kansas/Missouri;Mid-State;Mountain;New Jersey North;New York City;North Texas;Northern New England;Northwest;NY East;Philadelphia Tri-State;South Texas;Southern California;Southern New England;Temp;Test Territory;Texarhoma;TN/Carolinas West;Upstate New York;Virginia;WBV;WBV North</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_unknown</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Label for Unknown</shortDescription>
+        <value>Unknown</value>
+    </labels>
+    <labels>
+        <fullName>CCPM_updateLeadTypeOneTimeRun</fullName>
+        <categories>Batch Query</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCPM_updateLeadTypeOneTimeRun</shortDescription>
+        <value>Select id,CCPM_type__c,CCPM_createdChannel__c,CCPM_mobileNumber__c,recordtype.name,CCPM_leadType__c from Lead where ccpm_leadtype__c = null</value>
+    </labels>
+    <labels>
+        <fullName>leadSubStatusActionRequired</fullName>
+        <categories>Static Constant</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>leadSubStatusActionRequired</shortDescription>
+        <value>Action Required</value>
+    </labels>
+</CustomLabels>

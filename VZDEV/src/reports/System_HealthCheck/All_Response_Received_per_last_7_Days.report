@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Leads__r$Store__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r.Activities$Description</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$LastName</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Task.CCPM_interactionHistory</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$CCPM_communicationDirection__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$Description</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>X</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$Subject</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Text Message Received</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Leads__r$CCPM_SMSResponseReceivedDateTime__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Response Received per last 7 Days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CCPM_AccountsWithLeadsAndActivities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.Leads__r$CCPM_SMSResponseReceivedDateTime__c</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

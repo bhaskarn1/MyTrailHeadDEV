@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- Based on the NPS score; Promoter, Passive, Detractor --></help>
+        <label><!-- Category --></label>
+        <name>CCPM_NPSCategory__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comments from the customer that filled out the NPS survey --></help>
+        <label><!-- NPS Comments --></label>
+        <name>CCPM_NPSComments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Survey Completed --></label>
+        <name>CCPM_NPSDateSurveyCompleted__c</name>
+    </fields>
+    <fields>
+        <help><!-- Net Promoter Score last entered from the account --></help>
+        <label><!-- NPS Score --></label>
+        <name>CCPM_NPSScore__c</name>
+    </fields>
+    <fields>
+        <help><!-- MTN of the line that completed the survey for the account --></help>
+        <label><!-- Survey MTN --></label>
+        <name>CCPM_NPSmobileNumber__c</name>
+    </fields>
+    <fields>
+        <help><!-- This individual has indicated they do not want to receive SMS communications from Verizon. --></help>
+        <label><!-- Do Not SMS --></label>
+        <name>CCPM_SMSOptOut__c</name>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Opt Out Date Time --></label>
+        <name>CCPM_SalesforceOptOutDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>CCPM_accountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Unique ID --></label>
+        <name>CCPM_accountUniqueID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Average Margin --></label>
+        <name>CCPM_averageMargin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel Preference --></label>
+        <name>CCPM_channelPreference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Score --></label>
+        <name>CCPM_customerScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Do Not SMS Flag --></label>
+        <name>CCPM_doNotSMSFlag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>CCPM_email__c</name>
+    </fields>
+    <fields>
+        <help><!-- This individual has indicated they do not want to receive phone calls from Verizon. --></help>
+        <label><!-- Do Not Call --></label>
+        <name>CCPM_hasOptedOutOfCall__c</name>
+    </fields>
+    <fields>
+        <help><!-- This individual has indicated they do not want to receive email communications from Verizon. --></help>
+        <label><!-- Do Not Email --></label>
+        <name>CCPM_hasOptedOutOfEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Out of Contract --></label>
+        <name>CCPM_isOutOfContract__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Overdue --></label>
+        <name>CCPM_isPaymentOverdue__c</name>
+    </fields>
+    <fields>
+        <label><!-- VisionAccount? --></label>
+        <name>CCPM_isVisionAccount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Account Owner’s MTN --></help>
+        <label><!-- MTN --></label>
+        <name>CCPM_mobileNumber__c</name>
+    </fields>
+    <fields>
+        <help><!-- Nearest store ID to the account owner --></help>
+        <label><!-- Nearest Store ID --></label>
+        <name>CCPM_storeID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Nearest store to the account owner --></help>
+        <label><!-- Nearest Store --></label>
+        <name>CCPM_store__c</name>
+        <relationshipLabel><!-- Customers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Upgrade Propensity --></label>
+        <name>CCPM_upgradePropensity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>LiveText__Active__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Domain --></label>
+        <name>domain__c</name>
+    </fields>
+    <layouts>
+        <layout>CCPM Customer Account Layout</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- NPS --></label>
+            <section>NPS</section>
+        </sections>
+        <sections>
+            <label><!-- Nearest Store Information --></label>
+            <section>Nearest Store Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>CCPM_newTaskQuickAction</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Sidebar Account update --></label>
+        <name>Sidebar_Account_update</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Customer Account --></label>
+        <name>CCPM_customerAccount</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You cannot edit the &apos;Do Not SMS&apos; flag once it has been ticked, or change the values in any of the other fields. If required, please contact your System Administrator for assistance. --></errorMessage>
+        <name>CCPM_validateAccountUpdatePrivilege</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Opt_in_for_Text_Messages_list --></label>
+        <name>LiveText__Opt_in_for_Text_Messages_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Opt_out_for_Text_Messages_list --></label>
+        <name>LiveText__Opt_out_for_Text_Messages_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Bulk_SMS --></label>
+        <name>LiveText__Send_Bulk_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Resubscribe --></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Unsubscribe --></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_ExactTarget_Analytics --></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+</CustomObjectTranslation>

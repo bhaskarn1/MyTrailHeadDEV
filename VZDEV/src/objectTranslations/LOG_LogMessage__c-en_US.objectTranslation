@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Error Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Error Logs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Age in Days --></help>
+        <label><!-- Age --></label>
+        <name>CCPM_age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debug Level --></label>
+        <name>CCPM_debugLevel__c</name>
+        <picklistValues>
+            <masterLabel>Debug</masterLabel>
+            <translation><!-- Debug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Info</masterLabel>
+            <translation><!-- Info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warning</masterLabel>
+            <translation><!-- Warning --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If log is integration related show xml payload --></help>
+        <label><!-- Integration Payload --></label>
+        <name>CCPM_integrationPayload__c</name>
+    </fields>
+    <fields>
+        <help><!-- The exception error code of custom org code for record --></help>
+        <label><!-- Log Code --></label>
+        <name>CCPM_logCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Log Date Time --></label>
+        <name>CCPM_logDateTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Message to log --></help>
+        <label><!-- Message --></label>
+        <name>CCPM_message__c</name>
+    </fields>
+    <fields>
+        <help><!-- The related record Id --></help>
+        <label><!-- Reference Id --></label>
+        <name>CCPM_referenceId__c</name>
+    </fields>
+    <fields>
+        <help><!-- The related record info (e.g. Apex Batch Job Id, Contact etc) --></help>
+        <label><!-- Reference Info --></label>
+        <name>CCPM_referenceInfo__c</name>
+    </fields>
+    <fields>
+        <help><!-- The originating function in the class/component --></help>
+        <label><!-- Source Function --></label>
+        <name>CCPM_sourceFunction__c</name>
+    </fields>
+    <fields>
+        <help><!-- The originating component of log message --></help>
+        <label><!-- Source --></label>
+        <name>CCPM_source__c</name>
+    </fields>
+    <fields>
+        <help><!-- Raw exception stack trace for unhandled errors --></help>
+        <label><!-- Stack Trace --></label>
+        <name>CCPM_stackTrace__c</name>
+    </fields>
+    <fields>
+        <help><!-- The time in milliseconds for the transaction (e.g. For integration/batch apex messages it might be the time taken to process) --></help>
+        <label><!-- ExecutionTime --></label>
+        <name>CCPM_timer__c</name>
+    </fields>
+    <layouts>
+        <layout>CCPM Error Log Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Integration Information --></label>
+            <section>Integration Information</section>
+        </sections>
+        <sections>
+            <label><!-- Log Message --></label>
+            <section>Log Message</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

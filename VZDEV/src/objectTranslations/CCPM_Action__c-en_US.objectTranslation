@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RE Action</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RE Actions</value>
+    </caseValues>
+    <fields>
+        <label><!-- RE Action ID --></label>
+        <name>CCPM_RE_Action_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Number --></label>
+        <name>CCPM_actionNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action Object --></label>
+        <name>CCPM_actionObject__c</name>
+        <picklistValues>
+            <masterLabel>CCPM_journey__c</masterLabel>
+            <translation><!-- CCPM_journey__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>CCPM_description__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>CCPM_endDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Object --></label>
+        <name>CCPM_masterObject__c</name>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related Object Action --></label>
+        <name>CCPM_relatedObjectAction__c</name>
+        <picklistValues>
+            <masterLabel>Close And Attach To Winner</masterLabel>
+            <translation><!-- Close And Attach To Winner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove Queued And Attach to Winner</masterLabel>
+            <translation><!-- Remove Queued And Attach to Winner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related Object --></label>
+        <name>CCPM_relatedObject__c</name>
+        <picklistValues>
+            <masterLabel>SMSMessage</masterLabel>
+            <translation><!-- SMSMessage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task</masterLabel>
+            <translation><!-- Task --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>CCPM_startDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>CCPM_type__c</name>
+        <picklistValues>
+            <masterLabel>Insert</masterLabel>
+            <translation><!-- Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Insert Or Update Action Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Merge Insert Or Update Action Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Related Object Action Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Related Object Action --></label>
+        <name>CCPM_RelatedObjectAction</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Insert Or Update Action --></label>
+        <name>CCPM_insertOrUpdateAction</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Merge Insert Or Update Action --></label>
+        <name>CCPM_mergeInsertOrUpdateAction</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Name Cannot be blank --></errorMessage>
+        <name>Name_cannot_be_empty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Update is not a valid value if Action object is not equal to primary object. --></errorMessage>
+        <name>Update_Not_Allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Upsert is not a valid value if Action object is equal to primary object. --></errorMessage>
+        <name>Upsert_not_allowed</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CCPM_viewInRuleEngine --></label>
+        <name>CCPM_viewInRuleEngine</name>
+    </webLinks>
+</CustomObjectTranslation>

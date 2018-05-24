@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CCPM_Store__c.CCPM_market__c</field>
+    </columns>
+    <columns>
+        <field>CCPM_Store__c.CCPM_territory__c</field>
+    </columns>
+    <columns>
+        <field>CCPM_Store__c.CCPM_storeID__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CCPM_storeEmployee__c.CCPM_role__c</field>
+    </columns>
+    <columns>
+        <field>CCPM_storeEmployee__c.CCPM_employee__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CCPM_Store__c.CCPM_territory__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Great Lakes Central</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_storeEmployee__c.CCPM_role__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Store Manager</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CCPM_Store__c.CCPM_district__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Stores for Great Lakes</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$CCPM_Store__c$CCPM_storeEmployee__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

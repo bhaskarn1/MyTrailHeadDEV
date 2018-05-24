@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SMS Schedules To Be Removed</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SMS Schedules To Be Removed</value>
+    </caseValues>
+    <fields>
+        <label><!-- Inserted DateTime --></label>
+        <name>CCPM_InsertedDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- SObject Type --></label>
+        <name>CCPM_SObjectType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>CCPM_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Unique ID --></label>
+        <name>CCPM_accountUniqueID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store ID --></label>
+        <name>CCPM_storeID__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

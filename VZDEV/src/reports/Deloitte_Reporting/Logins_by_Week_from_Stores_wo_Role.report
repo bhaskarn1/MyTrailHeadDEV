@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_99718167</developerName>
+        <masterLabel>Stores</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ROLE</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (00263-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (00263-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Atlantic City</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (02271-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (02271-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Walnut St</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (03590-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (03590-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Deptfort Mall</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (09836-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (09836-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Egg Harbor</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (09839-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (09839-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Market Street</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (17748-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (17748-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Williamstown / Turnersville</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (71859-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (71859-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Manahawkin</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (73843-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (73843-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>Vineland</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Store (D6457-01) Sales Rep</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Store (D6457-01) Store Manager</sourceValue>
+            </sourceValues>
+            <value>UPenn</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnGrouped</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_99718167</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>LOGIN_DATE</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>10</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>12</titleSize>
+    </chart>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>CELL</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>User.CCPM_employeeID__c</field>
+    </columns>
+    <columns>
+        <field>LOGIN_DATETIME</field>
+    </columns>
+    <columns>
+        <field>LAST_LOGIN</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>BucketField_99718167</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_99718167</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>LOGIN_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Logins by Week from Stores wo Role</name>
+    <params>
+        <name>active</name>
+        <value>active</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User</reportType>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LOGIN_DATETIME</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

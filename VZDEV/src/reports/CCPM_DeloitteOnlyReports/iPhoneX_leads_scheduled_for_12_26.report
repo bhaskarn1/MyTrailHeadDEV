@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Lead.CCPM_eventType__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>iPhone X</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Manual Lead,Prospect</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_SMSFollowUpDate__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>12/26/2017 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.CCPM_SMSFollowUpDate__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>iPhoneX leads scheduled for 12.26 +</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,23 @@
+<aura:component controller="CCPM_leadsAwaitingChildApexController" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:registerEvent name="CommunicateParent" type="c:CCPM_communicateToLARParent"/>
+    <aura:attribute name="mapSMS" type="map"/>
+    <aura:attribute name="mapSMS1" type="map"/>
+    <aura:attribute name="objLead" type="Lead"/>
+    <aura:attribute name="selectedValueReplyPicklist" type="String" default="--None--"/>
+    <aura:attribute name="isSelectedNone" type="Boolean" default="true"/>
+    <aura:attribute name="isProfileDisabled" type="Boolean" default="false"/>
+    
+    
+    <lightning:select class="ld-rep-select" name="select" aura:id="ReplyPicklist" value="{!v.selectedValueReplyPicklist}" onchange="{!c.updateSelectedPicklistVal}" disabled="{!v.isProfileDisabled}">
+        <aura:iteration items="{!v.mapSMS1}" var="SMS" indexVar="key" >
+            <option text="{!SMS.value}" value="{!SMS.key}" selected="{!SMS.selected}"/>
+        </aura:iteration>
+    </lightning:select>
+    <aura:renderif isTrue="{!v.isSelectedNone}">
+        <lightning:button class="ld-rep-button" variant="neutral" label="Send" aura:id="Send" disabled='true'/>
+        <aura:set attribute="else">
+            <lightning:button class="ld-rep-button" variant="neutral" onclick="{!c.sendSMS}" label="Send" aura:id="Send" disabled='false'/>
+        </aura:set> 
+    </aura:renderif>
+</aura:component>

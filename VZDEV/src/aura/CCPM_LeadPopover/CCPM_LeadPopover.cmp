@@ -1,0 +1,94 @@
+<aura:component controller="CCPM_leadPopOverApexController" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" >
+   <aura:handler name="init" value="{!this}" action="{!c.doinit}"></aura:handler>   
+    <aura:attribute name="popupid" type="string" />
+    <aura:attribute name="objLead" type="Lead" />
+    <aura:attribute name="strHeight" type="String" default="200px" access="public"/>
+    <aura:attribute name="objPopWrapper" type="CCPM_leadPopOverApexController.CCPM_leadPopOverWrapperLead" />
+    <!-- <aura:attribute name="objLead" type="Lead" />-->
+    
+    
+    <section class="slds-popover  slds-nubbin_top-right ld-pop-hide" role="dialog" aria-label="Dialog Title" aria-describedby="dialog-body-id-48">  
+        
+        <button onclick="{!c.togglePopup}" class="slds-button slds-button_icon slds-button_icon-small   slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+            <lightning:icon iconName="utility:close" size="xx-small"  title="Close" />
+        </button>
+        
+        
+        <header class="slds-popover__header">
+            <h2 id="dialog-heading-id-18" class="slds-text-heading_small">Customer Response</h2>
+        </header>
+        
+        <ui:scrollerWrapper class=" slds-scrollable ld-response-box">
+            <div class="slds-popover__body " id="dialog-body-id-48">
+                <!--   <c:CCPM_SMSInteractionHistoryContainer />-->
+                
+                <style>
+                    .cTwilio_SMS .message-list {
+                    height: {!v.strHeight};
+                    }
+                </style>
+                
+                <br />
+                <aura:if isTrue="{! empty(v.objPopWrapper.lstWrapperTask)}">
+                    There are no messages to display.
+                </aura:if> 
+               
+                    <aura:iteration var="objTasks" items="{!v.objPopWrapper.lstWrapperTask}">
+                       
+                            <li class="slds-list__item">
+                                <c:CCPM_SMSInteractionHistoryFormatter aura:id="{!objTasks.objTask.Id}"
+                                                                       strDirection="{!objTasks.objTask.CCPM_communicationDirection__c}" 
+                                                                       strMsgBody="{!objTasks.objTask.Description}" 
+                                                                       strFromPN="{!objTasks.strFromNumber}"
+                                                                       strToPN="{!objTasks.strToNumber}" 
+                                                                       datTDate="{!objTasks.objTask.CreatedDate}" 
+                                                                       />
+                            </li>
+                        
+                    </aura:iteration>
+               
+                
+                
+                <!--      <dl class="slds-popover__body-list ld-popbox-p-around">
+                     <dd>
+                         <p class="slds-truncate"><a href="javascript:void(0);">Daniel Clarke</a></p>
+                         <p class="ld-xx-text-desc ">12/1/2017, 10:30 AM </p>
+                         <dl class="slds-list_horizontal slds-wrap slds-text-body_small ld-text-align-justify">
+                             <span class="slds-m-top_x-small">The great thing about customer service templates is that instead of just explaining a strategy conceptually, a template helps you see the concept in action</span>
+                         </dl>
+                     </dd>
+                </dl>
+                <dl class="slds-popover__body-list ld-popbox-p-around">
+                    <dd class="slds-text-align_right">
+                        <p class="slds-truncate"><a href="javascript:void(0);">Customer Executive</a></p>
+                        <p class="ld-xx-text-desc ">12/1/2017, 10:30 AM </p>
+                        <dl class="slds-list_horizontal slds-wrap slds-text-body_small ld-text-align-justify">
+                            <span class="slds-m-top_x-small">The great thing about customer service templates is that instead of just explaining a strategy conceptually, a template helps you see the concept in action</span>
+                        </dl>
+                    </dd>
+                </dl>
+                <dl class="slds-popover__body-list ld-popbox-p-around">
+                    <dd class="slds-text-align_right">
+                        <p class="slds-truncate"><a href="javascript:void(0);">Customer Executive</a></p>
+                        <p class="ld-xx-text-desc ">12/1/2017, 10:30 AM </p>
+                        <dl class="slds-list_horizontal slds-wrap slds-text-body_small ld-text-align-justify">
+                            <span class="slds-m-top_x-small">The great thing about customer service templates is that instead of just explaining a strategy conceptually, a template helps you see the concept in action</span>
+                        </dl>
+                    </dd>
+                </dl>
+                <dl class="slds-popover__body-list ld-popbox-p-around">
+                    <dd class="slds-text-align_right">
+                        <p class="slds-truncate"><a href="javascript:void(0);">Customer Executive</a></p>
+                        <p class="ld-xx-text-desc ">12/1/2017, 10:30 AM </p>
+                        <dl class="slds-list_horizontal slds-wrap slds-text-body_small ld-text-align-justify">
+                            <span class="slds-m-top_x-small">The great thing about customer service templates is that instead of just explaining a strategy conceptually, a template helps you see the concept in action</span>
+                        </dl>
+                    </dd>
+                </dl>
+                -->
+            </div>
+        </ui:scrollerWrapper>
+        
+        
+    </section>
+</aura:component>

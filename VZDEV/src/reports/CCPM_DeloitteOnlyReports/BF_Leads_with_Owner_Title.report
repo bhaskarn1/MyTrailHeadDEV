@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Leads__r$CCPM_leadOwner__c</field>
+    </columns>
+    <columns>
+        <field>User.Leads__r$Owner</field>
+    </columns>
+    <columns>
+        <field>User*User$CCPM_commissionableRepID__c</field>
+    </columns>
+    <columns>
+        <field>User.Leads__r$LastName</field>
+    </columns>
+    <columns>
+        <field>User.Leads__r$CCPM_Type__c</field>
+    </columns>
+    <columns>
+        <field>User.Leads__r$CCPM_eventType__c</field>
+    </columns>
+    <columns>
+        <field>User.Leads__r$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>User.Leads__r$CCPM_eventType__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Black Friday/Cyber Monday</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Leads__r$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Contacted,Responded,Qualified,Converted,Expired,Dismissed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Title</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>BF Leads with Owner Title</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Leads_with_Owner__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Leads__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

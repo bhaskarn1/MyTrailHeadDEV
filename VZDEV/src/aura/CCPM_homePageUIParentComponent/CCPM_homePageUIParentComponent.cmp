@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+    <c:CCPM_LeadsAwaitingResponse />
+     <c:CCPM_MyActiveLeads />
+</aura:component>

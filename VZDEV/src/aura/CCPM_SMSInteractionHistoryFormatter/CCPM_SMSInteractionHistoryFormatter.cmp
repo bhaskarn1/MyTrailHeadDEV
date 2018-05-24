@@ -1,0 +1,45 @@
+<!--
+*@name          CCPM_SMSInteractionHistoryFormatter.cmp
+*@author        Paras Shah (Deloitte)
+*@date          01/24/2016
+*@description   To add styling and alignment for each SMS message
+
+Modification    Log:
+************************************************************************************
+Developer                        Date                                Description
+************************************************************************************
+Paras Shah(Deloitte)             01/24/2016                          Original Version
+-->
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="strDirection" type="String" access="public"/>
+    <aura:attribute name="strMsgBody" type="String" access="public" />
+    <aura:attribute name="status" type="String" access="public" />
+    <aura:attribute name="strFromPN" type="String" access="global" />    
+    <aura:attribute name="strToPN" type="String" access="global" />
+    <aura:attribute name="datTDate" type="DateTime" access="public" />
+    <aura:attribute name="pn" type="String" access="private" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+	
+    <div aura:id="message-container" class="slds-p-bottom--small" style="z-index:0;">
+        <div aura:id="message" class="slds-size--8-of-12 slds-popover"  role="dialog" style="z-index:0;">
+            <section class="slds-clearfix">
+                <!-- To display the SMS message body -->
+                <div class="slds-popover__body" >
+                    <p class="sl-msg-box">{!v.strMsgBody}</p>
+                </div>
+            </section>
+            <!-- To display the Phone number and Time stamp of when the SMS message was sent/received -->
+            <ul aura:id="status" class="slds-list--horizontal">
+                
+                <aura:if isTrue="{!v.strDirection=='Outbound'}">
+                    <li class="slds-list__item slds-p-right--small" style="font-size:9px;"><ui:outputTextArea aura:id="pn" value="{!v.strFromPN}"/></li>
+                </aura:if>
+                <aura:if isTrue="{!v.strDirection=='Inbound'}">
+                    <li class="slds-list__item slds-p-right--small" style="font-size:9px;"><ui:outputTextArea aura:id="pn2" value="{!v.strToPN}"/></li>
+                </aura:if>
+				
+                <li class="slds-list__item slds-p-right--small" style="font-size:9px;"><ui:outputDateTime value="{!v.datTDate}"/></li>
+            </ul>
+        </div>
+    </div>	
+</aura:component>

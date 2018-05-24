@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>UI Component Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>UI Component Settings</value>
+    </caseValues>
+    <fields>
+        <help><!-- Orders by a specific Field. --></help>
+        <label><!-- Order By Field --></label>
+        <name>CCPM_orderByField__c</name>
+    </fields>
+    <fields>
+        <help><!-- Metadata property to set the order by which the Query should sort Data --></help>
+        <label><!-- Order --></label>
+        <name>CCPM_order__c</name>
+        <picklistValues>
+            <masterLabel>ASC</masterLabel>
+            <translation><!-- ASC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DESC</masterLabel>
+            <translation><!-- DESC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Record Limit --></label>
+        <name>CCPM_recordLimit__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

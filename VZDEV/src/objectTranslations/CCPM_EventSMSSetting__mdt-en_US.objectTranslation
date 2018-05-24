@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event SMS Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Event SMS Settings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calculate SMS Followup --></label>
+        <name>CCPM_CalculateSMSFollowup__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>CCPM_EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Journey Message Name --></label>
+        <name>CCPM_JourneyMessageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Event Type --></label>
+        <name>CCPM_LeadEventType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Record Type --></label>
+        <name>CCPM_LeadRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Next Business Day --></label>
+        <name>CCPM_SendNextBusinessDay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sms Follow Up End Date --></label>
+        <name>CCPM_SmsFollowUpEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sms Follow Up OverrideDate --></label>
+        <name>CCPM_SmsFollowUpOverrideDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sms Follow Up Start Date --></label>
+        <name>CCPM_SmsFollowUpStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>CCPM_StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Ecode --></label>
+        <name>CCPM_overrideEcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>CCPM_type__c</name>
+    </fields>
+    <layouts>
+        <layout>Event SMS Setting Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dates --></label>
+            <section>Dates</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

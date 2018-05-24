@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This process is used to verify a texter’s opt-in status, request that the texter opt-in if the texter is opted-out, routes the texter to the LiveText Agent console after opt-in has been confirmed, opt-out the texter when the opt-out command is received and provides help information when requested by the texter.</description>
+    <label>ConfirmOptIn</label>
+    <processType>Workflow</processType>
+</Flow>

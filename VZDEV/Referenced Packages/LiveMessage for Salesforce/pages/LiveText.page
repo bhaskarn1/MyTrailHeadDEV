@@ -1,0 +1,14 @@
+<apex:page standardController="LiveText__Conversation_Session__c" extensions="LiveText.LiveTextController" showHeader="false" action="{!init}" cache="false" standardStylesheets="false" sidebar="false">
+ <c:ScriptsComponent id="scmp"/>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+ <apex:pageMessages id="lt_pageMessages"/>
+ <apex:stylesheet value="{!URLFOR($Resource.LiveText__Framework, 'framework/css/bootstrap.min.css')}"/>
+ <apex:includeScript value="{!URLFOR($Resource.LiveText__Framework, 'framework/js/bootstrap.min.js')}"/>
+ <apex:includeScript value="/soap/ajax/31.0/connection.js"/>
+ <apex:includeScript value="/support/console/31.0/integration.js"/>
+ <apex:stylesheet value="{!URLFOR($Resource.LiveText__SLDS202, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+    <div style="height:100%;width:100%; position:relative;">
+	   <c:ConversationDetail convHeaderId="{!conversationRecordId}" oid="{!originatingObjectId}" objectprefix="{!originatingObjectPrefix}" />
+    </div>
+</apex:page>

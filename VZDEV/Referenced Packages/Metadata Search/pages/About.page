@@ -1,0 +1,53 @@
+<apex:page tabStyle="About__tab">
+<html>
+    <head>
+        <title>Metadata Search</title>
+    </head>
+    <body>
+        <p>
+            <span style="color: #ff8c00"><span style="font-size: 24px">Metadata Search - Quick search for Metadata components</span></span>
+            <span style="float:right;margin-right:20px;"><span style="font-size:18px"><a style="color: #ff8c00;" href="http://metadatasearch.satrangtech.com" target="_blank">Support</a></span></span>
+        </p> 
+        <p>
+            Thank you again for choosing Metadata Search! We really appreciate your business. 
+            <!-- <br/><br/><font color="red">Please refer the <a target="_blank" href="https://appexchange.salesforce.com/servlet/servlet.FileDownload?file=00P3000000GNhs2EAD">configuration guide&nbsp;<img src="/img/apexpages/setup/launch.jpg"/></a> to complete configuration steps for this application and start using Metadata search functionality.</font>-->
+        </p>        
+        <p>
+            <span style="font-size: 18px"><span style="color: #ff8c00">Features</span></span></p>
+        <ul>
+            <li>
+                Quick metadata search capability for the developers and administrators.</li>
+            <li>
+                 Different and varied components supported:
+                 <ul>
+                    <li>Configuration items : Audit Trails, Business Processes, Approval Processes, Workflows (Rules, Email Alerts, Tasks, Field Updates and Outbound Messages), Validation Rules, Apps, Roles, Profiles, Permission Sets, Email Templates, Public Groups, Queues, Sites, Buttons and Links, Record Types, Assignment Rules and Static Resources</li>
+                    <li>Customisation items : Apex Classes and Triggers, Visualforce Pages, Visualforce Components and Lightning Components</li> 
+                    <li>Also supports searching of Recent Items, Fields, Field Sets, Objects, Reports, Dashboards, Scheduled Jobs, Custom Tabs and Custom Settings.</li>
+                </ul>
+            </li>
+            <li>
+                A UI experience similar to Salesforce with extensive components search feature.
+            </li>
+        </ul>
+        <p>
+            &nbsp;</p>
+        <p>
+            <span style="font-size: 18px"><span style="color: #ff8c00">Configuration Guide (Post Installation Steps)</span></span></p>
+        <p>
+            <font color="red">Please refer the <a target="_blank" href="https://satrangtech.freshdesk.com/support/solutions/articles/17000002943-configuration-guide">configuration guide</a> to complete configuration steps for this application and start using Metadata search functionality. </font></p>
+        <p>
+            &nbsp;</p>
+        <p>
+            <span style="color: #ff8c00"><span style="font-size: 18px">Support</span>&nbsp;</span></p>
+        <p>
+            If you are still facing difficulty or need any assistance, please visit <a href="http://metadatasearch.satrangtech.com" target="_blank">Support Portal</a>. Also, you can email your queries/assistance requests/feedback at <a target="_blank" href="mailto:appexchange%2Bms@satrangtech.com">appexchange+ms@satrangtech.com&nbsp;<img src="/img/apexpages/setup/launch.jpg"/></a>.</p>
+        <p>
+            &nbsp;</p>            
+        <p>
+            <span style="color: #ff8c00"><span style="font-size: 18px">Write a Review</span>&nbsp;</span></p>
+        <p>
+            We would be delighted if you could take a moment to write a review of our app on the AppExchange. Simply visit <a target="_blank" href="http://bit.ly/X5N8YD">Metadata Search&nbsp;<img src="/img/apexpages/setup/launch.jpg"/></a> to begin.</p>            
+    </body>
+</html>
+
+</apex:page>

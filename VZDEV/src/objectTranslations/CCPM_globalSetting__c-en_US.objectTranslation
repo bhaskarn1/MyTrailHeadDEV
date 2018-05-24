@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Global Setting</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Global Setting</value>
+    </caseValues>
+    <fields>
+        <help><!-- Customer Response Task Subject Used in Process Builder &apos;Process Customer Response Using Apex V2&apos; --></help>
+        <label><!-- Customer Response Task Subject --></label>
+        <name>CCPM_CustomerResponseTaskSubject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Integration User Queue --></label>
+        <name>CCPM_DataIntegrationQueue__c</name>
+    </fields>
+    <fields>
+        <label><!-- HQ-Telesales --></label>
+        <name>CCPM_HQTelesale__c</name>
+    </fields>
+    <fields>
+        <label><!-- HotFixDeploymentDateTime --></label>
+        <name>CCPM_HotFixDeploymentDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iphone X Url --></label>
+        <name>CCPM_IphoneXUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pixel - future device --></label>
+        <name>CCPM_Pixelfuturedevice__c</name>
+    </fields>
+    <fields>
+        <help><!-- Keeps the value of Max time&apos;s the SMS can be resent. --></help>
+        <label><!-- SMS Fail Counter --></label>
+        <name>CCPM_SMSFailCounter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Closed Status --></label>
+        <name>CCPM_cartClosedStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart New Status --></label>
+        <name>CCPM_cartNewStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- clientCertName_x --></label>
+        <name>CCPM_clientCertName_x__c</name>
+    </fields>
+    <fields>
+        <help><!-- Interval for Event type- Confirming with Family First. --></help>
+        <label><!-- Event Confirm Family Interval(In Hrs) --></label>
+        <name>CCPM_confirmingWithFamilyFirstInterval__c</name>
+    </fields>
+    <fields>
+        <help><!-- Interval for event type- Contract Terminating Soon. --></help>
+        <label><!-- Event Cntrct Terminate Interval(In Hrs) --></label>
+        <name>CCPM_contractTerminatingSoonInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Switch To Avoid Update Trigger --></label>
+        <name>CCPM_customSwitchToAvoidUpdateTrigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Integration User ID --></label>
+        <name>CCPM_dataIntegrationUserID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Integration User Profile Id --></label>
+        <name>CCPM_dataIntegrationUserProfileId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days of Lead Expiry --></label>
+        <name>CCPM_daysOfLeadExpiry__c</name>
+    </fields>
+    <fields>
+        <help><!-- Algorithm used for Encrypting Data --></help>
+        <label><!-- EncryptionAlgorithm --></label>
+        <name>CCPM_encryptionAlgorithm__c</name>
+    </fields>
+    <fields>
+        <help><!-- End Point URL for Vision --></help>
+        <label><!-- Endpoint_x --></label>
+        <name>CCPM_endpoint_x__c</name>
+    </fields>
+    <fields>
+        <help><!-- Interval in minutes from date/time lead is created to send the follow-up SMS --></help>
+        <label><!-- Follow Up SMS Interval (In Min) --></label>
+        <name>CCPM_followUpSMSInterval__c</name>
+    </fields>
+    <fields>
+        <help><!-- If follow-up SMS date/time is outside the business hours, an initial interval is added so that Initial SMS and Follow Up SMS will have different start time --></help>
+        <label><!-- Follow Up SMS Next Start Interval --></label>
+        <name>CCPM_followUpSMSNextStartInterval__c</name>
+    </fields>
+    <fields>
+        <help><!-- Interval for event type: Gift for upcoming occassion. --></help>
+        <label><!-- Event Gift Occassion Interval(In Hrs) --></label>
+        <name>CCPM_giftForUpcomingOccassionInterval__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the AdminAccountID for LiveText Heywire. --></help>
+        <label><!-- Heywire API Account ID --></label>
+        <name>CCPM_heywireAPIAccountID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the Admin Password for LiveText Heywire. --></help>
+        <label><!-- Heywire API AdminPassword --></label>
+        <name>CCPM_heywireAPIAdminPassword__c</name>
+    </fields>
+    <fields>
+        <help><!-- End Point URL for Live Text. --></help>
+        <label><!-- Heywire API End point URL --></label>
+        <name>CCPM_heywireAPIEndpointURL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Interval in minutes to send the initial sms from date/time lead (cart) was created in salesforce --></help>
+        <label><!-- Initial SMS Interval (In Min) --></label>
+        <name>CCPM_initialSMSInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Customer Abandoned Cart Record Type --></label>
+        <name>CCPM_leadCustomerAbandonedCartRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Expiry RecordTypes --></label>
+        <name>CCPM_leadExpiryRecordTypes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lead Open Statuses --></help>
+        <label><!-- Lead Open Status --></label>
+        <name>CCPM_leadOpenStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Prospect Abandoned Cart Record Type --></label>
+        <name>CCPM_leadProspectAbandonedCartRecordType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Prospect Record Type --></label>
+        <name>CCPM_leadProspectRecordType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lead Action Required SMS Time Interval only in Hrs for the Schedule Job --></help>
+        <label><!-- Lead Action Required SMS Time Interval --></label>
+        <name>CCPM_leadReqActionSMSTimeInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Requiring Action Report --></label>
+        <name>CCPM_leadRequiringActionReport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leads By Owner Report --></label>
+        <name>CCPM_leadsByOwnerReport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Leads by Status Report --></label>
+        <name>CCPM_leadsByStatusReport__c</name>
+    </fields>
+    <fields>
+        <help><!-- Live Text Number to be used to send out SMS to non Verizon numbers. --></help>
+        <label><!-- Live Text Number Non Verizon --></label>
+        <name>CCPM_liveTextNumberNonVerizon__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Heywire number from number from which text messages will be sent --></help>
+        <label><!-- Live Text Phone Number --></label>
+        <name>CCPM_liveTextPhoneNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Event Interval(In Hrs) --></label>
+        <name>CCPM_noEventInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Event Interval (In Hrs) --></label>
+        <name>CCPM_otherEventInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outgoing SMS Reference Id --></label>
+        <name>CCPM_outgoingSMSReferenceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect SMS Next Start Interval --></label>
+        <name>CCPM_prospectSMSNextStartInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Types with FreeVzMsg --></label>
+        <name>CCPM_recordTypesWithFreeVzMsg__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecordTypes without FreeVzMsg --></label>
+        <name>CCPM_recordTypesWithoutFreeVzMsg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remove Schedule Batch Size --></label>
+        <name>CCPM_removeScheduleBatchSize__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Rep Profile Record Id --></label>
+        <name>CCPM_salesRepProfileId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to set the chunk size of batch class CCPM_sendSMSBatch. --></help>
+        <label><!-- Send SMS Batch Chunk --></label>
+        <name>CCPM_sendSMSBatchChunk__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sets the number of records to be pulled in the batch class CCPM_sendSMSBatch. --></help>
+        <label><!-- Send SMS Batch Limit --></label>
+        <name>CCPM_sendSMSBatchLimit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Defines the interval between part 1 and part 2 sms body. --></help>
+        <label><!-- Sleep Time Between Part 1 and 2(ms) --></label>
+        <name>CCPM_sleepTimeBetweenSMSBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stagger Initial SMS Interval (In Min) --></label>
+        <name>CCPM_staggerInitialSMSInterval__c</name>
+    </fields>
+    <fields>
+        <label><!-- System Admin Profile Id --></label>
+        <name>CCPM_systemAdminProfileId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Record Type ID for task of type Interaction History --></help>
+        <label><!-- Task Interaction History Record Type Id --></label>
+        <name>CCPM_taskInteractionHistoryRecordTypeId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Record Type ID for task of type To-Do --></help>
+        <label><!-- Task To Do Record Type Id --></label>
+        <name>CCPM_taskToDoRecordTypeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update Trigger Initial Time On Update --></label>
+        <name>CCPM_updateTriggerInitialTimeOnUpdate__c</name>
+    </fields>
+    <fields>
+        <help><!-- key to encrypt data --></help>
+        <label><!-- EncryptedKey --></label>
+        <name>ccpm_encryptedKey__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

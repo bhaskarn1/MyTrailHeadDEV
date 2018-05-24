@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>te</joinTable>
+        </blockInfo>
+        <columns>
+            <field>LEAD_ID</field>
+        </columns>
+        <columns>
+            <field>LAST_NAME</field>
+        </columns>
+        <columns>
+            <field>DESCRIPTION</field>
+        </columns>
+        <columns>
+            <field>Lead.CCPM_isInitialSMSSent__c</field>
+        </columns>
+        <columns>
+            <field>LAST_UPDATE</field>
+        </columns>
+        <columns>
+            <field>CREATED_DATE</field>
+        </columns>
+        <columns>
+            <field>Lead.CCPM_createdDate__c</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Activity.CCPM_communicationDirection__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Outbound</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>DESCRIPTION</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>startsWith</operator>
+                <value>FreeVzMsg:</value>
+            </criteriaItems>
+        </filter>
+        <format>Tabular</format>
+        <name>Activities with Leads block 1</name>
+        <params>
+            <name>closed</name>
+            <value>all</value>
+        </params>
+        <params>
+            <name>type</name>
+            <value>te</value>
+        </params>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>LeadActivity</reportType>
+        <scope>organization</scope>
+        <sortColumn>LEAD_ID</sortColumn>
+        <sortOrder>Desc</sortOrder>
+        <timeFrameFilter>
+            <dateColumn>CREATED_DATE</dateColumn>
+            <interval>INTERVAL_LASTMONTH</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>te</joinTable>
+    </blockInfo>
+    <description>Is the “Initial SMS Sent?” Flag set to true when both the Initial SMS Part 1 and Part 2 were sent?</description>
+    <format>MultiBlock</format>
+    <name>Audit Req 7 Initial SMS Flag True</name>
+    <reportType>LeadActivity</reportType>
+    <showDetails>true</showDetails>
+</Report>

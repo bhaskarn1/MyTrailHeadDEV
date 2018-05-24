@@ -1,0 +1,24 @@
+<aura:component controller="CCPM_leadsAwaitingChildStatusApexCon" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"></aura:handler>
+    <aura:registerEvent name="CommunicateParent" type="c:CCPM_communicateToLARParent"/>
+    <aura:attribute name="mapSubStatus" type="map"/>
+    <aura:attribute name="objLead" type="Lead"/>
+    <aura:attribute name="selectedValueSubStatus" type="String" default="--Select--"/>
+    <aura:attribute name="isSelectedSelect" type="Boolean" default="true"/>
+    <aura:attribute name="isProfileRestricted" type="Boolean" default="true"/>
+    
+    
+    
+  <lightning:select class="ld-rep-select" name="select" aura:id="SubStatusPicklist" value="{!v.selectedValueSubStatus}" onchange="{!c.updateSelectedSubStatus}" disabled="{!v.isProfileRestricted}">
+        <aura:iteration items="{!v.mapSubStatus}" var="SubStatus" indexVar="key" >
+            <option text="{!SubStatus.value}" value="{!SubStatus.key}" selected="{!SubStatus.selected}"/>
+        </aura:iteration>
+    </lightning:select>
+    <aura:renderif isTrue="{!v.isSelectedSelect}">
+        <lightning:button class="ld-rep-button" variant="neutral" label="Save" aura:id="Save" disabled='true'/>
+        <aura:set attribute="else">
+            <lightning:button class="ld-rep-button" variant="neutral" onclick="{!c.saveLead}" label="Save" aura:id="Save" disabled='false'/>
+        </aura:set>
+    </aura:renderif> 
+      
+</aura:component>

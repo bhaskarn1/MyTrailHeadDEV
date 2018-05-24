@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Follow-Up Date</value>
+        </caseValues>
+        <name>due_date_activity</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- SMS Message Type --></label>
+        <name>CCPM_SMSMessageType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity Creation Date Time --></label>
+        <name>CCPM_activityCreationDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Details --></label>
+        <name>CCPM_callDetails__c</name>
+        <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field describes if the SMS is either sent or received. --></help>
+        <label><!-- Communication Direction --></label>
+        <name>CCPM_communicationDirection__c</name>
+        <picklistValues>
+            <masterLabel>Inbound</masterLabel>
+            <translation><!-- Inbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound</masterLabel>
+            <translation><!-- Outbound --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Next Steps --></label>
+        <name>CCPM_nextSteps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>CCPM_notes__c</name>
+    </fields>
+</CustomObjectTranslation>

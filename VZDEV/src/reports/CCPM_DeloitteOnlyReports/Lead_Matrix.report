@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>BucketField_44806879</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Lead.CCPM_initialSMSSentDateTime__c</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% of Total</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_44806879</developerName>
+        <masterLabel>Sub Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Lead.CCPM_leadSubStatus__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Action Required</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>In Discussion</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Appointment Scheduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Needs Store Reassignment</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Service Issue</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Disinterested</sourceValue>
+            </sourceValues>
+            <value>Other Response</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Cart-Disinterested</sourceValue>
+            </sourceValues>
+            <value>Unsubscribed</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Opted Out</sourceValue>
+            </sourceValues>
+            <value>Opted Out</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Lead.CCPM_isInitialSMSSent__c</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <filter>
+        <booleanFilter>(((1 OR 2) AND 3)) AND 4</booleanFilter>
+        <criteriaItems>
+            <column>Lead.CCPM_leadSubStatus__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Opted Out,Action Required,In Discussion,Appointment Scheduled,Needs Store Reassignment,Service Issue,Disinterested,Cart-Disinterested</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_leadSubStatus__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_isInitialSMSSent__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_initialSMSSentDateTime__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>7/12/2017 12:00 AM</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_44806879</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.CCPM_initialSMSSentDateTime__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Double Opt Out Matrix</name>
+    <params>
+        <name>co</name>
+        <value>0</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-07-11</startDate>
+    </timeFrameFilter>
+</Report>

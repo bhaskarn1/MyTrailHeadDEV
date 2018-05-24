@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_previousLeadStatus__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Contacted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_previousLeadStatus__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Responded-Opted Out,Responded-Cart-Disinterested,Responded-Disinterested</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LAST_UPDATE_BY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Heroku Connect User</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Data update for Unsubscribe and Opt Outs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Lead.CCPM_previousLeadStatus__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

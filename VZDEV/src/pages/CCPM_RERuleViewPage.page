@@ -1,0 +1,124 @@
+<apex:page controller="CCPM_RERuleController" tabStyle="CCPM_Rule__c">
+<apex:pageMessages escape="false"/>
+
+<apex:form id="mainform">
+    
+    <apex:pageBlock id="mainBlock" rendered="{!strRuleRecordType <> ''}">
+        <apex:pageBlockButtons location="Top">
+            <apex:commandButton value="Edit" action="{!edit}"/>
+            <apex:commandButton value="Clone" action="{!cloneRulePackage}"/>
+        </apex:pageBlockButtons>
+    
+        <apex:pageBlockSection title="{!strRuleRecordType} Details">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Rule Name"/>
+                <apex:outputField value="{!rulePackage.objRule.Name}" style="width:230px"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Active"/>
+                <apex:outputField value="{!rulePackage.objRule.CCPM_active__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Primary Object"/>
+                <apex:outputField value="{!rulePackage.objRule.CCPM_primaryObject__c}" style="width:230px"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Start Date"/>
+                <apex:outputField value="{!rulePackage.objRule.CCPM_startDate__c}"/>
+            </apex:pageBlockSectionItem> 
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Description"/>
+                <apex:outputField value="{!rulePackage.objRule.CCPM_description__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="End Date"/>
+                <apex:outputField value="{!rulePackage.objRule.CCPM_endDate__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Created By"/>
+                <apex:outputPanel >
+                    <apex:outputLink value="/{!rulePackage.objRule.CreatedById}">{!rulePackage.objRule.CreatedBy.Name}</apex:outputLink>, <apex:outputField value="{!rulePackage.objRule.CreatedDate}"/> 
+                </apex:outputPanel>
+                
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Last Modified By"/>
+                <apex:outputPanel >
+                    <apex:outputLink value="/!{rulePackage.objRule.LastModifiedById}">{!rulePackage.objRule.LastModifiedBy.Name}</apex:outputLink>, <apex:outputField value="{!rulePackage.objRule.LastModifiedDate}"/>              
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSection title="Merge details" columns="1" rendered="{!strRuleRecordType == 'Batch Merge Rule'}">
+            
+	            <apex:pageBlockSectionItem >
+	            	<apex:outputLabel value="Existing Record"/>
+	                <apex:outputField value="{!rulePackage.objRule.CCPM_existingRecord__c}"/>
+	            </apex:pageBlockSectionItem>
+	            
+	            <apex:pageBlockSectionItem >
+	            	<apex:outputLabel value="New Record"/>
+	                <apex:outputField value="{!rulePackage.objRule.CCPM_newRecord__c}"/>
+	            </apex:pageBlockSectionItem>
+	            
+	            <apex:pageBlockSectionItem >
+	            	<apex:outputLabel value="Winning Record"/>
+	                <apex:outputField value="{!rulePackage.objRule.CCPM_winningRecord__c}"/>
+	            </apex:pageBlockSectionItem>
+	            
+	        </apex:pageBlockSection>
+        </apex:pageBlockSection>
+        
+        
+        <apex:pageBlockSection title="Criteria" columns="1" id="criteriaPanel" rendered="{!strRuleRecordType == 'Trigger Rule'}"> 
+            <apex:pageBlockTable value="{!rulePackage.mapCriteria}" var="objCri" id="criteriaTable">
+                <apex:column headerValue="Action" style="width:10%;text-align:center">
+                    <apex:commandLink value="Del" style="color:red" action="{!removeCriteriaRow}" reRender="criteriaPanel" immediate="true">
+                        <apex:param value="{!objCri}" name="intCRowNum" assignTo="{!intCRowNum}"/>
+                    </apex:commandLink> 
+                </apex:column>
+                <apex:column headerValue="Field Name" style="width:15%;text-align:left">
+                    <apex:outputField value="{!rulePackage.mapCriteria[objCri].CCPM_fieldName__c}" style="width:80%" />
+                </apex:column>
+                
+                <apex:column headerValue="Operator" style="width:15%;text-align:left">
+                    <apex:outputField value="{!rulePackage.mapCriteria[objCri].CCPM_operator__c}" style="width:80%" />
+                </apex:column>
+                <apex:column headerValue="Field Value" style="width:15%;text-align:left">
+                    <apex:outputPanel rendered="{!AND(rulePackage.mapCriteria[objCri].CCPM_operator__c <> 'Is Null', rulePackage.mapCriteria[objCri].CCPM_operator__c <> 'Is Not Null')}">
+                    <apex:outputField value="{!rulePackage.mapCriteria[objCri].CCPM_valueText__c}" style="width:70%;" rendered="{!rulePackage.mapCriteria[objCri].CCPM_fieldType__c <> 'Double'}"/>
+                    <apex:outputField value="{!rulePackage.mapCriteria[objCri].CCPM_valueDouble__c}" style="width:70%;" rendered="{!rulePackage.mapCriteria[objCri].CCPM_fieldType__c == 'Double'}"/>
+                    <apex:outputField value="{!rulePackage.mapCriteria[objCri].CCPM_valueDate__c	}" rendered="{!rulePackage.mapCriteria[objCri].CCPM_fieldType__c == 'Date'}"/>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column headerValue="Active" style="width:5%">
+                    <apex:outputField value="{!rulePackage.mapCriteria[objCri].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Rule Actions" columns="1" id="ruleActionPanel">
+            <apex:pageBlockTable style="width:30%;" value="{!rulePackage.mapRuleAction}" var="objRA" id="ruleActionTable">
+                <apex:column headerValue="Action" style="width:30%;text-align:center">
+                    <apex:commandLink value="Del" style="color:red" action="{!removeRuleActionRow}" reRender="ruleActionTable" immediate="true">
+                        <apex:param value="{!objRA}" name="intRARowNum" assignTo="{!intRARowNum}"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="Value Name" style="width:60%">
+                    <apex:outputLink value="/apex/CCPM_REActionViewPage?actionId={!rulePackage.mapRuleAction[objRA].CCPM_action__c}" >{!rulePackage.mapRuleAction[objRA].CCPM_Action__r.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Active" style="width:10%;text-align:center">
+                    <apex:outputField value="{!rulePackage.mapRuleAction[objRA].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:form>
+</apex:page>

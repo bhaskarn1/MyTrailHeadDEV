@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_mobileNumber__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_SKU__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_accountNumber__c</field>
+    </columns>
+    <description>A list of all leads, their MTN, SKU and Account number</description>
+    <format>Tabular</format>
+    <name>MTN and SKUs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

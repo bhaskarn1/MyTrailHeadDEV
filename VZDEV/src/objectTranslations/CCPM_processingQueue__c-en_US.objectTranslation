@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Processing Queue</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Processing Queue</value>
+    </caseValues>
+    <fields>
+        <label><!-- Inserted Date Time --></label>
+        <name>CCPM_InsertedDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- SObject Type --></label>
+        <name>CCPM_SObjectType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>CCPM_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Unique ID --></label>
+        <name>CCPM_accountUniqueID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Type --></label>
+        <name>CCPM_cartType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead ID --></label>
+        <name>CCPM_leadID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Queue Type --></label>
+        <name>CCPM_queueType__c</name>
+        <picklistValues>
+            <masterLabel>Cart Type Processing for Converted Leads</masterLabel>
+            <translation><!-- Cart Type Processing for Converted Leads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS Schedules To Be Removed</masterLabel>
+            <translation><!-- SMS Schedules To Be Removed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Store ID --></label>
+        <name>CCPM_storeID__c</name>
+    </fields>
+    <layouts>
+        <layout>Processing Queue Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

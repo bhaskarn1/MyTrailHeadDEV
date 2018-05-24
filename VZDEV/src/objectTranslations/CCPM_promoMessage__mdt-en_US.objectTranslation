@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Send  Pre Defined SMS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Send Pre Defined SMS</value>
+    </caseValues>
+    <fields>
+        <label><!-- Message Content For Leads --></label>
+        <name>CCPM_MessageContentForLeads__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dispaly Orginal Message --></label>
+        <name>CCPM_dispalyOrignialMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Pre Defined Response --></label>
+        <name>CCPM_finalPreDefinedResponse__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Pre Defined Response --></label>
+        <name>CCPM_firstPreDefinedResponse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Content For Prospects --></label>
+        <name>CCPM_messageContentForProspects__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

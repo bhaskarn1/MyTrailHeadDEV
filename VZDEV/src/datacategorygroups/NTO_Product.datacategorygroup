@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Backpacking</label>
+            <name>Backpacking</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Camping</label>
+            <name>Camping</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Climbing</label>
+            <name>Climbing</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Expeditions</label>
+            <name>Expeditions</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Hiking</label>
+            <name>Hiking</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Mountaineering</label>
+            <name>Mountaineering</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Running</label>
+            <name>Running</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Skiing</label>
+            <name>Skiing</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Snowboarding</label>
+            <name>Snowboarding</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <description>Specifies which product line an article is related to.</description>
+    <label>NTO Product</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

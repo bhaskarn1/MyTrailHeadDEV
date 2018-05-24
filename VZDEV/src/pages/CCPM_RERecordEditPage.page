@@ -1,0 +1,81 @@
+<apex:page controller="CCPM_RERecordController" tabStyle="CCPM_RERecord__c">
+<apex:pageMessages escape="false"/>
+<apex:form id="mainform">
+    
+    <apex:pageBlock id="mainBlock">
+        <apex:pageBlockButtons id="mainButtonsBlock" >
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton onclick="history.go(-1);return false;" value="Cancel" />
+        </apex:pageBlockButtons>
+        
+        <apex:pageBlockSection title="Record Details" id="RecordSection" >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Record Name"/>
+                <apex:outputPanel >
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        <apex:inputField value="{!recordPackage.objRecord.Name}" style="width:230px"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Active"/>
+                <apex:inputField value="{!recordPackage.objRecord.CCPM_active__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Object"/ > 
+                <apex:outputField value="{!recordPackage.objRecord.CCPM_primaryObject__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+            </apex:pageBlockSectionItem>
+            
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Criteria Details" columns="1" id="criteriaPanel">
+            <apex:outputText value="Use <Today> for current date. Add or reduce days by using formula '<Today> + n' or '<Today> - n' where n is Number of days." escape="true"/>
+            <apex:actionFunction name="checkForNull" rerender="criteriaPanel"/>
+            <apex:pageBlockTable value="{!recordPackage.mapCriteria}" var="cri" id="criteriaTable">
+                <apex:column headerValue="Action" style="width:5%;text-align:center">
+                    <apex:commandLink value="Del" style="color:red" action="{!removeCriteriaRow}" reRender="criteriaPanel" immediate="true">
+                        <apex:param value="{!cri}" name="intCRowNum" assignTo="{!intCRowNum}"/>
+                    </apex:commandLink> 
+                </apex:column>
+                <apex:column headerValue="Field Name " style="width:15%">
+                    <apex:selectList value="{!recordPackage.mapCriteria[cri].CCPM_fieldName__c}" size="1" >  
+                        <apex:actionSupport event="onchange" action="{!setFieldType}" reRender="criteriaPanel" >
+                            <apex:param value="{!cri}" name="intCRowNum" assignTo="{!intCRowNum}"/>
+                        </apex:actionSupport>
+                        <apex:selectOptions value="{!fieldTypes}" />
+                    </apex:selectList>
+                </apex:column>              
+                <apex:column headerValue="Operator" style="width:15%;text-align:left">
+                    <apex:inputField value="{!recordPackage.mapCriteria[cri].CCPM_fieldType__c}" style="display:none"/>
+                    <apex:inputField value="{!recordPackage.mapCriteria[cri].CCPM_operator__c}" style="width:80%" onchange="checkForNull()"/>
+                </apex:column>
+                <apex:column headerValue="Field Value" style="width:15%;text-align:left">
+                    <apex:outputPanel rendered="{!AND(recordPackage.mapCriteria[cri].CCPM_operator__c <> 'Is Null', recordPackage.mapCriteria[cri].CCPM_operator__c <> 'Is Not Null')}">
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        
+                        <apex:inputField value="{!recordPackage.mapCriteria[cri].CCPM_valueText__c}" style="width:70%;" rendered="{!recordPackage.mapCriteria[cri].CCPM_fieldType__c <> 'Double'}"/>
+                        <apex:inputField value="{!recordPackage.mapCriteria[cri].CCPM_valueDouble__c}" style="width:70%;" rendered="{!recordPackage.mapCriteria[cri].CCPM_fieldType__c == 'Double'}"/>
+                        <apex:inputField value="{!recordPackage.mapCriteria[cri].CCPM_valueDate__c}" rendered="{!recordPackage.mapCriteria[cri].CCPM_fieldType__c == 'Date'}"/>
+                        
+                        &nbsp;&nbsp;({!recordPackage.mapCriteria[cri].CCPM_fieldType__c})
+                    </div>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column headerValue="Active" style="width:5%">
+                    <apex:inputField value="{!recordPackage.mapCriteria[cri].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:commandButton value="Add" action="{!recordPackage.addCriteriaRow}" reRender="criteriaPanel"/>
+        </apex:pageBlockSection> 
+        
+    </apex:pageBlock>
+    
+</apex:form>
+</apex:page>

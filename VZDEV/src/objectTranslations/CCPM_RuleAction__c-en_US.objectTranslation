@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RE Rule Action</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RE Rule Actions</value>
+    </caseValues>
+    <fields>
+        <label><!-- RE Rule Action ID --></label>
+        <name>CCPM_RE_Rule_Action_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Action --></label>
+        <name>CCPM_action__c</name>
+        <relationshipLabel><!-- RE Rule Actions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rule --></label>
+        <name>CCPM_rule__c</name>
+        <relationshipLabel><!-- RE Rule Actions --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead$Id</field>
+    </columns>
+    <columns>
+        <field>Lead$CCPM_initialSMSSentDateTime__c</field>
+    </columns>
+    <description>Lead ID and initial SMS Sent Date/TIme</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Converted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead$CCPM_isInitialSMSSent__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Initial SMS Sent Time for Converted Lead</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CCPM_leadsWithActivities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Lead$CCPM_createdDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

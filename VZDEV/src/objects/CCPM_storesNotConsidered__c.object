@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Contains the Custom settings to store market, Territory and Distric to which SMS should not be sent.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CCPM_district__c</fullName>
+        <description>This field stores the value of the district.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field stores the value of the district.</inlineHelpText>
+        <label>District</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_market__c</fullName>
+        <description>This field stores the market value.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field stores the market value.</inlineHelpText>
+        <label>Market</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_territory__c</fullName>
+        <description>Holds the value for territory.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Holds the value for territory.</inlineHelpText>
+        <label>Territory</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Stores Not Considered</label>
+    <visibility>Public</visibility>
+</CustomObject>

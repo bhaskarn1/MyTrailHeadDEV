@@ -1,0 +1,2036 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnableCustomerPortal</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnablePartnerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EnableSelfService</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Merge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewContact</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SmsHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewCustomerPortal</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewPartnerPortalUser</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewSelfService</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssistantName</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>AssistantPhone</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Birthdate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>CCPM_accountNumber__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Account Number</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_communicationPreference__c</fullName>
+        <externalId>false</externalId>
+        <label>Communication Preference</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CCPM_itemInterestedIn__c</fullName>
+        <externalId>false</externalId>
+        <label>Item Interested In</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tablet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Accessory</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CCPM_state__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>--None--</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alabama</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Alaska</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Arizona</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Arkansas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>California</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Colorado</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Connecticut</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Delaware</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Florida</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hawaii</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Idaho</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Illinois</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Indiana</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Iowa</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Kansas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Kentucky</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Louisiana</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maine</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maryland</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Massachusetts</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Michigan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Minnesota</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mississippi</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Missouri</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Montana</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nebraska</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nevada</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New Hampshire</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New Jersey</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New Mexico</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New York</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>North Carolina</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>North Dakota</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ohio</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Oklahoma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Oregon</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pennsylvania</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rhode Island</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>South Carolina</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>South Dakota</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tennessee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Texas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Utah</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Vermont</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Virginia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Washington</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>West Virginia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Wisconsin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Wyoming</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Department</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>HomePhone</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>LastCURequestDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LastCUUpdateDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MailingAddress</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+        <encrypted>true</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>true</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OtherAddress</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OtherPhone</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ReportsToId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+        <encrypted>false</encrypted>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>et4ae5__HasOptedOutOfMobile__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mobile Opt Out</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>et4ae5__Mobile_Country_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mobile Country Code</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>US</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>AC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BJ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>BZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DJ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>EG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ER</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ES</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ET</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FJ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>JP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ME</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ML</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SJ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TJ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TW</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VG</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VU</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WF</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>YE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>YT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ZA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ZM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ZW</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>AllContacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CONTACT.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Contacts</label>
+    </listViews>
+    <listViews>
+        <fullName>BirthdaysThisMonth</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CONTACT.BIRTHDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.BIRTHDATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Birthdays This Month</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CONTACT.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CONTACT.PHONE1</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.SITE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.SITE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE1</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE3</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE4</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE5</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CONTACT.PHONE6</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.SITE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTACT.PHONE1</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTACT.EMAIL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CONTACT.PHONE3</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CCPM_retrictNumbersOnContactNames</fullName>
+        <active>true</active>
+        <description>First/Last Name cannot contain numbers.</description>
+        <errorConditionFormula>OR(
+NOT(REGEX( FirstName, &quot;[^0-9]{0,255}&quot; )),
+NOT(REGEX( LastName, &quot;[^0-9]{0,255}&quot; ))
+)</errorConditionFormula>
+        <errorMessage>First/Last Name cannot contain numbers.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CCPM_validMTN</fullName>
+        <active>true</active>
+        <description>MTN should not be blank and should not contain anything other than numbers</description>
+        <errorConditionFormula>OR(
+ISNULL(MobilePhone),
+NOT(REGEX(MobilePhone, &quot;^[0-9 + (+)+-]*$&quot;))
+)</errorConditionFormula>
+        <errorMessage>Please enter a valid MTN. It should not contain anything other than numbers.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Contact_MailingStreet}+{!Contact_MailingCity}+{!Contact_MailingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Contact_FirstName} {!Contact_LastName}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LiveText__Opt_in_for_Text_Messages_list</fullName>
+        <availability>online</availability>
+        <description>This button is for List View</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Opt-in for Text Messages</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+			{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+			{!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)}; 
+
+			var records = {!GETRECORDIDS($ObjectType.Contact)}; 
+			if (records[0] == null) 
+			{ 
+				alert(&quot;Please select at least one contact&quot;) 
+			} 
+			else{ 
+				var packagePrefix = &quot;LiveText__&quot;; 
+				var recordType = &quot;contact&quot;; 
+				var recordIds = &quot;&quot;; 
+				var optOutField = &apos;&apos;; 
+				var optOutDefaultValue = &apos;yes&apos;; 
+				var smsType = &apos;&apos;; 
+				var userId = &apos;{!$User.Id}&apos;; 
+				var elementIdVar = &apos;&apos;; 
+				var showUserDropDown = false; 
+				var dialogTitle = &apos;&apos;; 
+				var queryString = &apos;&apos;; 
+
+				for (var n in records) { 
+					if(n == &apos;remove&apos; || n == &apos;indexOf&apos;) continue; 
+					recordIds = recordIds + records[n]; 
+				
+					if (n != records.length-1) { 
+						recordIds = recordIds + &quot;,&quot;; 
+					} 
+				} 
+
+				var e = document.getElementsByName(&quot;fcf&quot;)[0]; 
+				var selectedView = e.options[e.selectedIndex].value; 
+				
+				var returnURL = &apos;/003?fcf=&apos;+ selectedView + &apos;&amp;rolodexIndex=-1&amp;page=1&apos;; 
+
+				var urlStart =  &apos;https://&apos;+window.location.hostname+&apos;/apex/LiveText__LiveTextOptinStatusPage?recordType=&apos;+recordType + 
+&apos;&amp;records=&apos;+recordIds+&apos;&amp;retURL=&apos;+returnURL;
+
+
+				if(sforce.console.isInConsole()) { 
+					sforce.console.openPrimaryTab(null, urlStart + &apos;&amp;inConsole=yes&amp;optType=1&apos;, true, &apos;Opt-in for Text Messages&apos;); 
+				}else{ 
+					window.top.location.href = urlStart + &apos;&amp;inConsole=no&amp;optType=1&apos;; 
+				} 
+			}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LiveText__Opt_out_for_Text_Messaging_List</fullName>
+        <availability>online</availability>
+        <description>This button is for List View</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Opt-out for Text Messages</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+			{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+			{!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)};
+
+			var records = {!GETRECORDIDS($ObjectType.Contact)};
+			if (records[0] == null)
+			{
+				alert(&quot;Please select at least one contact&quot;);
+			}
+			else{
+				var packagePrefix = &quot;LiveText__&quot;;
+				var recordType = &quot;contact&quot;;
+				var recordIds = &quot;&quot;;
+				var optOutField = &apos;&apos;;
+				var optOutDefaultValue = &apos;yes&apos;;
+				var smsType = &apos;&apos;;
+				var userId = &apos;{!$User.Id}&apos;;
+				var elementIdVar = &apos;&apos;;
+				var showUserDropDown = false;
+				var dialogTitle = &apos;&apos;;
+				var queryString = &apos;&apos;; 				
+					
+				for (var n in records) {
+					if(n == &apos;remove&apos; || n == &apos;indexOf&apos;) continue;
+					recordIds = recordIds + records[n];
+					
+					if (n != records.length-1) {
+						recordIds = recordIds + &quot;,&quot;;
+					}
+				}
+			
+				var e = document.getElementsByName(&quot;fcf&quot;)[0];
+				var selectedView = e.options[e.selectedIndex].value;
+			
+				var returnURL = &apos;/003?fcf=&apos;+ selectedView + &apos;&amp;rolodexIndex=-1&amp;page=1&apos;;
+			
+				var urlStart =  &apos;https://&apos;+window.location.hostname+&apos;/apex/LiveText__LiveTextOptinStatusPage?recordType=&apos;+recordType + 
+&apos;&amp;records=&apos;+recordIds+&apos;&amp;retURL=&apos;+returnURL;
+
+				
+				if(sforce.console.isInConsole()) {
+					sforce.console.openPrimaryTab(null, urlStart+&apos;&amp;inConsole=yes&amp;optType=0&apos;, true, &apos;Opt-out for Text Messages&apos;);
+				}else{
+					window.top.location.href = urlStart + &apos;&amp;inConsole=no&amp;optType=0&apos;;
+				}
+			}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>LiveText__Send_Bulk_SMS2</fullName>
+        <availability>online</availability>
+        <description>Sends text message to selected records</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Text to List</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)} 
+            {!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+            {!REQUIRESCRIPT(&apos;/support/console/31.0/integration.js&apos;)}; 
+
+            var records = {!GETRECORDIDS($ObjectType.Contact)}; 
+            var hasShortCodeNumber = sforce.apex.execute(&quot;LiveText.RetrievePreferredPhoneNumber&quot;,&quot;agentHasShortcodeNumberAssigned&quot;,{});
+            if (records[0] == null){ 
+                alert(&quot;Please select at least one contact&quot;);
+            }else if((records.length &gt; 25) &amp;&amp; hasShortCodeNumber==&quot;false&quot;){ 
+                alert(&quot;A maximum of 25 text messages may be sent at once. Please select fewer recipients and try again.&quot;); 
+            } 
+            else{ 
+                var packagePrefix = &quot;LiveText__&quot;; 
+                var recordType = &quot;contact&quot;; 
+                var recordIds = &quot;&quot;;
+
+                for (var n in records) { 
+                    if(n == &apos;remove&apos; || n == &apos;indexOf&apos;) continue; 
+                    recordIds = recordIds + records[n]; 
+                    
+                    if (n != records.length-1) { 
+                        recordIds = recordIds + &quot;,&quot;; 
+                    } 
+                }
+
+                var storageId = sforce.apex.execute(&quot;LiveText.RetrievePreferredPhoneNumber&quot;,&quot;saveToStorage&quot;,{stringToSave:recordIds});
+                var urlStart = &apos;https://&apos;+window.location.hostname+&apos;/apex/LiveText__LiveTextBulkSms?recordType=&apos;+recordType+&apos;&amp;storageId=&apos;+storageId; 
+                
+                if(sforce.console.isInConsole()) { 
+                    sforce.console.openPrimaryTab(null, urlStart, true);
+                } else { 
+                    window.top.location.href = urlStart; 
+                } 
+            }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SendGmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Gmail</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://mail.google.com/mail?view=cm&amp;tf=0&amp;to={!Contact_Email}&lt;{!Contact_LastName}, {!Contact_FirstName}&gt;&amp;tf=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Contact_MailingCountry}&amp;csz={!Contact_MailingCity}+{!Contact_MailingState}+{!Contact_MailingPostalCode}+&amp;addr={!Contact_MailingAddress}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooWeather</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Weather</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://weather.yahoo.com/search/weather2?p={!Contact_MailingPostalCode}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__ExactTarget_Resubscribe</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Marketing Cloud Resubscribe</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+      {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+      var didResub;
+      try
+      {
+      didResub=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;performResub&quot;, {subscriberKey:&quot;{!CASESAFEID(Contact.Id)}&quot;,objectType:&quot;contact&quot;});
+      }
+      catch (e)
+      {
+      didResub=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;performResub&quot;, {subscriberKey:&quot;{!CASESAFEID(Contact.Id)}&quot;,objectType:&quot;contact&quot;});
+      }
+      if (didResub==&quot;connection error&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0047}&quot;);
+      }
+      else if (didResub==&quot;not found&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0085}&quot;);
+      }
+      else if (didResub==&quot;other error&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0086}&quot;);
+      }
+      else if (didResub==&quot;not integrated&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0087}&quot;);
+      }
+      else if (didResub==&quot;success&quot;)
+      {
+      alert(&quot;{!Contact.Name} {!$Label.et4ae5__wasresublegacy}&quot;);
+      }
+      else
+      {
+      alert(didResub);
+      }
+      var theUrl=&quot;/{!Contact.Id}&quot;;
+      parent.location.href=theUrl;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__ExactTarget_Unsubscribe</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Marketing Cloud Unsubscribe</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+      {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+      var didUnsub;
+      try
+      {
+      didUnsub=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;performUnsub&quot;, {subscriberKey:&quot;{!CASESAFEID(Contact.Id)}&quot;,objectType:&quot;contact&quot;});
+      }
+      catch (e)
+      {
+      didUnsub=sforce.apex.execute(&quot;jsButtonMethods&quot;,&quot;performUnsub&quot;, {subscriberKey:&quot;{!CASESAFEID(Contact.Id)}&quot;,objectType:&quot;contact&quot;});
+      }
+      if (didUnsub==&quot;connection error&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0047}&quot;);
+      }
+      else if (didUnsub==&quot;not found&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0085}&quot;);
+      }
+      else if (didUnsub==&quot;other error&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0086}&quot;);
+      }
+      else if (didUnsub==&quot;not integrated&quot;)
+      {
+      alert(&quot;{!$Label.et4ae5__msg0087}&quot;);
+      }
+      else if (didUnsub==&quot;success&quot;)
+      {
+      alert(&quot;{!Contact.Name} {!$Label.et4ae5__wasunsublegacy}&quot;);
+      }
+      else
+      {
+      alert(didUnsub);
+      }
+      var theUrl=&quot;/{!Contact.Id}&quot;;
+      parent.location.href=theUrl;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__Send_ExactTarget_Email</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Marketing Cloud Email</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+var bAccessable; 
+try{
+     bAccessable = sforce.apex.execute(&quot;et4ae5.SObjectHelperJS&quot;,&quot;isFieldAccessible&quot;,{sSObject:&quot;Contact&quot;, sField:&quot;HasOptedOutOfEmail&quot;});
+}catch (e) {
+     bAccessable = false;
+}
+
+if(bAccessable == &quot;true&quot;){
+     var sHasOptedOutOfEmail = &quot;&quot; + {!Contact.HasOptedOutOfEmail} + &quot;&quot;;
+     if(sHasOptedOutOfEmail == &quot;1&quot;){
+          alert(&quot;{!$Label.et4ae5__ctoptedout}&quot;);
+     }else{
+          try{
+               var urlPrefix=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;namespace&quot;, {});
+               var theUrl=&quot;https://&quot;+urlPrefix+&quot;/apex/singleSendETEmail?contactId={!CASESAFEID(Contact.Id)}&quot;;
+               parent.location.href = theUrl;
+          }catch (e){
+               var theUrl=&quot;/apex/singleSendETEmail?contactId={!CASESAFEID(Contact.Id)}&quot;;
+               parent.location.href = theUrl;
+          }
+     }
+}else{
+     alert(&quot;{!$Label.et4ae5__ctoptedoutaccess}&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__Send_ExactTarget_SMS</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Marketing Cloud SMS</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+var bAccessable;
+try{
+     bAccessable = sforce.apex.execute(&quot;et4ae5.SObjectHelperJS&quot;,&quot;isFieldAccessible&quot;,{sSObject:&quot;Contact&quot;, sField:&quot;HasOptedOutOfMobile__c&quot;});
+} catch (e) {
+     bAccessable = false;
+}
+
+if(bAccessable == &quot;true&quot;){
+     var sHasOptedOutOfSMS = &quot;&quot; + {!Contact.et4ae5__HasOptedOutOfMobile__c} + &quot;&quot;;
+     if(sHasOptedOutOfSMS == &quot;1&quot;){
+         alert(&quot;{!$Label.et4ae5__ctoptedoutsms}&quot;);
+     }else{
+         try{
+               var urlPrefix=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;namespace&quot;, {});
+               var theUrl=&quot;https://&quot;+urlPrefix+&quot;/apex/singleSendETMobile?contactId={!CASESAFEID(Contact.Id)}&quot;;
+               parent.location.href = theUrl;
+         }catch (e){
+              var theUrl=&quot;/apex/singleSendETMobile?contactId={!CASESAFEID(Contact.Id)}&quot;;
+           parent.location.href = theUrl;
+         }
+     }
+}else{
+     alert(&quot;{!$Label.et4ae5__ctoptedoutsmsaccess}&quot;);     
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>et4ae5__View_ExactTarget_Analytics</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>View Marketing Cloud Analytics</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+      {!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+      try
+      {
+      var urlPrefix=sforce.apex.execute(&quot;et4ae5/jsButtonMethods&quot;,&quot;namespace&quot;, {});
+      var theUrl=&quot;https://&quot;+urlPrefix+&quot;/apex/SubscriberAnalytics?id={!CASESAFEID(Contact.Id)}&amp;obj=contact&quot;;
+      parent.location.href = theUrl;
+      }
+      catch (e)
+      {
+      var theUrl=&quot;/apex/SubscriberAnalytics?id={!CASESAFEID(Contact.Id)}&amp;obj=contact&quot;;
+      parent.location.href = theUrl;
+      }</url>
+    </webLinks>
+</CustomObject>

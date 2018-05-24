@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_previousLeadStatus__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_eventType__c</field>
+    </columns>
+    <columns>
+        <field>Lead.CCPM_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Lead.CCPM_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Prospect,Manual Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_eventType__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Add a Line,iPhone X</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.CCPM_SMSFollowUpDate__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>TODAY</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Expired</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Prospects/Manual Leads to Update</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

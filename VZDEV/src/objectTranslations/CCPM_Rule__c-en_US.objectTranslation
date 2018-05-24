@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RE Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RE Rules</value>
+    </caseValues>
+    <fields>
+        <label><!-- RE Rule ID --></label>
+        <name>CCPM_RE_Rule_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>CCPM_description__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>CCPM_endDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Existing Record --></label>
+        <name>CCPM_existingRecord__c</name>
+        <relationshipLabel><!-- RE Rules (Existing Record) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Merge Unique Field --></label>
+        <name>CCPM_mergeUniqueField__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Record --></label>
+        <name>CCPM_newRecord__c</name>
+        <relationshipLabel><!-- RE Rules (New Record) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Object --></label>
+        <name>CCPM_primaryObject__c</name>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>CCPM_startDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Winning Record --></label>
+        <name>CCPM_winningRecord__c</name>
+        <picklistValues>
+            <masterLabel>Existing Record</masterLabel>
+            <translation><!-- Existing Record --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Record</masterLabel>
+            <translation><!-- New Record --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Batch Merge Rule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Rule Details --></label>
+            <section>Rule Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Batch Merge Rule --></label>
+        <name>CCPM_batchMergeRule</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Rule Name Required --></errorMessage>
+        <name>Name_is_required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CCPM_viewInRuleEngine --></label>
+        <name>CCPM_viewInRuleEngine</name>
+    </webLinks>
+</CustomObjectTranslation>

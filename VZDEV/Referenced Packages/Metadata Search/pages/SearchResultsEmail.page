@@ -1,0 +1,8 @@
+<apex:page sidebar="false" showHeader="false" cache="false" id="pageID" title="Email Metadata Search Results" renderAs="pdf">
+    <html>
+        <apex:stylesheet value="{!$Resource.MetaDataSearch__Email}"/>
+        <body>
+            <c:SearchResultsComponentWithExport id="inlineComponentID" />
+        </body>
+    </html>
+</apex:page>

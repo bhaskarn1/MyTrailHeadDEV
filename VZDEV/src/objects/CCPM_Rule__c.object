@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CCPM_RE_Rule_ID__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>true</externalId>
+        <label>RE Rule ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_description__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_endDate__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_existingRecord__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Existing Record</label>
+        <referenceTo>CCPM_RERecord__c</referenceTo>
+        <relationshipLabel>RE Rules (Existing Record)</relationshipLabel>
+        <relationshipName>CCPM_exitingRecord</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_mergeUniqueField__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>This is filled in by workflow. THis is a combination of the Winner reference field and Looser Reference field.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Merge Unique Field</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_newRecord__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>New Record</label>
+        <referenceTo>CCPM_RERecord__c</referenceTo>
+        <relationshipLabel>RE Rules (New Record)</relationshipLabel>
+        <relationshipName>CCPM_newRecord</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_primaryObject__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Object</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CCPM_startDate__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_winningRecord__c</fullName>
+        <externalId>false</externalId>
+        <label>Winning Record</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Record</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Existing Record</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>RE Rule</label>
+    <listViews>
+        <fullName>Batch_Merge_Rules</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_primaryObject__c</columns>
+        <columns>CCPM_newRecord__c</columns>
+        <columns>CCPM_existingRecord__c</columns>
+        <columns>CCPM_winningRecord__c</columns>
+        <columns>CCPM_active__c</columns>
+        <columns>CCPM_startDate__c</columns>
+        <columns>CCPM_endDate__c</columns>
+        <columns>CCPM_mergeUniqueField__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CCPM_Rule__c.CCPM_batchMergeRule</value>
+        </filters>
+        <label>Batch Merge Rules</label>
+    </listViews>
+    <nameField>
+        <label>Rule Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>RE Rules</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CCPM_batchMergeRule</fullName>
+        <active>true</active>
+        <label>Batch Merge Rule</label>
+        <picklistValues>
+            <picklist>CCPM_primaryObject__c</picklist>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CCPM_winningRecord__c</picklist>
+            <values>
+                <fullName>Existing Record</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Record</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_primaryObject__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_startDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_endDate__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Name_is_required</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Name )</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Rule Name Required</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>CCPM_viewInRuleEngine</fullName>
+        <availability>online</availability>
+        <description>This is to add to the Trigger Rule layout</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>View in Rule Engine</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.open(&apos;/apex/CCPM_RERuleViewPage?ruleid={!CCPM_Rule__c.Id}&apos;, &apos;_blank&apos;);</url>
+    </webLinks>
+</CustomObject>

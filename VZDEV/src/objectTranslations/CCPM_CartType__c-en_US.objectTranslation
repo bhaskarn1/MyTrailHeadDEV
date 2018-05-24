@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cart Type</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cart Types</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cart Type Mapping --></label>
+        <name>CCPM_CartTypeMapping__c</name>
+        <picklistValues>
+            <masterLabel>AAL</masterLabel>
+            <translation><!-- AAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACC</masterLabel>
+            <translation><!-- ACC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUP</masterLabel>
+            <translation><!-- EUP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEW</masterLabel>
+            <translation><!-- NEW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTHER</masterLabel>
+            <translation><!-- OTHER --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cart Type --></label>
+        <name>CCPM_CartType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commission Eligible --></label>
+        <name>CCPM_CommissionEligible__c</name>
+    </fields>
+    <fields>
+        <help><!-- This Field captures the ESN codes associated with the Cart Type Object. --></help>
+        <label><!-- ESN Code --></label>
+        <name>CCPM_ESNCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Cart Types --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Cart Type Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

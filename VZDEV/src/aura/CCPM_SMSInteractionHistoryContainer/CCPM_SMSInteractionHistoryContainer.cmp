@@ -1,0 +1,54 @@
+<!--
+*@name          CCPM_SMSInteractionHistoryContainer.cmp
+*@author        Paras Shah (Deloitte)
+*@date          01/24/2016
+*@description   Aura component to display the SMS messages. This is a container for all SMS for the Lead
+
+Modification    Log:
+************************************************************************************
+Developer                        Date                                Description
+************************************************************************************
+Paras Shah(Deloitte)             01/24/2016                          Original Version
+-->
+
+<aura:component access="global" controller="CCPM_SMSInteractionHistoryController" implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <ltng:require styles="/resource/SLDS0110/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <aura:attribute name="recordId" type="Id" access="public"/>
+    <aura:attribute name="messageList" type="Task[]" access="public"/>
+    <aura:attribute name="strLeadPhone" type="String" access="public"/>
+    <aura:attribute name="strHeight" type="String" default="200px" access="public"/>
+    <aura:attribute name="strToPNList" type="List" access="public"/>
+    <aura:attribute name="strFromPN" type="String" access="public"/>
+    <aura:handler name="init" value="{!this}" action="{!c.myAction}" /> 
+ 
+    <!-- Styling for displaying the SMS Interaction History -->
+    
+    <style>
+        .cTwilio_SMS .message-list {
+            height: {!v.strHeight};
+        }
+    </style>
+    
+	<br />
+        <aura:if isTrue="{! empty(v.messageList)}">
+            There are no messages to display.
+        </aura:if> 
+
+                <ul aura:id="message-list" class="message-list slds-list--vertical slds-scrollable--y"> 
+  					
+                    <!-- This is a iteration to display the SMS interaction history. Each message is passed to the CCPM_SMSMessage component for  
+                         message styling and alignment -->
+
+                    <aura:iteration var="message" items="{!v.messageList}"> 
+                        <li class="slds-list__item">
+                            <c:CCPM_SMSInteractionHistoryFormatter aura:id="{!message.id}"
+                                strDirection="{!message.CCPM_communicationDirection__c}" 
+                                strMsgBody="{!message.Description}" 
+                                strFromPN="{!'+1' + v.strLeadPhone}"
+                                strToPN="{!'+1' + v.strLeadPhone}" 
+                                datTDate="{!message.CreatedDate}" 
+                            />
+                        </li>
+                    </aura:iteration>
+                </ul>
+</aura:component>

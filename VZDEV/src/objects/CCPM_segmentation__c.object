@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CCPM_campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will capture which Territories’ Sales Rep will have this Event type available to them</inlineHelpText>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>Segmentations</relationshipLabel>
+        <relationshipName>CCPM_segmentations</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_channels__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will capture a value if the Event type should be available based on the Channel nation-wide when Market, District and Territory are left blank.</inlineHelpText>
+        <label>Channels</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Telesales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrator</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_districts1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will capture which District’s Sales Rep will have this Event type available to them</inlineHelpText>
+        <label>Districts 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AK01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAR01-Coastal Carolinas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAR02-Eastern NC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAR03-NC Triad</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAR04-SC Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAR05-SCSE Coast</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAR06-Triangle North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CAR07-Triangle South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CC01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CC02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CC03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CC04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CC05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CC06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CP01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CP02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CP03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CP04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CP05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CP06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CP07</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS01-Las Vegas West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS02-Phoenix North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS03-Phoenix West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS04-Scottsdale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS05-Phoenix East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS06-Phoenix South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS07-Tucson West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS08-Tucson East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS09-Albuquerque</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS10-El Paso</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DS11-Las Vegas East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLNW1-Fort Myers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLNW2-Sarasota St Pete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLNW3-Tampa Lakeland</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLNW4-North Tampa</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLNW5-Tally Gainesville</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLNW6-Jacksonville</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLSE1-Miami</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLSE2-Ft Lauderdale</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLSE3-Palm Beach</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLSE4-Orlando South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FLSE5-Orlando North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAN01-Central Alabama</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAN02-East Atlanta</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAN03-East Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAN04-North Alabama</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAN05-NorthEast Alabama</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAN06-North Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAN07-West Atlanta</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAS01-Central Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAS02-NC Atlanta</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAS03-SC Alabama</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAS04-SE Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAS05-SW Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAS06-WCentral Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GAS07-West Georgia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL01-New Orleans</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL02-Baton Rouge</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL03-Beaumont-Lafayette</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL04-Shreveport</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL05-Memphis</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL06-Mississippi</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GL07-Mobile-Pensacola</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC01-Central Detroit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC02-NW Detroit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC03-NE Detroit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC04-Central Michigan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC05-Mid Michigan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC06-Northern Michigan</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC07-Toledo</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLC08-Northwest Ohio</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE01-Penn Ohio Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE02-SW Pittsburgh</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE03-Pittsburgh Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE04-Central PA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE05-Southern OH Valley</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE06-Canton-Akron</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE07-North Central Ohio</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE08-Cleveland West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLE09-Lake Erie East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN01-N IL Milwaukee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN02-NW Milwaukee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN03-North Central IL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN04-Schaumburg Suburbs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN05-North Chicago</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN07-Western Wisconsin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN08-Downtown Chicago</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLN09-NE Wisconsin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS01-Indy South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS02-Indy West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS03-Kentucky</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS04-Indy East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS05-Cincinnati West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS06-Cincinnati East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS07-Dayton</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS08-Columbus West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLS09-Columbus East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLW01-Central IL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLW02-Northern IN-SW MI</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_districts2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will capture which District’s Sales Rep will have this Event type available to them</inlineHelpText>
+        <label>Districts 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GLW04-Far West Chicago</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLW05-South Chicago-NW IN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLW06-Peoria-Davenport</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLW07-SW Chicago</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLW08-W MI-Grand Rapids</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GLW09-NE Indiana</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HI01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HI02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HQ-Telesales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KM01-Southern IL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KM02-St Louis</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KM03-Southern MO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KM04-KC East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KM05-KC West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KM06-Central KS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA07</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA08</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT01-Northern CO-WY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT02-Southern CO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT03-Southern Denver</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT04-Central Denver</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT05-Northern Denver</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT06-Northern UT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT07-Southern UT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT08-Idaho</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NN01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NN02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NN03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NN04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NN05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NN06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT01-West Texas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT02-DFW West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT03-DFW Northwest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT04-DFW Northeast</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT05-DFW East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT06-San Angelo-Ft Worth</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT07-Austin North-Waco</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NT08-Austin South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW07</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NW08</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY07</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PH01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PH02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PH03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PH04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PH05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PH06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PN01-Mpls-St Paul MN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PN02-S Minnesota</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PN03-Mpls-St Cloud MN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PN04-St Paul-NE Minn</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PN05-N Dakota-NW Minn</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PN06-Montana</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS01-Central IA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS02-Southern NE-Lincoln</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS03-SD-NW IA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS04-Eastern IA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS05-Omaha-Council Bluff</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS06-Central-West NE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PS07-Southwest KS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC07</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC08</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SN01</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_districts3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will capture which District’s Sales Rep will have this Event type available to them</inlineHelpText>
+        <label>Districts 3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SN02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SN03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SN04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SN05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SN06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST01-San Antonio</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST02-RGV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST03-Houston Southwest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST04-Houston West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST05-Houston North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST06-Houston East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST07-Houston Southeast</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ST08-Houston Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TA01-East Texas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TA02-South Oklahoma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TA03-North Oklahoma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TA04-West Arkansas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TA05-East Arkansas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TA06-South Arkansas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW01-Charlotte North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW02-Charlotte South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW03-Nashville</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW04-Chattanooga</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW05-Knoxville</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW06-Tri-Cities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW07-Upstate SC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TCW08-Western NC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UP01</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UP02</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UP03</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UP04</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UP05</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UP06</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VIR01-Southeast Virginia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VIR02-Virginia Beach</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VIR03-Northwest Virginia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VIR04-Central West Virginia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VIR05-Southwest Virginia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV02-DC Metro</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV6</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_isActive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_markets__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will capture which Market’s Sales Rep will have this Event type available to them</inlineHelpText>
+        <label>Markets</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Great Lakes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HQ-Telesales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>North Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>North East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pacific</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>South Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>South East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrator</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_segmentationKey__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>true</externalId>
+        <label>Segmenation Key</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_territories__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will capture which Territories’ Sales Rep will have this Event type available to them</inlineHelpText>
+        <label>Territories</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alaska</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Carolinas East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Central California</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Central Pacific</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Desert</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FL Northwest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FL Southeast</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GA/AL North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GA/AL South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Lakes Central</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Lakes East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Lakes North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Lakes South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Lakes West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Plains North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Great Plains South</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Greater LA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Gulf</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hawaii</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HQ-Telesales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Kansas/Missouri</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mid-State</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mountain</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New Jersey North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>New York City</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>North Texas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Northern New England</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Northwest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY East</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Philadelphia Tri-State</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>South Texas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Southern California</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Southern New England</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Temp</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Test Territory</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Texarhoma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TN/Carolinas West</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Upstate New York</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Virginia</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WBV North</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Administrator</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <label>Segmentation</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_campaign__c</columns>
+        <columns>CCPM_channels__c</columns>
+        <columns>CCPM_markets__c</columns>
+        <columns>CCPM_territories__c</columns>
+        <columns>CCPM_districts1__c</columns>
+        <columns>CCPM_districts2__c</columns>
+        <columns>CCPM_districts3__c</columns>
+        <columns>CCPM_isActive__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SEG-{000000}</displayFormat>
+        <label>Segmentation Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Segmentations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>CCPM_District_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISBLANK( CCPM_districts1__c ) ,ISBLANK( CCPM_districts2__c ),ISBLANK( CCPM_districts3__c ))</errorConditionFormula>
+        <errorMessage>Districts cannot be left blank.</errorMessage>
+    </validationRules>
+</CustomObject>

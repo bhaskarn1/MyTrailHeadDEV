@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Reply</value>
+        </caseValues>
+        <name>publisher_email</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Reply</value>
+        </caseValues>
+        <name>publisher_portal</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Company</value>
+        </caseValues>
+        <name>web_company_case</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Email</value>
+        </caseValues>
+        <name>web_email_case</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Name</value>
+        </caseValues>
+        <name>web_name_case</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Phone</value>
+        </caseValues>
+        <name>web_phone_case</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Origin --></label>
+        <name>Case_origin__c</name>
+    </fields>
+    <quickActions>
+        <label><!-- Log a Call --></label>
+        <name>Log_a_Call</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewChildCase --></label>
+        <name>NewChildCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Reply --></label>
+        <name>Reply</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send Email --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SocialPublisher --></label>
+        <name>SocialPublisher</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Case --></label>
+        <name>UpdateCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Sidebar Component --></label>
+        <name>Update_Sidebar_Component</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Chat --></label>
+        <name>Chat</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Community --></label>
+        <name>Community</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Email --></label>
+        <name>Email</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Phone --></label>
+        <name>Phone</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Social --></label>
+        <name>Social</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Send_Bulk_SMS --></label>
+        <name>LiveText__Send_Bulk_SMS</name>
+    </webLinks>
+</CustomObjectTranslation>

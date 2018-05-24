@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Journey Message</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Journey Messages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Journey Message Name --></label>
+        <name>CCPM_JourneyMessageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source --></label>
+        <name>CCPM_LeadSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calculate SMS Followup --></label>
+        <name>CCPM_calculateSMSFollowup__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>CCPM_campaign__c</name>
+        <relationshipLabel><!-- Journey Messages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Message --></label>
+        <name>CCPM_customerMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date Time --></label>
+        <name>CCPM_endDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event End Date --></label>
+        <name>CCPM_eventEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event SMS Follow Up End Date --></label>
+        <name>CCPM_eventSMSFollowUpEndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event SMS Follow Up Start Date --></label>
+        <name>CCPM_eventSMSFollowUpStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Start Date --></label>
+        <name>CCPM_eventStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Type --></label>
+        <name>CCPM_eventType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active? --></label>
+        <name>CCPM_isActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default? --></label>
+        <name>CCPM_isDefault__c</name>
+    </fields>
+    <fields>
+        <label><!-- MessageFollowupSMS --></label>
+        <name>CCPM_messageFollowUpSMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- MessageInitialSMS --></label>
+        <name>CCPM_messageInitialSMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Override Ecode --></label>
+        <name>CCPM_overrideEcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect Message --></label>
+        <name>CCPM_prospectMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date Time --></label>
+        <name>CCPM_startDateTime__c</name>
+    </fields>
+    <layouts>
+        <layout>CCPM Campaign Message Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Message Info --></label>
+            <section>Message Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Event Message Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Message Details --></label>
+            <section>Message Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Journey Message Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Pre Defined Message Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Message Details --></label>
+            <section>Message Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Regular Message Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Campaign Message --></label>
+        <name>CCPM_CampaignMessage</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Event Message --></label>
+        <name>CCPM_EventMessage</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Pre Defined Message --></label>
+        <name>CCPM_PreDefinedMessage</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Regular Message --></label>
+        <name>CCPM_RegularMessage</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

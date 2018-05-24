@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>false</isGridLayout>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Includes campaign leads that have received an initial SMS message</footer>
+            <header>Initiated Leads</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Leads that have been contacted</metricLabel>
+            <report>Old_Report_Folder/CCPM_InitiatedCampaignLeads</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Initiated Leads</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Old_Report_Folder/CCPM_InitiatedLeadsByCampaign</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Initiated Leads by Campaign</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Messages are suppressed due to abandoned carts being merged with a campaign lead</footer>
+            <header>Abandoned Carts Suppressed</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Number of SMS messages suppressed</metricLabel>
+            <report>Old_Report_Folder/CCPM_AbandonedCartsSuppressedfromMerge</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Messages are suppressed due to campaign leads being merged with an abandoned cart</footer>
+            <header>Campaign Leads Suppressed</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Number of SMS messages suppressed</metricLabel>
+            <report>Old_Report_Folder/CCPM_CampaignLeadsSuppressedfromMerge</report>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Includes campaign leads that have responded to the initial SMS message</footer>
+            <header>Responses Received</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Leads that have responded</metricLabel>
+            <report>Old_Report_Folder/CCPM_ResponsesReceivedCampaigns</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Responses Received</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Old_Report_Folder/CCPM_ResponsesReceivedByCampaign</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Responses Received by Campaign</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Leads that have responded with an X to opt out of future communication</footer>
+            <header>Opt Outs</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Leads that have opted out</metricLabel>
+            <report>Old_Report_Folder/CCPM_CampaignOptOut</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>Account$CCPM_SMSOptOut__c</column>
+                <sortBy>RowLabelDescending</sortBy>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>true</calculatePercent>
+                <column>FORMULA1</column>
+                <decimalPlaces>2</decimalPlaces>
+                <showTotal>false</showTotal>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <header>Opt Out Rate</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <maxValuesDisplayed>1</maxValuesDisplayed>
+            <report>Old_Report_Folder/CCPM_campaignOptOutRate</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Opt Out Rate</title>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <displayUnits>Integer</displayUnits>
+            <footer>Does not consider the SKU level data when counting conversions for a campaign</footer>
+            <header>Converted Leads</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Leads that have been converted</metricLabel>
+            <report>Old_Report_Folder/CCPM_ConvertedCampaignLeads1</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>true</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Converted Leads</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Old_Report_Folder/CCPM_ConvertedLeadsByCampaign</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Converted Leads by Campaign</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardTableColumn>
+                <column>BucketField_33382098</column>
+                <sortBy>RowLabelAscending</sortBy>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>true</calculatePercent>
+                <column>FORMULA1</column>
+                <decimalPlaces>2</decimalPlaces>
+                <showTotal>false</showTotal>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <header>Conversion Rate</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <maxValuesDisplayed>1</maxValuesDisplayed>
+            <report>Old_Report_Folder/CCPM_campaignLeadConversionRate</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Conversion Rate</title>
+        </components>
+    </rightSection>
+    <runningUser>matkoenig@verizonwireless.com.vzwretail.prod</runningUser>
+    <textColor>#000000</textColor>
+    <title>Campaign Dashboard</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

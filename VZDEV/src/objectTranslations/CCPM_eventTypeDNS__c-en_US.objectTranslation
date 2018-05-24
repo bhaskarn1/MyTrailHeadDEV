@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Event Type DNS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Event Type DNS</value>
+    </caseValues>
+    <fields>
+        <help><!-- To Store the Event type to be Iphone X. --></help>
+        <label><!-- Prospect Event Type --></label>
+        <name>CCPM_prospectEventType__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

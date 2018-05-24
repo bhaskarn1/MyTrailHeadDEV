@@ -1,0 +1,12 @@
+.THIS .uiMessage h4{
+    margin: 10px;
+    display: block;
+}
+.THIS .uiMessage .uiOutputText {
+    margin-left: 10px;
+    float:left;
+}
+
+.THIS .hide {
+    display: none;
+}

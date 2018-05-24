@@ -1,0 +1,3086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Holder --></label>
+        <name>CCPM_Account__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Actual SMS Schedule Date Time --></label>
+        <name>CCPM_ActualSMSScheduleDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- AutoResponse For Double Opt Out Sms Sent --></label>
+        <name>CCPM_AutoResponseForDoubleOptOutSmsSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Camping FollowUp Message Template --></label>
+        <name>CCPM_CampingFollowUpMessageTemplate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Date --></label>
+        <name>CCPM_Converted_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- This represents the initial type of the lead or prospect upon creation --></help>
+        <label><!-- Created Type --></label>
+        <name>CCPM_CreatedType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created In vs Converted In Channel --></label>
+        <name>CCPM_Created_In_vs_Converted_In_Channel__c</name>
+    </fields>
+    <fields>
+        <help><!-- This represents the initial source system upon lead or prospect creation --></help>
+        <label><!-- Created Lead Source --></label>
+        <name>CCPM_Created_Lead_Source__c</name>
+        <picklistValues>
+            <masterLabel>ACSS</masterLabel>
+            <translation><!-- ACSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-DESK</masterLabel>
+            <translation><!-- ATG-ECOM-DESK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGDESK</masterLabel>
+            <translation><!-- ATG-ECOM-GGDESK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGMOB</masterLabel>
+            <translation><!-- ATG-ECOM-GGMOB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGTAB</masterLabel>
+            <translation><!-- ATG-ECOM-GGTAB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MAPP</masterLabel>
+            <translation><!-- ATG-ECOM-MAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MDOT</masterLabel>
+            <translation><!-- ATG-ECOM-MDOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MIPP</masterLabel>
+            <translation><!-- ATG-ECOM-MIPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-TDOT</masterLabel>
+            <translation><!-- ATG-ECOM-TDOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRM</masterLabel>
+            <translation><!-- CRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOTCOM</masterLabel>
+            <translation><!-- DOTCOM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EROES</masterLabel>
+            <translation><!-- EROES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MFRAPP</masterLabel>
+            <translation><!-- MFRAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NETACE</masterLabel>
+            <translation><!-- NETACE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-APDT</masterLabel>
+            <translation><!-- NR-APDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-APPL</masterLabel>
+            <translation><!-- NR-APPL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-BBDT</masterLabel>
+            <translation><!-- NR-BBDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-BEST</masterLabel>
+            <translation><!-- NR-BEST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-TARG</masterLabel>
+            <translation><!-- NR-TARG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONEPOS</masterLabel>
+            <translation><!-- ONEPOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POS</masterLabel>
+            <translation><!-- POS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote-Retail</masterLabel>
+            <translation><!-- Quote-Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quote-Telesales</masterLabel>
+            <translation><!-- Quote-Telesales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALESFORCE</masterLabel>
+            <translation><!-- SALESFORCE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer Response Message Body --></label>
+        <name>CCPM_CustomerResponseMessageBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Response Msg Body for Prosp --></label>
+        <name>CCPM_CustomerResponseMsgBodyforProsp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dismissed Channel --></label>
+        <name>CCPM_DismissedChannel__c</name>
+    </fields>
+    <fields>
+        <label><!-- DismissedLead --></label>
+        <name>CCPM_DismissedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dismissed Source --></label>
+        <name>CCPM_DismissedSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Double Opt Out Sent --></label>
+        <name>CCPM_DoubleOptOutSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Double Opt Out Sms Body --></label>
+        <name>CCPM_DoubleOptOutSmsBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- HotFix Flag To Send Initial SMS --></label>
+        <name>CCPM_HotFixFlagToSendInitialSMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Dismissed --></label>
+        <name>CCPM_IsCartDismissed__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will be updated with the value of Last Interaction Date/Time field only when the Status of the Lead is either (New,Eligible,Contacted,Responded or Qualified) --></help>
+        <label><!-- Last Interaction Before Closed --></label>
+        <name>CCPM_Last_Interaction_Before_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead status-substatus --></label>
+        <name>CCPM_Lead_status_substatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Time of Contacted Lead --></label>
+        <name>CCPM_LifeTimeofContactedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Time of Eligible Lead --></label>
+        <name>CCPM_LifeTimeofEligibleLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Time of New Lead --></label>
+        <name>CCPM_LifeTimeofNewLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Time of Qualified Lead --></label>
+        <name>CCPM_LifeTimeofQualifiedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Time of Responded Lead --></label>
+        <name>CCPM_LifeTimeofRespondedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manually Change Ownership Message --></label>
+        <name>CCPM_ManuallyChangeOwnershipMessage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Customer grouping based on the NPS score (Promoter, Passive, Detractor) --></help>
+        <label><!-- Category --></label>
+        <name>CCPM_NPSCategory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Survey Completed --></label>
+        <name>CCPM_NPSDateSurveyCompleted__c</name>
+    </fields>
+    <fields>
+        <help><!-- Net Promoter Score last entered from the account. Note this may not be associated with this MTN. --></help>
+        <label><!-- NPS Score --></label>
+        <name>CCPM_NPSScore__c</name>
+    </fields>
+    <fields>
+        <help><!-- MTN of the line that completed the survey for the account --></help>
+        <label><!-- Survey MTN --></label>
+        <name>CCPM_NPSmobileNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>CCPM_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>CCPM_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect Follow Up SMS Body --></label>
+        <name>CCPM_ProspectFollowUpSMSBody__c</name>
+    </fields>
+    <fields>
+        <help><!-- IDs of the quotes associated to this lead --></help>
+        <label><!-- Quote ID --></label>
+        <name>CCPM_QuoteID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Links --></label>
+        <name>CCPM_QuoteLinks__c</name>
+    </fields>
+    <fields>
+        <help><!-- IDs ands SKUs of the products that are in the leads quotes --></help>
+        <label><!-- Quote Details --></label>
+        <name>CCPM_QuoteNotes__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field represents the list or reasons for the Leads visit to the store --></help>
+        <label><!-- Reason for Visit --></label>
+        <name>CCPM_ReasonForVisit__c</name>
+        <picklistValues>
+            <masterLabel>About my Account</masterLabel>
+            <translation><!-- About my Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill Account Inquiry</masterLabel>
+            <translation><!-- Bill Account Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill Payments</masterLabel>
+            <translation><!-- Bill Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device-Content Transfer</masterLabel>
+            <translation><!-- Device-Content Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device-Device Help</masterLabel>
+            <translation><!-- Device-Device Help --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device-Software updates</masterLabel>
+            <translation><!-- Device-Software updates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device-Warranty Services</masterLabel>
+            <translation><!-- Device-Warranty Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refund/Exchange</masterLabel>
+            <translation><!-- Refund/Exchange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales-Accessories</masterLabel>
+            <translation><!-- Sales-Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales-Add a Line</masterLabel>
+            <translation><!-- Sales-Add a Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales-New Customer Service</masterLabel>
+            <translation><!-- Sales-New Customer Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales-Upgrade</masterLabel>
+            <translation><!-- Sales-Upgrade --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- IDs of the products that are in the individual&apos;s cart&apos; --></help>
+        <label><!-- SKU --></label>
+        <name>CCPM_SKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Messaging consent --></label>
+        <name>CCPM_SMSCustomerLegalOptin__c</name>
+    </fields>
+    <fields>
+        <help><!-- The date &amp; time for the SMS to be scheduled to be sent --></help>
+        <label><!-- SMS Follow Up Date --></label>
+        <name>CCPM_SMSFollowUpDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- I Agree --></label>
+        <name>CCPM_SMSLegalOptIn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suppress SMS --></label>
+        <name>CCPM_SMSOptOut__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Response Body for OptOut --></label>
+        <name>CCPM_SMSResponseBodyForOptOut__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Response Body for Prospects --></label>
+        <name>CCPM_SMSResponseBodyForProspect__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Response Body --></label>
+        <name>CCPM_SMSResponseBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Response Received Date/Time --></label>
+        <name>CCPM_SMSResponseReceivedDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Time Zone --></label>
+        <name>CCPM_StoreTimeZone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp For Closed Lead --></label>
+        <name>CCPM_TimeStampForClosedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp For Contacted Lead --></label>
+        <name>CCPM_TimeStampForContactedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp For Eligible Lead --></label>
+        <name>CCPM_TimeStampForEligibleLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp For Qualified Lead --></label>
+        <name>CCPM_TimeStampForQualifiedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp For Responded Action Req Lead --></label>
+        <name>CCPM_TimeStampForRespondedActionReqLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp For Responded Lead --></label>
+        <name>CCPM_TimeStampForRespondedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp For Responded OptedOut Lead --></label>
+        <name>CCPM_TimeStampForRespondedOptedOutLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeStamp Qualified AptScheduled Lead --></label>
+        <name>CCPM_TimeStampQualifiedAptScheduledLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Stamp Qualified Disinterested Lead --></label>
+        <name>CCPM_TimeStampQualifiedDisinterestedLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeStamp For QualifiedInDiscussion Lead --></label>
+        <name>CCPM_TimeStampQualifiedInDiscussionLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeStamp Qualified Service Issue Lead --></label>
+        <name>CCPM_TimeStampQualifiedServiceIssueLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeStamp Qualified StoreReassign Lead --></label>
+        <name>CCPM_TimeStampQualifiedStoreReassignLead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time to Convert After Contact --></label>
+        <name>CCPM_TimetoConvertAfterContact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time to Convert After Qualification --></label>
+        <name>CCPM_TimetoConvertAfterQualification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do they prefer to transact In-Store or Online --></help>
+        <label><!-- Trans Completion Channel Preference --></label>
+        <name>CCPM_Trans_Completion_Channel_Preference__c</name>
+        <picklistValues>
+            <masterLabel>In-store</masterLabel>
+            <translation><!-- In-store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Trigger Initial SMS Date/Time Part II --></label>
+        <name>CCPM_TriggerInitialSMSDateTimePartII__c</name>
+    </fields>
+    <fields>
+        <help><!-- Type of lead or prospect based on how it entered Salesforce --></help>
+        <label><!-- Current Type --></label>
+        <name>CCPM_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- UpdateAccountOptOut --></label>
+        <name>CCPM_UpdateAccountOptOut__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field represents the date when the Lead Checked in to the store --></help>
+        <label><!-- Abandoned Date --></label>
+        <name>CCPM_abandonedDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Account number for this mobile number --></help>
+        <label><!-- Account Number --></label>
+        <name>CCPM_accountNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Unique ID --></label>
+        <name>CCPM_accountUniqueID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart ID --></label>
+        <name>CCPM_cartID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Modified Date --></label>
+        <name>CCPM_cartModifiedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Status --></label>
+        <name>CCPM_cartStatus__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I</masterLabel>
+            <translation><!-- I --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cart Type Processed --></label>
+        <name>CCPM_cartTypeProcessed__c</name>
+    </fields>
+    <fields>
+        <help><!-- PRP (feature change) | ACC (accessory only) | AAL (add a line) | EUP (equipment upgrade) | NEW (new customer order) --></help>
+        <label><!-- Cart Type --></label>
+        <name>CCPM_cartType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Unique ID --></label>
+        <name>CCPM_cartUniqueID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Last Handled By --></label>
+        <name>CCPM_cartlastHandledBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Change Ownership Assignment Message Body --></label>
+        <name>CCPM_changeOwnershipAssignmentMsgBody__c</name>
+    </fields>
+    <fields>
+        <help><!-- The channel the prospect converted their cart in. --></help>
+        <label><!-- Closed Lead Channel(DO NOT USE) --></label>
+        <name>CCPM_closedLeadChannel__c</name>
+    </fields>
+    <fields>
+        <help><!-- This represents the close source system of the lead or prospect --></help>
+        <label><!-- Closed Lead Source --></label>
+        <name>CCPM_closedLeadSource__c</name>
+        <picklistValues>
+            <masterLabel>ACSS</masterLabel>
+            <translation><!-- ACSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-DESK</masterLabel>
+            <translation><!-- ATG-ECOM-DESK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGDESK</masterLabel>
+            <translation><!-- ATG-ECOM-GGDESK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGMOB</masterLabel>
+            <translation><!-- ATG-ECOM-GGMOB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-GGTAB</masterLabel>
+            <translation><!-- ATG-ECOM-GGTAB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MAPP</masterLabel>
+            <translation><!-- ATG-ECOM-MAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MDOT</masterLabel>
+            <translation><!-- ATG-ECOM-MDOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-MIPP</masterLabel>
+            <translation><!-- ATG-ECOM-MIPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATG-ECOM-TDOT</masterLabel>
+            <translation><!-- ATG-ECOM-TDOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOTCOM</masterLabel>
+            <translation><!-- DOTCOM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EROES</masterLabel>
+            <translation><!-- EROES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MFRAPP</masterLabel>
+            <translation><!-- MFRAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NETACE</masterLabel>
+            <translation><!-- NETACE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-APDT</masterLabel>
+            <translation><!-- NR-APDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-APPL</masterLabel>
+            <translation><!-- NR-APPL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-BBDT</masterLabel>
+            <translation><!-- NR-BBDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-BEST</masterLabel>
+            <translation><!-- NR-BEST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR-TARG</masterLabel>
+            <translation><!-- NR-TARG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ONEPOS</masterLabel>
+            <translation><!-- ONEPOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QUOTE-RETAIL</masterLabel>
+            <translation><!-- QUOTE-RETAIL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QUOTE-TELESALES</masterLabel>
+            <translation><!-- QUOTE-TELESALES --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This represents the closed channel of the lead or prospect --></help>
+        <label><!-- Closed Lead Channel --></label>
+        <name>CCPM_closed_Lead_Channel__c</name>
+    </fields>
+    <fields>
+        <help><!-- SMS, Phone, Email --></help>
+        <label><!-- Communication Preference --></label>
+        <name>CCPM_communicationPreference__c</name>
+        <picklistValues>
+            <masterLabel>E-mail</masterLabel>
+            <translation><!-- E-mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS</masterLabel>
+            <translation><!-- SMS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Confirm Email --></label>
+        <name>CCPM_confirmEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirm MTN --></label>
+        <name>CCPM_confirmMTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Consent Channel Signed --></label>
+        <name>CCPM_consentChannelSigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Consent Timestamp --></label>
+        <name>CCPM_consentTimestamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conversion eligible --></label>
+        <name>CCPM_conversionEligible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Cart SKUs --></label>
+        <name>CCPM_convertedCartSKUs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Converted Cart Type --></label>
+        <name>CCPM_convertedCartType__c</name>
+    </fields>
+    <fields>
+        <help><!-- Timestamp for leads that are converted. --></help>
+        <label><!-- Converted Date/Time --></label>
+        <name>CCPM_convertedDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>CCPM_country__c</name>
+        <picklistValues>
+            <masterLabel>--None--</masterLabel>
+            <translation><!-- - - None- -  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United States</masterLabel>
+            <translation><!-- United States --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This represents the initial channel of the lead or prospect upon creation --></help>
+        <label><!-- Created Channel --></label>
+        <name>CCPM_createdChannel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Created Date --></label>
+        <name>CCPM_createdDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Month --></label>
+        <name>CCPM_createdMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Application No --></label>
+        <name>CCPM_creditApplicationNo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Class --></label>
+        <name>CCPM_creditClass__c</name>
+    </fields>
+    <fields>
+        <label><!-- CRM Lead Key ID --></label>
+        <name>CCPM_crmLeadKeyID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Carrier --></label>
+        <name>CCPM_currentCarrier__c</name>
+        <picklistValues>
+            <masterLabel>AT&amp;T Wireless</masterLabel>
+            <translation><!-- AT&amp;T Wireless --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cricket</masterLabel>
+            <translation><!-- Cricket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nextel</masterLabel>
+            <translation><!-- Nextel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sprint (PCS)</masterLabel>
+            <translation><!-- Sprint (PCS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>T-Mobile</masterLabel>
+            <translation><!-- T-Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Verizon</masterLabel>
+            <translation><!-- Verizon --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Score --></label>
+        <name>CCPM_customerAndLeadCombinedScoreFormula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date and Time Consent was agreed --></label>
+        <name>CCPM_dateAndTimeConsentAgreed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Email of the lead / prospect. Required to save a Prospect if the MTN is unavailable. --></help>
+        <label><!-- Email --></label>
+        <name>CCPM_email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Date(DO NOT USE) --></label>
+        <name>CCPM_eventDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- This will Relate a Lead record to a single Event Type record from the campaign object. --></help>
+        <label><!-- Event Type --></label>
+        <name>CCPM_eventTypeCampaign__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The Conversation Topic that requires an SMS follow up to be sent. --></help>
+        <label><!-- Event Type --></label>
+        <name>CCPM_eventTypeLabel__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Conversation Topic that requires an SMS follow up to be sent. --></help>
+        <label><!-- Event Type --></label>
+        <name>CCPM_eventType__c</name>
+        <picklistValues>
+            <masterLabel>Add a Line</masterLabel>
+            <translation><!-- Add a Line --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirming with Family First</masterLabel>
+            <translation><!-- Confirming with Family First --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connected Device</masterLabel>
+            <translation><!-- Connected Device --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Terminating Soon</masterLabel>
+            <translation><!-- Contract Terminating Soon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature Add</masterLabel>
+            <translation><!-- Feature Add --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gift for Upcoming Occasion</masterLabel>
+            <translation><!-- Gift for Upcoming Occasion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Service</masterLabel>
+            <translation><!-- New Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Event</masterLabel>
+            <translation><!-- Other Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMB</masterLabel>
+            <translation><!-- SMB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Samsung GS9 BOGO</masterLabel>
+            <translation><!-- Samsung GS9 BOGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Event</masterLabel>
+            <translation><!-- Special Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TMP OE - Q2 2018</masterLabel>
+            <translation><!-- TMP OE - Q2 2018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tablets</masterLabel>
+            <translation><!-- Tablets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgrade</masterLabel>
+            <translation><!-- Upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>iPhone X</masterLabel>
+            <translation><!-- iPhone X --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>iPhone X send message</masterLabel>
+            <translation><!-- iPhone X send message --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Event(DO NOT USE) --></label>
+        <name>CCPM_event__c</name>
+        <picklistValues>
+            <masterLabel>Confirming with Family First</masterLabel>
+            <translation><!-- Confirming with Family First --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract Terminating Soon</masterLabel>
+            <translation><!-- Contract Terminating Soon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gift for Upcoming occasion</masterLabel>
+            <translation><!-- Gift for Upcoming occasion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other event</masterLabel>
+            <translation><!-- Other event --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Expiry Date --></label>
+        <name>CCPM_expiryDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Pre Defined Response --></label>
+        <name>CCPM_finalPreDefinedResponse__c</name>
+        <picklistValues>
+            <masterLabel>Ok, I’ll be reaching out to you via phone, shortly.</masterLabel>
+            <translation><!-- Ok, I’ll be reaching out to you via phone, shortly. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ok, thank you! Have a great day.</masterLabel>
+            <translation><!-- Ok, thank you! Have a great day. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Final Pre Defined SMS Flag --></label>
+        <name>CCPM_finalPreDefinedSMSFlag__c</name>
+    </fields>
+    <fields>
+        <label><!-- First PreDefined Response --></label>
+        <name>CCPM_firstPreDefinedResponse__c</name>
+        <picklistValues>
+            <masterLabel>Ok, I’ll be reaching out to you via phone, shortly.</masterLabel>
+            <translation><!-- Ok, I’ll be reaching out to you via phone, shortly. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ok, thank you! Have a great day.</masterLabel>
+            <translation><!-- Ok, thank you! Have a great day. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ok, thanks! Please call our customer service department at 1-800-922-0204.</masterLabel>
+            <translation><!-- Ok, thanks! Please call our customer service department at 1-800-922-0204. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ok, thanks! We will make the necessary changes.</masterLabel>
+            <translation><!-- Ok, thanks! We will make the necessary changes. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>What would be the best time to follow up with you via phone call?</masterLabel>
+            <translation><!-- What would be the best time to follow up with you via phone call? --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes, thank you! See you then.</masterLabel>
+            <translation><!-- Yes, thank you! See you then. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Predefined SMS Flag --></label>
+        <name>CCPM_firstPredefinedSMSFlag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Follow-Up SMS Sent Date/Time --></label>
+        <name>CCPM_followUpSMSDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Follow-Up SMS Sent Date/Time(DO NOT USE) --></label>
+        <name>CCPM_followUpSMSSentDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Follow-Up Message Body --></label>
+        <name>CCPM_followupMessageBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Informatica Merge Lead Type --></label>
+        <name>CCPM_informaticaMergeLeadType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Message Body Part II --></label>
+        <name>CCPM_initialMessageBodyPartII__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Message Body Part I --></label>
+        <name>CCPM_initialMessageBodyPartI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Ownership Assignment Msg Body --></label>
+        <name>CCPM_initialOwnershipAssignmentMsgBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial SMS Body --></label>
+        <name>CCPM_initialSMSBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial SMS Fail Counter --></label>
+        <name>CCPM_initialSMSFailCounter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial SMS Sent Date/Time --></label>
+        <name>CCPM_initialSMSSentDateTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- check the field if the lead is a Campaign Lead --></help>
+        <label><!-- Campaign Lead? --></label>
+        <name>CCPM_isCampaignLead__c</name>
+    </fields>
+    <fields>
+        <help><!-- Has a follow up SMS been sent to encourage the individual to visit a Verizon store? --></help>
+        <label><!-- Follow-Up SMS Sent? --></label>
+        <name>CCPM_isFollowUpSMSSent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Informatica Merge Flag. this will be checked by Informatica Feed when there is an update to the existing cart  with new cart details (Merge Scenarios) --></help>
+        <label><!-- Informatica Merge ? --></label>
+        <name>CCPM_isInformaticaMerge__c</name>
+    </fields>
+    <fields>
+        <help><!-- Has an initial SMS been sent to encourage the individual to visit a Verizon store? --></help>
+        <label><!-- Initial SMS Sent? --></label>
+        <name>CCPM_isInitialSMSSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Owner Active? --></label>
+        <name>CCPM_isLeadOwnerActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- MTN Available? --></label>
+        <name>CCPM_isMTNAvailable__c</name>
+    </fields>
+    <fields>
+        <help><!-- if check Prospect is Embedded Account --></help>
+        <label><!-- Manual Lead? --></label>
+        <name>CCPM_isManualLead__c</name>
+    </fields>
+    <fields>
+        <help><!-- Merged Record --></help>
+        <label><!-- Merged Record --></label>
+        <name>CCPM_isMergedUIFlag__c</name>
+    </fields>
+    <fields>
+        <help><!-- This flag is automatically checked during the merge process once we merge the child lead --></help>
+        <label><!-- Merged ? --></label>
+        <name>CCPM_isMerged__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership Changed ? --></label>
+        <name>CCPM_isOwnershipChanged__c</name>
+    </fields>
+    <fields>
+        <help><!-- Has an Event SMS been sent based off the Event based SMS and event date selected? --></help>
+        <label><!-- Event SMS sent? --></label>
+        <name>CCPM_isProspectSMSsent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Rep Ecode Matching --></label>
+        <name>CCPM_isRepEcodeMatching__c</name>
+    </fields>
+    <fields>
+        <help><!-- Has the individual responded to any of the Verizon communications? --></help>
+        <label><!-- SMS Response Received? --></label>
+        <name>CCPM_isSMSResponseReceived__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Employee Updated? --></label>
+        <name>CCPM_isStoreEmployeeUpdated__c</name>
+    </fields>
+    <fields>
+        <help><!-- Phone, Tablet, Accessory --></help>
+        <label><!-- Item Interested In --></label>
+        <name>CCPM_itemInterestedIn__c</name>
+        <picklistValues>
+            <masterLabel>Accessory</masterLabel>
+            <translation><!-- Accessory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tablet</masterLabel>
+            <translation><!-- Tablet --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Interaction Date/Time (DO NOT USE) --></label>
+        <name>CCPM_lastInteractionDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Interaction Date/TIme --></label>
+        <name>CCPM_lastInteraction__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Promo Sent --></label>
+        <name>CCPM_lastPromoSent__c</name>
+    </fields>
+    <fields>
+        <help><!-- The channel the prospect abandoned cart in. --></help>
+        <label><!-- Current Channel --></label>
+        <name>CCPM_leadChannel__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checks if the lead owner is the current logged in user --></help>
+        <label><!-- Lead Owner Check ? --></label>
+        <name>CCPM_leadOwnerCheck__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Owner --></label>
+        <name>CCPM_leadOwner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Score Formula --></label>
+        <name>CCPM_leadScoreFormula__c</name>
+    </fields>
+    <fields>
+        <help><!-- How likely is this individual to purchase from Verizon - the more stars, the more likely they are to purchase. --></help>
+        <label><!-- Lead Score Rating --></label>
+        <name>CCPM_leadScoreRating__c</name>
+    </fields>
+    <fields>
+        <help><!-- Populated when the status is “Responded” or “Qualified” --></help>
+        <label><!-- Lead Sub Status --></label>
+        <name>CCPM_leadSubStatus__c</name>
+        <picklistValues>
+            <masterLabel>Action Required</masterLabel>
+            <translation><!-- Action Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appointment Scheduled</masterLabel>
+            <translation><!-- Appointment Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cart-Disinterested</masterLabel>
+            <translation><!-- Cart-Disinterested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disinterested</masterLabel>
+            <translation><!-- Disinterested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Discussion</masterLabel>
+            <translation><!-- In Discussion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Store Reassignment</masterLabel>
+            <translation><!-- Needs Store Reassignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opted Out</masterLabel>
+            <translation><!-- Opted Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Issue</masterLabel>
+            <translation><!-- Service Issue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Type --></label>
+        <name>CCPM_leadType__c</name>
+        <picklistValues>
+            <masterLabel>Customer Abandoned Cart Digital</masterLabel>
+            <translation><!-- Customer Abandoned Cart Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Abandoned Cart Retail</masterLabel>
+            <translation><!-- Customer Abandoned Cart Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Campaign</masterLabel>
+            <translation><!-- Customer Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer POS Manual</masterLabel>
+            <translation><!-- Customer POS Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Quotes</masterLabel>
+            <translation><!-- Customer Quotes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer SFDC Manual</masterLabel>
+            <translation><!-- Customer SFDC Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Telesales POS Manual</masterLabel>
+            <translation><!-- Customer Telesales POS Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Telesales SFDC Manual</masterLabel>
+            <translation><!-- Customer Telesales SFDC Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect Abandoned Cart Digital</masterLabel>
+            <translation><!-- Prospect Abandoned Cart Digital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect Abandoned Cart Retail</masterLabel>
+            <translation><!-- Prospect Abandoned Cart Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect SFDC Manual</masterLabel>
+            <translation><!-- Prospect SFDC Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect Telesales SFDC Manual</masterLabel>
+            <translation><!-- Prospect Telesales SFDC Manual --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Manual Lead 1st SMS body --></label>
+        <name>CCPM_manualLeadSMSBody__c</name>
+    </fields>
+    <fields>
+        <help><!-- Merge Master Prospect Record ID --></help>
+        <label><!-- Merge Master Record ID --></label>
+        <name>CCPM_mergeMasterID__c</name>
+    </fields>
+    <fields>
+        <label><!-- MF To Be Merged --></label>
+        <name>CCPM_mfToBeMerged__c</name>
+    </fields>
+    <fields>
+        <help><!-- Mobile number of the lead / prospect --></help>
+        <label><!-- MTN --></label>
+        <name>CCPM_mobileNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Originating Rep --></label>
+        <name>CCPM_originatingRep__c</name>
+        <relationshipLabel><!-- Leads (Originating Rep) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Originating Store --></label>
+        <name>CCPM_originatingStore__c</name>
+        <relationshipLabel><!-- Leads (Originating Store) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Owner Ecode --></label>
+        <name>CCPM_ownerEcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner First Name --></label>
+        <name>CCPM_ownerFirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership Changed Date/Time --></label>
+        <name>CCPM_ownershipChangedDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Lead Status --></label>
+        <name>CCPM_previousLeadStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo 1 Sent Date/Time --></label>
+        <name>CCPM_promoFirstSentDate_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo 1 Sent --></label>
+        <name>CCPM_promoFirstSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo 2 Sent Date/Time --></label>
+        <name>CCPM_promoSecondSentDate_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Promo 2 Sent --></label>
+        <name>CCPM_promoSecondSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect Initial SMS Body --></label>
+        <name>CCPM_prospectInitialSMSBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect 1st SMS Body Part II --></label>
+        <name>CCPM_prospectSMSBodyPartII__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect 1st SMS Body Part I --></label>
+        <name>CCPM_prospectSMSBodyPartI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect 1st SMS body --></label>
+        <name>CCPM_prospectSMSBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Date/Time --></label>
+        <name>CCPM_prospectSMSSentDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field captures the Date/Time when the status is Qualified. --></help>
+        <label><!-- Qualified Date/Time --></label>
+        <name>CCPM_qualifiedDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qualified SubStatus For PreDefinedSMS --></label>
+        <name>CCPM_qualifiedSubStatusForPreDefinedSMS__c</name>
+        <picklistValues>
+            <masterLabel>Appointment Scheduled</masterLabel>
+            <translation><!-- Appointment Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disinterested</masterLabel>
+            <translation><!-- Disinterested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Discussion</masterLabel>
+            <translation><!-- In Discussion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Store Reassignment</masterLabel>
+            <translation><!-- Needs Store Reassignment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Issue</masterLabel>
+            <translation><!-- Service Issue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Conversation Category --></help>
+        <label><!-- Quick Notes Description --></label>
+        <name>CCPM_quickNotesDescription__c</name>
+        <picklistValues>
+            <masterLabel>Frustrations with current Non-VZW Carrier</masterLabel>
+            <translation><!-- Frustrations with current Non-VZW Carrier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Looking for additional product</masterLabel>
+            <translation><!-- Looking for additional product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Looking for new service</masterLabel>
+            <translation><!-- Looking for new service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New activation</masterLabel>
+            <translation><!-- New activation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trying to switch type of device</masterLabel>
+            <translation><!-- Trying to switch type of device --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Conversation Details --></help>
+        <label><!-- Quick Notes --></label>
+        <name>CCPM_quickNotes__c</name>
+    </fields>
+    <fields>
+        <help><!-- What brought them into the store --></help>
+        <label><!-- Reason for Purchase? --></label>
+        <name>CCPM_reasonForPurchase__c</name>
+        <picklistValues>
+            <masterLabel>Brand new account</masterLabel>
+            <translation><!-- Brand new account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expecting better coverage with VZW</masterLabel>
+            <translation><!-- Expecting better coverage with VZW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gift for family member</masterLabel>
+            <translation><!-- Gift for family member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terminating contract with competitor</masterLabel>
+            <translation><!-- Terminating contract with competitor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reminder --></label>
+        <name>CCPM_reminder__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Send Follow-Up SMS --></label>
+        <name>CCPM_sendFollowUpSMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Initial SMS Part 1 --></label>
+        <name>CCPM_sendInitialSMSPart1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Initial SMS Part 2 --></label>
+        <name>CCPM_sendInitialSMSPart2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Leads Requiring Action SMS --></label>
+        <name>CCPM_sendLeadsRequiringActionSMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Opt Out --></label>
+        <name>CCPM_smsOptOutAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store District --></label>
+        <name>CCPM_storeDistrict__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Ecode --></label>
+        <name>CCPM_storeEcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store ID Reference --></label>
+        <name>CCPM_storeIDReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store ID --></label>
+        <name>CCPM_storeID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Store Manager of the Verizon store that this lead is associated with. --></help>
+        <label><!-- Store Manager --></label>
+        <name>CCPM_storeManager__c</name>
+        <relationshipLabel><!-- Leads (Store Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Store Market --></label>
+        <name>CCPM_storeMarket__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Name --></label>
+        <name>CCPM_storeName__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula field to store Recommended Visiting Hours --></help>
+        <label><!-- Store Recommended Hours --></label>
+        <name>CCPM_storeRecommendedHours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Territory --></label>
+        <name>CCPM_storeTerritory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time To Qualify --></label>
+        <name>CCPM_timeToQualify__c</name>
+    </fields>
+    <fields>
+        <help><!-- Merge Flag for the Prospect Cart --></help>
+        <label><!-- To Be Merged ? --></label>
+        <name>CCPM_tobeMerged__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Follow-Up SMS Date/Time --></label>
+        <name>CCPM_triggerFollowupSMSDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Initial SMS Date/Time --></label>
+        <name>CCPM_triggerInitialSMSDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Prospect 1st SMS Date Part I --></label>
+        <name>CCPM_triggerProspectSMSPart1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Prospect 1st SMS Date Part II --></label>
+        <name>CCPM_triggerProspectSMSPartII__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>CCPM_usstate__c</name>
+        <picklistValues>
+            <masterLabel>--None--</masterLabel>
+            <translation><!-- - - None- -  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation><!-- Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation><!-- Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation><!-- New Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation><!-- New Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation><!-- North Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio</masterLabel>
+            <translation><!-- Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation><!-- Pennsylvania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation><!-- South Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation><!-- Tennessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation><!-- West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- When is their contract up? --></label>
+        <name>CCPM_whenIsTheirContractUp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Mobile Opt --></label>
+        <name>Customer_Mobile_Opt__c</name>
+    </fields>
+    <fields>
+        <help><!-- Verizon store that this lead is associated with. --></help>
+        <label><!-- Store --></label>
+        <name>Store__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- This field represents the list of reasons why the Lead abandoned the Store after checking in to the store --></help>
+        <label><!-- Reason for Abandon --></label>
+        <name>ccpm_reasonForAbandon__c</name>
+        <picklistValues>
+            <masterLabel>Duplicate or Invalid Entry</masterLabel>
+            <translation><!-- Duplicate or Invalid Entry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Left Unassigned</masterLabel>
+            <translation><!-- Left Unassigned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not ready to purchase</masterLabel>
+            <translation><!-- Not ready to purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions answered</masterLabel>
+            <translation><!-- Questions answered --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mobile Opt Out --></label>
+        <name>et4ae5__HasOptedOutOfMobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile Country Code --></label>
+        <name>et4ae5__Mobile_Country_Code__c</name>
+        <picklistValues>
+            <masterLabel>AC</masterLabel>
+            <translation>AC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AD</masterLabel>
+            <translation>AD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AE</masterLabel>
+            <translation>AE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AF</masterLabel>
+            <translation>AF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AG</masterLabel>
+            <translation>AG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AI</masterLabel>
+            <translation>AI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation>AL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AM</masterLabel>
+            <translation>AM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AO</masterLabel>
+            <translation>AO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AQ</masterLabel>
+            <translation>AQ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation>AR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AS</masterLabel>
+            <translation>AS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AT</masterLabel>
+            <translation>AT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AU</masterLabel>
+            <translation>AU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AW</masterLabel>
+            <translation>AW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AX</masterLabel>
+            <translation>AX</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation>AZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BA</masterLabel>
+            <translation>BA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BB</masterLabel>
+            <translation>BB</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD</masterLabel>
+            <translation>BD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BE</masterLabel>
+            <translation>BE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BF</masterLabel>
+            <translation>BF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BG</masterLabel>
+            <translation>BG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BH</masterLabel>
+            <translation>BH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI</masterLabel>
+            <translation>BI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BJ</masterLabel>
+            <translation>BJ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BL</masterLabel>
+            <translation>BL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BM</masterLabel>
+            <translation>BM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BN</masterLabel>
+            <translation>BN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BO</masterLabel>
+            <translation>BO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BQ</masterLabel>
+            <translation>BQ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BR</masterLabel>
+            <translation>BR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BS</masterLabel>
+            <translation>BS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BT</masterLabel>
+            <translation>BT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BV</masterLabel>
+            <translation>BV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BW</masterLabel>
+            <translation>BW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BY</masterLabel>
+            <translation>BY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BZ</masterLabel>
+            <translation>BZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation>CA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC</masterLabel>
+            <translation>CC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CD</masterLabel>
+            <translation>CD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CF</masterLabel>
+            <translation>CF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CG</masterLabel>
+            <translation>CG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CH</masterLabel>
+            <translation>CH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI</masterLabel>
+            <translation>CI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CK</masterLabel>
+            <translation>CK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL</masterLabel>
+            <translation>CL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM</masterLabel>
+            <translation>CM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CN</masterLabel>
+            <translation>CN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation>CO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CR</masterLabel>
+            <translation>CR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CU</masterLabel>
+            <translation>CU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CV</masterLabel>
+            <translation>CV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation>CW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CX</masterLabel>
+            <translation>CX</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CY</masterLabel>
+            <translation>CY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CZ</masterLabel>
+            <translation>CZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation>DE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DJ</masterLabel>
+            <translation>DJ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DK</masterLabel>
+            <translation>DK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM</masterLabel>
+            <translation>DM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DO</masterLabel>
+            <translation>DO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DZ</masterLabel>
+            <translation>DZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EC</masterLabel>
+            <translation>EC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EE</masterLabel>
+            <translation>EE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EG</masterLabel>
+            <translation>EG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ER</masterLabel>
+            <translation>ER</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES</masterLabel>
+            <translation>ES</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ET</masterLabel>
+            <translation>ET</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FI</masterLabel>
+            <translation>FI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FJ</masterLabel>
+            <translation>FJ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FK</masterLabel>
+            <translation>FK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FM</masterLabel>
+            <translation>FM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FO</masterLabel>
+            <translation>FO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FR</masterLabel>
+            <translation>FR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA</masterLabel>
+            <translation>GA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GB</masterLabel>
+            <translation>GB</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GD</masterLabel>
+            <translation>GD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GE</masterLabel>
+            <translation>GE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GF</masterLabel>
+            <translation>GF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GG</masterLabel>
+            <translation>GG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GH</masterLabel>
+            <translation>GH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GI</masterLabel>
+            <translation>GI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL</masterLabel>
+            <translation>GL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GM</masterLabel>
+            <translation>GM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GN</masterLabel>
+            <translation>GN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GP</masterLabel>
+            <translation>GP</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GQ</masterLabel>
+            <translation>GQ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GR</masterLabel>
+            <translation>GR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS</masterLabel>
+            <translation>GS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GT</masterLabel>
+            <translation>GT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GU</masterLabel>
+            <translation>GU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GW</masterLabel>
+            <translation>GW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GY</masterLabel>
+            <translation>GY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HK</masterLabel>
+            <translation>HK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HM</masterLabel>
+            <translation>HM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HN</masterLabel>
+            <translation>HN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR</masterLabel>
+            <translation>HR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HT</masterLabel>
+            <translation>HT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HU</masterLabel>
+            <translation>HU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID</masterLabel>
+            <translation>ID</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IE</masterLabel>
+            <translation>IE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation>IL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IM</masterLabel>
+            <translation>IM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation>IN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IO</masterLabel>
+            <translation>IO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IQ</masterLabel>
+            <translation>IQ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IR</masterLabel>
+            <translation>IR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IS</masterLabel>
+            <translation>IS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation>IT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JE</masterLabel>
+            <translation>JE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JM</masterLabel>
+            <translation>JM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JO</masterLabel>
+            <translation>JO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JP</masterLabel>
+            <translation>JP</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KE</masterLabel>
+            <translation>KE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KG</masterLabel>
+            <translation>KG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KH</masterLabel>
+            <translation>KH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KI</masterLabel>
+            <translation>KI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KM</masterLabel>
+            <translation>KM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KN</masterLabel>
+            <translation>KN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KP</masterLabel>
+            <translation>KP</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KR</masterLabel>
+            <translation>KR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KW</masterLabel>
+            <translation>KW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KY</masterLabel>
+            <translation>KY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KZ</masterLabel>
+            <translation>KZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation>LA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LB</masterLabel>
+            <translation>LB</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LC</masterLabel>
+            <translation>LC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LI</masterLabel>
+            <translation>LI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LK</masterLabel>
+            <translation>LK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LR</masterLabel>
+            <translation>LR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LS</masterLabel>
+            <translation>LS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LT</masterLabel>
+            <translation>LT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LU</masterLabel>
+            <translation>LU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LV</masterLabel>
+            <translation>LV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LY</masterLabel>
+            <translation>LY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation>MA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC</masterLabel>
+            <translation>MC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation>MD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation>ME</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF</masterLabel>
+            <translation>MF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation>MG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MH</masterLabel>
+            <translation>MH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MK</masterLabel>
+            <translation>MK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ML</masterLabel>
+            <translation>ML</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MM</masterLabel>
+            <translation>MM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation>MN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO</masterLabel>
+            <translation>MO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MP</masterLabel>
+            <translation>MP</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MQ</masterLabel>
+            <translation>MQ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MR</masterLabel>
+            <translation>MR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation>MS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation>MT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MU</masterLabel>
+            <translation>MU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MV</masterLabel>
+            <translation>MV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MW</masterLabel>
+            <translation>MW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MX</masterLabel>
+            <translation>MX</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MY</masterLabel>
+            <translation>MY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MZ</masterLabel>
+            <translation>MZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation>NA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation>NC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NE</masterLabel>
+            <translation>NE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NF</masterLabel>
+            <translation>NF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NG</masterLabel>
+            <translation>NG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NI</masterLabel>
+            <translation>NI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NL</masterLabel>
+            <translation>NL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO</masterLabel>
+            <translation>NO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NP</masterLabel>
+            <translation>NP</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NR</masterLabel>
+            <translation>NR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NU</masterLabel>
+            <translation>NU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NZ</masterLabel>
+            <translation>NZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OM</masterLabel>
+            <translation>OM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation>PA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE</masterLabel>
+            <translation>PE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PF</masterLabel>
+            <translation>PF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PG</masterLabel>
+            <translation>PG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PH</masterLabel>
+            <translation>PH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PK</masterLabel>
+            <translation>PK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PL</masterLabel>
+            <translation>PL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PM</masterLabel>
+            <translation>PM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN</masterLabel>
+            <translation>PN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation>PR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PS</masterLabel>
+            <translation>PS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PT</masterLabel>
+            <translation>PT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PW</masterLabel>
+            <translation>PW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PY</masterLabel>
+            <translation>PY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA</masterLabel>
+            <translation>QA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RE</masterLabel>
+            <translation>RE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO</masterLabel>
+            <translation>RO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS</masterLabel>
+            <translation>RS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RU</masterLabel>
+            <translation>RU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RW</masterLabel>
+            <translation>RW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA</masterLabel>
+            <translation>SA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB</masterLabel>
+            <translation>SB</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation>SC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation>SD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SE</masterLabel>
+            <translation>SE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SG</masterLabel>
+            <translation>SG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SH</masterLabel>
+            <translation>SH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SI</masterLabel>
+            <translation>SI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SJ</masterLabel>
+            <translation>SJ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SK</masterLabel>
+            <translation>SK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SL</masterLabel>
+            <translation>SL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SM</masterLabel>
+            <translation>SM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SN</masterLabel>
+            <translation>SN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SO</masterLabel>
+            <translation>SO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SR</masterLabel>
+            <translation>SR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS</masterLabel>
+            <translation>SS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ST</masterLabel>
+            <translation>ST</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SV</masterLabel>
+            <translation>SV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SX</masterLabel>
+            <translation>SX</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SY</masterLabel>
+            <translation>SY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SZ</masterLabel>
+            <translation>SZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA</masterLabel>
+            <translation>TA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TC</masterLabel>
+            <translation>TC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TD</masterLabel>
+            <translation>TD</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TG</masterLabel>
+            <translation>TG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TH</masterLabel>
+            <translation>TH</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TJ</masterLabel>
+            <translation>TJ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TK</masterLabel>
+            <translation>TK</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TL</masterLabel>
+            <translation>TL</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TM</masterLabel>
+            <translation>TM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation>TN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TO</masterLabel>
+            <translation>TO</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TR</masterLabel>
+            <translation>TR</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TT</masterLabel>
+            <translation>TT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TV</masterLabel>
+            <translation>TV</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TW</masterLabel>
+            <translation>TW</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TZ</masterLabel>
+            <translation>TZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UA</masterLabel>
+            <translation>UA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UG</masterLabel>
+            <translation>UG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US</masterLabel>
+            <translation>US</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UY</masterLabel>
+            <translation>UY</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UZ</masterLabel>
+            <translation>UZ</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation>VA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VC</masterLabel>
+            <translation>VC</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VE</masterLabel>
+            <translation>VE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VG</masterLabel>
+            <translation>VG</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VI</masterLabel>
+            <translation>VI</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VN</masterLabel>
+            <translation>VN</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VU</masterLabel>
+            <translation>VU</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WF</masterLabel>
+            <translation>WF</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WS</masterLabel>
+            <translation>WS</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YE</masterLabel>
+            <translation>YE</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>YT</masterLabel>
+            <translation>YT</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZA</masterLabel>
+            <translation>ZA</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZM</masterLabel>
+            <translation>ZM</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZW</masterLabel>
+            <translation>ZW</translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>CCPM Customer Quotes Layout</layout>
+        <sections>
+            <label><!-- Abandoned Cart Information --></label>
+            <section>Abandoned Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- NPS Information --></label>
+            <section>NPS Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Messages --></label>
+            <section>SMS Messages</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Customer Quotes Layout - CC &amp; Market Analyst</layout>
+        <sections>
+            <label><!-- Abandoned Cart Information --></label>
+            <section>Abandoned Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- NPS Information --></label>
+            <section>NPS Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Messages --></label>
+            <section>SMS Messages</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Lead Layout</layout>
+        <sections>
+            <label><!-- Abandoned Cart Information --></label>
+            <section>Abandoned Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- NPS Information --></label>
+            <section>NPS Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Messages --></label>
+            <section>SMS Messages</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Lead Layout - CC &amp; Market Analyst</layout>
+        <sections>
+            <label><!-- Abandoned Cart Information --></label>
+            <section>Abandoned Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- NPS Information --></label>
+            <section>NPS Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Messages --></label>
+            <section>SMS Messages</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Lead Layout - System Admin</layout>
+        <sections>
+            <label><!-- Abandoned Visit Details --></label>
+            <section>Abandoned Visit Details</section>
+        </sections>
+        <sections>
+            <label><!-- Cart Information --></label>
+            <section>Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Interaction Overview --></label>
+            <section>Interaction Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- NPS --></label>
+            <section>NPS</section>
+        </sections>
+        <sections>
+            <label><!-- Nearest Store Information --></label>
+            <section>Nearest Store Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Interaction History --></label>
+            <section>SMS Interaction History</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Prospect Cart Layout</layout>
+        <sections>
+            <label><!-- Cart Information --></label>
+            <section>Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Interaction Overview --></label>
+            <section>Interaction Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- Nearest Store Information --></label>
+            <section>Nearest Store Information</section>
+        </sections>
+        <sections>
+            <label><!-- SMS INTERACTION HISTORY --></label>
+            <section>SMS INTERACTION HISTORY</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Prospect Layout</layout>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Messages --></label>
+            <section>SMS Messages</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Prospect Layout - System Admin</layout>
+        <sections>
+            <label><!-- Cart Information --></label>
+            <section>Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Interaction Overview --></label>
+            <section>Interaction Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- Prospect Notes --></label>
+            <section>Prospect Notes</section>
+        </sections>
+        <sections>
+            <label><!-- SMS INTERACTION HISTORY --></label>
+            <section>SMS INTERACTION HISTORY</section>
+        </sections>
+        <sections>
+            <label><!-- Store Information --></label>
+            <section>Store Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Salesrep ASVL - Lead</layout>
+        <sections>
+            <label><!-- Abandoned Cart Information --></label>
+            <section>Abandoned Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- NPS Information --></label>
+            <section>NPS Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Messages --></label>
+            <section>SMS Messages</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Salesrep ASVL - Lead - CC &amp; Market Analyst</layout>
+        <sections>
+            <label><!-- Abandoned Cart Information --></label>
+            <section>Abandoned Cart Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Next Steps --></label>
+            <section>Lead Next Steps</section>
+        </sections>
+        <sections>
+            <label><!-- NPS Information --></label>
+            <section>NPS Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- SMS Messages --></label>
+            <section>SMS Messages</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Call Now --></label>
+        <name>CCPM_callNow</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>CCPM_newTaskQuickAction</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Send SMS --></label>
+        <name>CCPM_sendSMS</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Customer Abandoned Visit --></label>
+        <name>CCPM_CustomerAbandonedVisit</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Customer Quotes --></label>
+        <name>CCPM_CustomerQuotes</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Customer Cart --></label>
+        <name>CCPM_customerCart</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Prospect --></label>
+        <name>CCPM_prospect</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Prospect Cart --></label>
+        <name>CCPM_prospectCart</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Quarantined Cart --></label>
+        <name>CCPM_quarantined</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- MTN or Email is required to save the Prospect record. --></errorMessage>
+        <name>CCPM_MTNorEmailRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please check the &apos;Messaging Consent&apos; checkbox. --></errorMessage>
+        <name>CCPM_SMSOptIn</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Both the Email&apos;s should match --></errorMessage>
+        <name>CCPM_confirmEmail</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Both the MTN&apos;s should match --></errorMessage>
+        <name>CCPM_confirmMTN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event Type is a mandatory field --></errorMessage>
+        <name>CCPM_eventTypeMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- First Name is a mandatory field --></errorMessage>
+        <name>CCPM_firstNameMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter valid MTN --></errorMessage>
+        <name>CCPM_limitMTNto15Numbers</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Zip Code atleast should be five digit --></errorMessage>
+        <name>CCPM_limitZipcodeto5</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event date/time cannot be in Past. Please correct the &apos;SMS Follow Up Date/Time&apos; field. --></errorMessage>
+        <name>CCPM_restricChangeToEvent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Black Friday/Cyber Monday event type is no longer available --></errorMessage>
+        <name>CCPM_restrictBlackFriday</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Status must be New --></errorMessage>
+        <name>CCPM_restrictLeadStatustoNew</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- First/Last Name Cannot contain special characters or numbers --></errorMessage>
+        <name>CCPM_restrictNametoAlphabets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Number of Lines Interested In can only contain numbers --></errorMessage>
+        <name>CCPM_restrictNoofLinestoNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- SMS Follow Up Date is a mandatory field to determine when a SMS is sent to the prospect --></errorMessage>
+        <name>CCPM_validateEventDateToMarkRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not allowed to change the Lead Status to New, Eligible, Contacted, Responded, Converted and Expired --></errorMessage>
+        <name>CCPM_validateLeadStatusChangePrivilege</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change the Lead Sub-Status when the Lead Status is Responded. You can only change the Lead Status to Qualified and then change the associated Sub-Status. --></errorMessage>
+        <name>CCPM_validateLeadSubStatusChgPrivilege</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can only edit the &apos;Lead Owner&apos; and &apos;Lead Status&apos; fields. --></errorMessage>
+        <name>CCPM_validateLeadUpdatePriviledge</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change Lead Owner. --></errorMessage>
+        <name>CCPM_validateLeadUpdatePriviledgeCrossC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can only edit the &apos;Lead Owner&apos;, &apos;Lead Status&apos; and &apos;Notes&apos; fields. --></errorMessage>
+        <name>CCPM_validateLeadUpdatePriviledgeForReps</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can only edit the &apos;Lead Owner&apos;, &apos;Lead Status&apos; and &apos;Notes&apos; fields. --></errorMessage>
+        <name>CCPM_validateLeadUpdatePriviledgeQuote</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can only edit the &apos;Lead Owner&apos; and &apos;Lead status&apos;. --></errorMessage>
+        <name>CCPM_validateLeadUpdatePriviledgeReDistM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot edit &apos;Lead Status&apos; and &apos;Lead Sub Status&apos;. --></errorMessage>
+        <name>CCPM_validateLeadUpdatePriviledgeRetailM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- All Qualified leads need a sub-status selected --></errorMessage>
+        <name>CCPM_validateQualifiedSubStatusPrivilege</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select October 26th for the iPhone X pre-order --></errorMessage>
+        <name>IphoneX_validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CCPM_accountInformation --></label>
+        <name>CCPM_accountInformation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Opt_in_for_Text_Messages_list --></label>
+        <name>LiveText__Opt_in_for_Text_Messages_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Opt_out_for_Text_Messages_list --></label>
+        <name>LiveText__Opt_out_for_Text_Messages_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Bulk_SMS --></label>
+        <name>LiveText__Send_Bulk_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Resubscribe --></label>
+        <name>et4ae5__ExactTarget_Resubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ExactTarget_Unsubscribe --></label>
+        <name>et4ae5__ExactTarget_Unsubscribe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_Email --></label>
+        <name>et4ae5__Send_ExactTarget_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_ExactTarget_SMS --></label>
+        <name>et4ae5__Send_ExactTarget_SMS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_ExactTarget_Analytics --></label>
+        <name>et4ae5__View_ExactTarget_Analytics</name>
+    </webLinks>
+</CustomObjectTranslation>

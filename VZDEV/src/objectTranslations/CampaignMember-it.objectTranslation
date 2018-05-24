@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Run ID --></label>
+        <name>CCPM_Runid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign key --></label>
+        <name>CCPM_campaignkey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cart Unique ID --></label>
+        <name>CCPM_cartUniqueID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Split ID --></label>
+        <name>CCPM_splitID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Step ID --></label>
+        <name>CCPM_stepID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activity --></label>
+        <name>et4ae5__Activity__c</name>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation>Inviati</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsubscribed</masterLabel>
+            <translation>Iscrizione annullata</translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

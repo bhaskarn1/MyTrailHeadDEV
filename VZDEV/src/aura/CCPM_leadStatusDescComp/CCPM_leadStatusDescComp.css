@@ -1,0 +1,8 @@
+.THIS .desc-list-li{
+    margin-left: 20px; 
+    list-style-type: decimal;
+}
+
+.THIS .ld-gauge-ing{
+    max-height:200px;
+}

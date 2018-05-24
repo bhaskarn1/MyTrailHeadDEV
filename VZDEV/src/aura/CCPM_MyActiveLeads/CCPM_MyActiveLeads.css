@@ -1,0 +1,37 @@
+.cCCPM_MyActiveLeads .ld-std-lineht {
+    line-height: 13px;
+}
+
+.cCCPM_MyActiveLeads .slds-table td, .cCCPM_MyActiveLeads .slds-table th{
+    min-width:70px;
+    max-width:135px;
+}
+
+.cCCPM_MyActiveLeads .ld-table-hd{
+	height:34px; 
+    text-transform: uppercase;
+     font-size:13px;
+}
+
+.cCCPM_MyActiveLeads .ld-tbl-row{
+	height:34px; 
+}
+
+.cCCPM_MyActiveLeads .ld-sub-hdn-column{
+	padding-left:35px; 
+}
+
+.cCCPM_MyActiveLeads .ld-short-resp{
+    width:75%;
+    width: calc(100% - 30px);
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.cCCPM_MyActiveLeads   .ld-header-column{
+	cursor:pointer; 
+}
+
+.cCCPM_MyActiveLeads   .ld-header-column:hover{
+	color:rgb(0, 112, 210);
+}

@@ -1,0 +1,70 @@
+.THIS span.required {
+    color:#c23934;
+}
+.THIS .toggle {
+   display: none;
+ }
+.THIS .textColor 
+{
+color :red;
+}
+.THIS .newtextColor 
+{
+color :red;
+}
+.THIS.scrollerSize {
+    height: 100%;
+}
+
+.THIS .ld-eventMsg{
+       text-align: justify;
+    font-size: 11px;
+    background: #EFEFEF;
+    border: 1px solid #CCCCCC;
+    margin: 15px 0px;
+    padding:10px;
+}
+
+.THIS .ld-eventMsg  .ld-event-msg-header{
+    display: inline-block;
+    background: #CCCCCC;
+    padding: 0px 10px;
+    margin-bottom: -8px;
+    position: relative;
+    top: -19px;
+}
+
+.THIS .ld-eventMsg  .ld-event-msg-body{
+    margin-top:-10px;
+}
+
+.THIS .lds-event-type, .THIS .lds-event-type .slds-form-element__control{
+    display:block;
+}
+
+.THIS .lds-event-type.slds-p-horizontal--x-small{
+    margin-right:0px;
+}
+
+.THIS .lds-event-type .slds-form-element__label{
+    margin-bottom: .25rem;
+}
+
+.THIS .lds-event-type select:not([multiple]) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 14px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…w9IiM1NTY5OEQiIHdpZHRoPSIyNy42IiBoZWlnaHQ9IjIxIi8+DQogIDwvZz4NCjwvc3ZnPg0K),rgb(255, 255, 255);
+    background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI3LjYgMjEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI3LjYgMjEiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8Zz4NCiAgICA8ZGVmcz4NCiAgICAgIDxwYXRoIGlkPSJTVkdJRF8xXyIgZD0iTTUuNiA1aDE2LjRjMC40IDAgMC44IDAuNiAwLjQgMWwtOCA5LjhjLTAuMyAwLjMtMC45IDAuMy0xLjIgMGwtOC05LjhDNC44IDUuNiA1LjEgNSA1LjYgNXoiLz4NCiAgICA8L2RlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJTVkdJRF8yXyI+DQogICAgICA8dXNlIHhsaW5rOmhyZWY9IiNTVkdJRF8xXyIgb3ZlcmZsb3c9InZpc2libGUiLz4NCiAgICA8L2NsaXBQYXRoPg0KICAgIDxyZWN0IHg9IjAiIHk9IjAiIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8yXykiIGZpbGw9IiM1NTY5OEQiIHdpZHRoPSIyNy42IiBoZWlnaHQ9IjIxIi8+DQogIDwvZz4NCjwvc3ZnPg0K);
+    background-repeat: no-repeat;
+    background-position: 97.5% 50%;
+    background-size: .8125rem .8125rem,100% 100%;
+}
+
+.THIS .lds-event-type .slds-select_container:before{
+    border-bottom:0px; 
+}
+.THIS .lds-event-type .slds-select_container:after{
+    border-top:0px;
+}

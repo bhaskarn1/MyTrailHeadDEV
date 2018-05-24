@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Container for custom exception/log messages</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CCPM_age__c</fullName>
+        <description>Age in Days</description>
+        <externalId>false</externalId>
+        <formula>TODAY() - DATEVALUE(CreatedDate)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Age in Days</inlineHelpText>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_debugLevel__c</fullName>
+        <description>Debug Level</description>
+        <externalId>false</externalId>
+        <label>Debug Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Info</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Warning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Debug</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CCPM_integrationPayload__c</fullName>
+        <description>If log is integration related show xml payload</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>If log is integration related show xml payload</inlineHelpText>
+        <label>Integration Payload</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_logCode__c</fullName>
+        <description>The exception error code of custom org code for record</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>The exception error code of custom org code for record</inlineHelpText>
+        <label>Log Code</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_logDateTime__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Log Date Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_message__c</fullName>
+        <description>Message to log</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Message to log</inlineHelpText>
+        <label>Message</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_referenceId__c</fullName>
+        <description>The related record Id</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>The related record Id</inlineHelpText>
+        <label>Reference Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_referenceInfo__c</fullName>
+        <description>The related record info (e.g. Apex Batch Job Id, Contact etc)</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>The related record info (e.g. Apex Batch Job Id, Contact etc)</inlineHelpText>
+        <label>Reference Info</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_sourceFunction__c</fullName>
+        <description>The originating function in the class/component</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>The originating function in the class/component</inlineHelpText>
+        <label>Source Function</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_source__c</fullName>
+        <description>The originating class/component of log message</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>The originating component of log message</inlineHelpText>
+        <label>Source</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_stackTrace__c</fullName>
+        <description>Raw exception stack trace for unhandled errors</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Raw exception stack trace for unhandled errors</inlineHelpText>
+        <label>Stack Trace</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_timer__c</fullName>
+        <description>The time in milliseconds for the transaction (e.g. For integration/batch apex messages it might be the time taken to process)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The time in milliseconds for the transaction (e.g. For integration/batch apex messages it might be the time taken to process)</inlineHelpText>
+        <label>ExecutionTime</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Error Log</label>
+    <listViews>
+        <fullName>error_Log_today</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_source__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CCPM_message__c</columns>
+        <columns>CCPM_sourceFunction__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>2/5/2018 9:02 AM</value>
+        </filters>
+        <filters>
+            <field>CCPM_source__c</field>
+            <operation>startsWith</operation>
+            <value>CCPM_</value>
+        </filters>
+        <label>error Log today</label>
+    </listViews>
+    <nameField>
+        <displayFormat>LOG-{000000}</displayFormat>
+        <label>Log Message #</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Error Logs</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>CCPM_logDateTime__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_debugLevel__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_source__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_sourceFunction__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_logCode__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_message__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCPM_referenceId__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_logDateTime__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_debugLevel__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_source__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_sourceFunction__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_logCode__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_message__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCPM_referenceId__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_logDateTime__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_debugLevel__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_source__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_sourceFunction__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_logCode__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_message__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CCPM_referenceId__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>CCPM_logDateTime__c</searchFilterFields>
+        <searchFilterFields>CCPM_debugLevel__c</searchFilterFields>
+        <searchFilterFields>CCPM_source__c</searchFilterFields>
+        <searchFilterFields>CCPM_sourceFunction__c</searchFilterFields>
+        <searchFilterFields>CCPM_logCode__c</searchFilterFields>
+        <searchFilterFields>CCPM_referenceId__c</searchFilterFields>
+        <searchFilterFields>CREATEDBY_USER</searchFilterFields>
+        <searchResultsAdditionalFields>CCPM_logDateTime__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_debugLevel__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_source__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_sourceFunction__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_logCode__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_message__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCPM_referenceId__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

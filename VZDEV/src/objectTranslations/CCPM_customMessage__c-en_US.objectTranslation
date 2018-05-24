@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Custom Message</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Custom Messages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Foul Words Found --></label>
+        <name>CCPM_foulWords__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>CCPM_lead__c</name>
+        <relationshipLabel><!-- Custom Messages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Message Text --></label>
+        <name>CCPM_messageText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>CCPM_status__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Send Failure</masterLabel>
+            <translation><!-- Send Failure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Store --></label>
+        <name>CCPM_store__c</name>
+        <relationshipLabel><!-- Custom Messages --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

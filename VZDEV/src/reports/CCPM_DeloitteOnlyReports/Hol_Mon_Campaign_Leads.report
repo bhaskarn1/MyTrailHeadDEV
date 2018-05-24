@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign.LeadCampaignMembers$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers.CampaignMembers$Name</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.LeadCampaignMembers$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Eligible,Contacted,Responded,Qualified,Converted,Dismissed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2017 Holiday Salesforce 4 - 2017_Holiday_AAL_SF_4,2017 Holiday Salesforce 3 - 2017_Holiday_AAL_SF_3,2017 Holiday Salesforce 2 - 2017_Holiday_AAL_SF_2,10.17 Daily Responder SF - AAL Daily Responder SF,2017 Holiday Salesforce 1 - 2017_Holiday_AAL_SF_1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.LeadCampaignMembers$RecordType</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.LeadCampaignMembers$Status</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Hol Mon - Campaign Leads</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CCPM_leadsWithCampaigns__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Campaign.LeadCampaignMembers$CreatedDate</dateColumn>
+        <endDate>2017-11-27</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-11-21</startDate>
+    </timeFrameFilter>
+</Report>

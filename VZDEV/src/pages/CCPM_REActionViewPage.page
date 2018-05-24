@@ -1,0 +1,188 @@
+<apex:page controller="CCPM_REActionController" tabStyle="CCPM_Action__c" >
+<apex:pageMessages escape="false"/>
+
+<apex:form >
+
+<apex:pageBlock rendered="{!strActionRecordName <> ''}">
+    <apex:pageBlockButtons >
+        <apex:commandButton value="Edit" action="{!edit}"/>
+        <apex:commandButton value="Clone" action="{!clonevaluePackage}"/> 
+    </apex:pageBlockButtons>
+    
+    <apex:pageBlockSection rendered="{!actionPackage.objAction.RecordType.Name <> 'Related Object Action'}">
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Action Name"/>
+            <apex:outputField value="{!actionPackage.objAction.Name}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Record Type Name"/>
+            <apex:outputField value="{!actionPackage.objAction.RecordType.Name}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Master Object"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_masterObject__c}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Action Number"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_actionNumber__c}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+        	<apex:outputLabel value="Type"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_type__c}"/>
+        </apex:pageBlockSectionItem>          
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Active"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_active__c}"/>
+        </apex:pageBlockSectionItem>        
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Action Object"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_actionObject__c}" style="width:230px"/>
+        </apex:pageBlockSectionItem>  
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Start Date"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_startDate__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Description"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_description__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="End Date"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_endDate__c}"/>
+        </apex:pageBlockSectionItem>
+                
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Created By"/>
+            <apex:outputPanel >
+                <apex:outputLink value="/{!actionPackage.objAction.CreatedById}">{!actionPackage.objAction.CreatedBy.Name}</apex:outputLink>, <apex:outputField value="{!actionPackage.objAction.CreatedDate}"/> 
+            </apex:outputPanel>
+            
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Last Modified By"/>
+            <apex:outputPanel >
+                <apex:outputLink value="/{!actionPackage.objAction.LastModifiedById}">{!actionPackage.objAction.LastModifiedBy.Name}</apex:outputLink>, <apex:outputField value="{!actionPackage.objAction.LastModifiedDate}"/>                
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection rendered="{!actionPackage.objAction.RecordType.Name = 'Related Object Action'}">
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Action Name"/>
+            <apex:outputField value="{!actionPackage.objAction.Name}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Record Type Name"/>
+            <apex:outputField value="{!actionPackage.objAction.RecordType.Name}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Master Object"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_masterObject__c}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Action Number"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_actionNumber__c}" style="width:230px"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Related Object"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_relatedObject__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Active"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_active__c}"/>
+        </apex:pageBlockSectionItem>
+		
+		<apex:pageBlockSectionItem >
+            <apex:outputLabel value="Related Object Action"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_relatedObjectAction__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Start Date"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_startDate__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Description"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_description__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="End Date"/>
+            <apex:outputField value="{!actionPackage.objAction.CCPM_endDate__c}"/>
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Created By"/>
+            <apex:outputPanel >
+                <apex:outputLink value="/{!actionPackage.objAction.CreatedById}">{!actionPackage.objAction.CreatedBy.Name}</apex:outputLink>, <apex:outputField value="{!actionPackage.objAction.CreatedDate}"/> 
+            </apex:outputPanel>
+            
+        </apex:pageBlockSectionItem>
+        
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Last Modified By"/>
+            <apex:outputPanel >
+                <apex:outputLink value="/{!actionPackage.objAction.LastModifiedById}">{!actionPackage.objAction.LastModifiedBy.Name}</apex:outputLink>, <apex:outputField value="{!actionPackage.objAction.LastModifiedDate}"/>                
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="Action Components" columns="1" id="actionPanel" rendered="{!actionPackage.objAction.RecordType.Name <> 'Related Object Action'}">
+        <apex:pageBlockTable style="width:100%" value="{!actionPackage.mapActionComponents}" var="objAC" id="actionTable">
+            <apex:column headerValue="Action" style="width:30px">
+                <apex:commandLink value="Del" style="color:red" action="{!removeVCRow}" rerender="actionPanel" immediate="true" >
+                    <apex:param value="{!objAC}" name="intACRowNum" assignTo="{!intACRowNum}"/>
+                </apex:commandLink>
+            </apex:column>
+            <apex:column headerValue="Order" style="width:100px">
+                {!actionPackage.mapActionComponents[objAC].CCPM_order__c}
+            </apex:column>
+            <apex:column headerValue="Field Name" style="width:100px">
+                {!actionPackage.mapActionComponents[objAC].CCPM_fieldAPIName__c}
+                <apex:outputLabel value=" : {!actionPackage.mapActionComponents[objAC].CCPM_variableName__c}" rendered="{!actionPackage.mapActionComponents[objAC].CCPM_variableName__c <> ''}"/>
+            </apex:column>
+            <apex:column style="width:100px" headerValue="Merge Copy If Null Or Blank" rendered="{!strActionRecordName == 'Merge Insert Or Update Action'}">
+                <apex:outputField value="{!actionPackage.mapActionComponents[objAC].CCPM_mergeCopyIfNullOrBlank__c}"/>
+            </apex:column>
+            <apex:column style="width:100px" headerValue="Merge Copy" rendered="{!strActionRecordName == 'Merge Insert Or Update Action'}">
+                <apex:outputField value="{!actionPackage.mapActionComponents[objAC].CCPM_mergeCopy__c}"/>
+            </apex:column>
+            <apex:column headerValue="Field Value" > 
+            	{!actionPackage.mapActionComponents[objAC].CCPM_fieldValue__c} 
+            </apex:column>
+            <apex:column style="width:100px" headerValue="Active" > 
+                <apex:outputField value="{!actionPackage.mapActionComponents[objAC].CCPM_active__c}" />
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockSection title="Rule Actions" columns="1" id="ruleActionPanel">
+            <apex:pageBlockTable style="width:30%;" value="{!actionPackage.mapRuleAction}" var="objRA" id="ruleActionTable">
+                <apex:column headerValue="Action Name" style="width:60%">
+                    <apex:outputLink value="/apex/CCPM_RERuleViewPage?ruleid={!actionPackage.mapRuleAction[objRA].CCPM_rule__c}" >{!actionPackage.mapRuleAction[objRA].CCPM_rule__r.Name}</apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Active" style="width:10%;text-align:center">
+                    <apex:outputField value="{!actionPackage.mapRuleAction[objRA].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

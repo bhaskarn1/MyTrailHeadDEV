@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <articleTypeChannelDisplay>
+        <articleTypeTemplates>
+            <channel>App</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Prm</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Csp</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Pkb</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+    </articleTypeChannelDisplay>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>Additional_Resources__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Resources</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Content__c</fullName>
+        <description>Contains Knowledge article content</description>
+        <externalId>false</externalId>
+        <label>Content</label>
+        <length>100000</length>
+        <type>Html</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Summary__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Summary</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Knowledge</label>
+    <pluralLabel>Knowledge</pluralLabel>
+</CustomObject>

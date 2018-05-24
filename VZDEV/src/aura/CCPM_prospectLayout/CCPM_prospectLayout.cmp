@@ -1,0 +1,457 @@
+<aura:component controller="CCPM_getLeadStatus" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId,force:lightningQuickAction,force:appHostable"  access="global">    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="lead" type="Lead"
+                    default="{ 'sobjectType': 'Lead',
+                             'Last Name': '',
+                             'CCPM_mobileNumber__c': '',
+                             'Email': '',
+                             'Status': '',
+                             'Address':'',
+                             'CCPM_reasonForPurchase__c' : '--None--',
+                             'CCPM_SMSFollowUpDate__c': '',
+                             'CCPM_SMSOptOut__c': false,
+                             'CCPM_country__c' :'',
+                             'CCPM_usstate__c':'' ,
+                             'Country':'', 
+                             'State':''}"/>
+    <aura:attribute name="account" type="Account" 
+                    default="{'sobjectType': 'Account',
+                             'Name':'','CCPM_email__c':'','CCPM_SMSOptOut__c':false,'CCPM_hasOptedOutOfCall__c':false, 'CCPM_hasOptedOutOfEmail__c':false}" />
+    <aura:attribute name="searchResult" type="boolean" default="false" />
+    <aura:attribute name="isSfdcAccount" type="boolean" default="false" />
+    <aura:attribute name="isVisionAccount" type="boolean" default="false" />
+    <aura:attribute name="isEmptyAccount" type="boolean" default="false" />
+    <aura:attribute name="isErrorAccount" type="boolean" default="false" />
+    <aura:attribute name="isException" type="boolean" default="false" />
+    <aura:attribute name="isErrorMessage" type="String"/>
+    <aura:attribute name="isGlobalErrorMessage" type="boolean" default="false"/>
+    <aura:attribute name="isDisplayOnlyMTN" type="boolean" default="true" />
+    <aura:attribute name="isMtnEmpty" type="String"/>
+    <aura:attribute name="isMtnExist" type="boolean" default="true" />
+    <aura:attribute name="isDependentDisable" type="boolean" default="true" description="use for, make disbale depandent field." />
+    <aura:attribute name="isEventBasedDisable" type="boolean" default="false" description="use for, make disbale depandent field." />
+
+    <aura:attribute name="eventMap"
+                    type="map"
+             description="Stores key value pair of customer or prospect and respective eventType map"/>
+    
+    <aura:attribute name="eventMsgVal"
+                    type="String"
+                 default=""
+             description="Stores the event message with respect to event type"/>
+    
+    <aura:attribute name="eventMsgList"
+                    type="List"/>
+    
+    <aura:attribute name="eventNameList"
+                    type="List"
+                    description="List to store event types"
+                    access="public"/>
+    
+    <aura:attribute name="eventTypeMap"
+                    type="Map"
+                    description="map to store event type and related event message"/>
+    <aura:attribute name="selectedEvent"
+                    type="String"
+                    access="public"/>
+    
+    <aura:attribute name="eventTypeErr"
+                    type="boolean"
+                    default="false"/>
+    
+    <aura:attribute name="isTelesalesUser"
+                    type="Boolean"
+                    default="false"/>
+        
+    <!-- PAGE HEADER -->
+       <ui:scrollerWrapper class="scrollerSize" aura:id="scrollerID"> 
+        <div class="slds-page-header" role="banner" >
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <p class="slds-text-heading--label">Create Prospect: Lead</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- / PAGE HEADER -->
+        <div>
+            <p class = "textColor">
+                <ui:outputText value="{!v.isErrorMessage}"/>
+            </p>
+        </div>
+        
+        <!-- NEW EXPENSE FORM -->
+        <div class="slds-col  slds-p-top--large slds-size_1-of-1">
+            
+            <div aria-labelledby="newprospectform">
+                
+                <!-- BOXED AREA -->
+                <aura:if isTrue="{!v.isGlobalErrorMessage}">
+                    <ui:message title="Error" severity="error" closable="true">
+                        Please review all error messages below to correct your data.
+                    </ui:message>
+                    
+                </aura:if>
+                <fieldset class="slds-box slds-theme--default"> 
+                    <form class="slds-form--stacked, slds-form--inline">
+                        <fieldset class="slds-form slds-form_compound">
+                            <div class="slds-form-element__group slds-align_absolute-center">
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size--4-of-8">
+                                        Enter Mobile Telephone Number
+                                        <ui:inputPhone aura:id="Mobile"
+                                                       maxlength="15" 
+                                                       class="slds-input"
+                                                       labelClass="slds-form-element__label" 
+                                                       value="{!v.lead.CCPM_mobileNumber__c}"
+                                                       required="false"/>
+                                    </div>
+                                    <div class=" slds-align_absolute-center">
+                                        <div class="slds-form-element slds-size--4-of-8"  style="margin-right: -15px;margin-left: 56px;">
+                                            <br><br/></br> <lightning:button label="Search" name="search"
+                                                                             class="slds-button slds-button--brand" aura:id="SearchDynamic"
+                                                                             onclick="{!c.Click}"/> 
+                                        </div>
+                                        
+                                        <div class="slds-form-element slds-size--5-of-8">
+                                            <br></br>  <lightning:button label="Cancel" name="cancel"
+                                                                         class="slds-button slds-button--brand" aura:id="SearchDynamic"
+                                                                         onclick="{!c.cancel}"/> 
+                                        </div>
+                                        
+                                    </div>
+                                </div>                                
+                            </div>
+                        </fieldset>
+                        <aura:if isTrue="{!v.isMtnExist}">
+                            <div class="slds-form-element__row slds-align_absolute-center">
+                                <div class="slds-form-element slds-size--1-of-3">
+                                    <p class = "textColor">
+                                        <ui:outputText value="{!v.isMtnEmpty}"/>
+                                    </p>
+                                </div>  
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.isErrorAccount}">
+                            <p class = "textColor">system is down </p>
+                        </aura:if> 
+                        <aura:if isTrue="{!v.isEmptyAccount}">
+                            <p class = "textColor">No associated account found. Please add prospect information below </p>
+                        </aura:if> 
+                        <aura:if isTrue="{!v.isException}">
+                            <p class = "textColor">Unknown Exception </p>
+                        </aura:if> 
+                        
+                        <aura:if isTrue="{!v.searchResult}">
+                            <h3 class="slds-section-title--divider">Account Details</h3>
+                            <fieldset class="slds-form--compound"> 
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row"> 
+                                        <div class="slds-form-element slds-size--1-of-3">
+                                            Account Holder : <ui:outputText value="{!v.account.Name}"/> <br></br>
+                                        </div>
+                                        
+                                        <div class="slds-form-element slds-size--1-of-3">
+                                            Email : <ui:outputText value="{!v.account.CCPM_email__c}"/> <br></br> 
+                                        </div>
+                                        <div class="slds-form-element slds-size--1-of-3">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="slds-form-element__row"> 
+                                    <div class="slds-form-element slds-size--1-of-3">
+                                        Do Not SMS : <ui:outputCheckbox value="{!v.account.CCPM_SMSOptOut__c}"/> <br></br>
+                                    </div>
+                                    
+                                    <div class="slds-form-element slds-size--1-of-3">
+                                        Do Not Call : <ui:outputCheckbox value="{!v.account.CCPM_hasOptedOutOfCall__c}"/> <br></br>
+                                    </div>
+                                    <div class="slds-form-element slds-size--1-of-3">
+                                        Do Not Email : <ui:outputCheckbox value="{!v.account.CCPM_hasOptedOutOfEmail__c}"/> <br></br> 
+                                    </div>
+                                    
+                                </div>
+                                
+                            </fieldset>
+                            <!-- <aura:set attribute="else">
+            <p class = "textColor">Account doesn't exist </p>
+           </aura:set> -->
+                        </aura:if>
+                        
+                        <aura:if isTrue="{!v.isDisplayOnlyMTN}">
+                            
+                            <h3 class="slds-section-title--divider">Lead Information</h3>
+                            <div class="slds-form-element__group">
+                                <div class="slds-form-element slds-size--1-of-6 slds-p-horizontal--x-small">
+                                    <br/> <ui:inputSelect aura:id="salutation" label="Salutation"
+                                                          class="slds-select"
+                                                          labelClass="slds-form-element__label"
+                                                          value="{!v.lead.Salutation}"/> <br/>
+                                </div>
+                            </div>
+                            <fieldset class="slds-form--compound"> 
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row"> 
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            <ui:inputText aura:id="prospectFirstName" label="First Name"
+                                                          class="slds-input"
+                                                          labelClass="slds-form-element__label"
+                                                          value="{!v.lead.FirstName}"
+                                                          required="false"/>
+                                        </div>
+                                        
+                                        <div class="slds-form-element slds-is-required slds-size--1-of-2 slds-p-horizontal--x-small">
+                                            <!--   <div class="slds-form-element__control"> -->
+                                            <ui:inputText aura:id="prospectName" label="Last Name"
+                                                          class="slds-input"
+                                                          labelClass="slds-form-element__label"
+                                                          value="{!v.lead.LastName}"
+                                                          required="true"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>  
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            <lightning:helptext style="position:absolute;bottom:70%;left:40px"
+                                                  content="MTN or Email is required to save the prospect record"/>
+                                            <div>   
+                                                <ui:inputPhone aura:id="MTN" label="MTN"
+                                                               maxlength="15"
+                                                               class="slds-input"
+                                                               labelClass="slds-form-element__label"
+                                                               value="{!v.lead.CCPM_mobileNumber__c}"
+                                                               required="false"/>
+                                            </div>
+                                        </div>
+                                        <aura:if isTrue="{!and(not(v.isVisionAccount),not(v.isSfdcAccount))}">
+                                            <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                                
+                                                <ui:inputPhone aura:id="confirmMTN" label="Confirm MTN"
+                                                               maxlength="15"
+                                                               class="slds-input"
+                                                               labelClass="slds-form-element__label"
+                                                               value="{!v.lead.CCPM_confirmMTN__c}"
+                                                               required="false"/>
+                                            </div>
+                                        </aura:if>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </fieldset>
+                                <fieldset class="slds-form--compound">
+                                    <div class="slds-form-element__group">
+                                        <div class="slds-form-element__row">
+                                            
+                                            
+                                            <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                                <lightning:helptext style="position:absolute;bottom:70%;left:43px"
+                                                  content="MTN or Email is required to save the prospect record"/>
+                                                <div>
+                                                    <ui:inputPhone aura:id="Email" label="Email"
+                                                                   class="slds-input"
+                                                                   labelClass="slds-form-element__label"
+                                                                   value="{!v.lead.CCPM_email__c}"
+                                                                   required="false"/>
+                                                </div>
+                                            </div>
+                                            
+                                         <aura:if isTrue="{!and(not(v.isVisionAccount),not(v.isSfdcAccount))}">
+                                            <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                                <ui:inputPhone aura:id="confirmEmail" label="Confirm Email"
+                                                               class="slds-input"
+                                                               labelClass="slds-form-element__label"
+                                                               value="{!v.lead.CCPM_confirmEmail__c}"
+                                                               required="false"/>
+                                            </div>
+                                             </aura:if>
+                                        </div>
+                                    </div>
+                                    
+                                </fieldset>
+                            
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            
+                                            Messaging Consent: By checking this box and clicking submit, I agree that Verizon may and use automated technology to call or text my cellphone and/or may send me offers via email.
+                                            
+                                        </div>
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                            <ui:inputCheckbox aura:id="agree" label="I Agree"
+                                                              class="slds-checkbox"
+                                                              labelClass="slds-form-element__label"
+                                                              value="{!v.lead.CCPM_SMSLegalOptIn__c}" required="true"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                           
+                            <h3 class="slds-section-title--divider">Notes</h3>
+
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            <ui:inputSelect aura:id="reasonForPurchase" label="Reason for Purchase"
+                                                            class="slds-select"
+                                                            labelClass="slds-form-element__label"
+                                                            value="{!v.lead.CCPM_reasonForPurchase__c}"
+                                                            required="false"/>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size--1-of-2 ">
+                                     <lightning:select aura:id="eventTypeId" class="lds-event-type slds-p-horizontal--x-small uiInput--select"  label="Event Type"
+                                                       value="{!v.selectedEvent}"
+                                                            required="false" onchange="{!c.onEventTypeChange}">
+                                               <aura:iteration items="{!v.eventNameList}" var="evtType">
+                                                        <option text="{!evtType}" value="{!evtType}" label="{!evtType}"/>
+                                                    </aura:iteration>
+                                            </lightning:select> 
+                                            <aura:if isTrue="{!v.eventTypeErr == true}">
+                                            	<span style="color:red">Please select an event type</span>
+                                            </aura:if>
+                                  
+                                             <aura:if isTrue="{!v.eventMsgVal}">
+                                                <div class="ld-eventMsg">
+                                                    <div class="ld-event-msg-header">SMS preview</div>
+                                                    <aura:iteration items="{!v.eventMsgList}" var="message">
+                                                        <div class="ld-event-msg-body">
+                                                            {!message}
+                                                        </div>
+                                                        <br/>
+                                                    </aura:iteration>
+                                                </div>
+                                            </aura:if>
+                                    </div>
+                                        
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                            <!--   <div class="slds-form-element__control"> -->
+                                            <ui:inputDateTime aura:id="smsFollowUpDate" label="SMS Follow Up Date/Time"
+                                                              class="form-control"
+                                                              labelClass="slds-form-element__label"
+                                                              value="{!v.lead.CCPM_SMSFollowUpDate__c}"
+                                                              displayDatePicker="true" required="true" disabled="{!v.isEventBasedDisable}" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset> 
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            <ui:inputSelect aura:id="currentCarrier" label="Current Carrier"
+                                                            class="slds-input"
+                                                            labelClass="slds-form-element__label"
+                                                            value="{!v.lead.CCPM_currentCarrier__c}"
+                                                            required="false"/> 
+                                        </div>
+                                        
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                            <!--   <div class="slds-form-element__control"> -->
+                                            <ui:inputDate aura:id="contractUp" label="When is their contract up?"
+                                                          class="form-control"
+                                                          labelClass="slds-form-element__label"
+                                                          value="{!v.lead.CCPM_whenIsTheirContractUp__c}"
+                                                          displayDatePicker="true"/>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            <ui:inputSelect aura:id="quickNotesDescription" label="Quick Notes Description"
+                                                            class="slds-input"
+                                                            labelClass="slds-form-element__label"
+                                                            value="{!v.lead.CCPM_quickNotesDescription__c}"
+                                                            required="false"/>
+                                        </div>
+                                        
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                            <!--   <div class="slds-form-element__control"> -->
+                                            <ui:inputText aura:id="quickNotes" label="Quick Notes"
+                                                          class="slds-input"
+                                                          labelClass="slds-form-element__label"
+                                                          value="{!v.lead.CCPM_quickNotes__c}" required="false"/>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            <ui:inputText aura:id="numberOfLines" label="Number of Lines Interested In"
+                                                          class="slds-input"
+                                                          labelClass="slds-form-element__label" 
+                                                          value="{!v.lead.Company}"
+                                                          required="true"/>
+                                        </div>
+                                        
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                            <!--   <div class="slds-form-element__control"> -->
+                                            <ui:inputSelect aura:id="itemsInterestedIn" label="Items Interested In"
+                                                            class="slds-input"
+                                                            labelClass="slds-form-element__label"
+                                                            value="{!v.lead.CCPM_itemInterestedIn__c}"/>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group">
+                                    <div class="slds-form-element__row">
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small"> 
+                                            <ui:inputSelect aura:id="transCompletionChannelPreference" label="Trans Completion Channel Preference"
+                                                            class="slds-input"
+                                                            labelClass="slds-form-element__label"
+                                                            value="{!v.lead.CCPM_Trans_Completion_Channel_Preference__c}" required="false"/> 
+                                        </div>
+                                        <div class="slds-form-element slds-size--1-of-2 slds-p-horizontal--x-small">
+                                            <ui:inputSelect aura:id="communicationPreference" label="Communication Preference"
+                                                            class="slds-input"
+                                                            labelClass="slds-form-element__label"
+                                                            value="{!v.lead.CCPM_communicationPreference__c}"
+                                                            required="false"/>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            
+                            <fieldset class="slds-form--compound">
+                                <div class="slds-form-element__group slds-align_absolute-center">
+                                    <div class="slds-form-element__row ">
+                                        <div class="slds-form-element slds-size--1-of-2 "> 
+                                            <br/><lightning:button label="Submit" name="submit" class="slds-button slds-button--brand" aura:id="SearchDynamic" onclick="{!c.submit}" />
+                                        </div>
+                                        <div class="slds-form-element slds-size--1-of-2"> 
+                                            <br/><lightning:button label="Cancel" name="cancel" class="slds-button slds-button--brand" aura:id="SearchDynamic" onclick="{!c.cancel}"/>                             
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </aura:if>
+                    </form>
+                </fieldset>
+                
+            </div>
+        </div>
+        </ui:scrollerWrapper> 
+</aura:component>

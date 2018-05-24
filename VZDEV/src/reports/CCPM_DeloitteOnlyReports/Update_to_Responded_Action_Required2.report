@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CCPM_Store__c.Leads__r$Id</field>
+    </columns>
+    <columns>
+        <field>CCPM_Store__c.Leads__r$Status</field>
+    </columns>
+    <columns>
+        <field>CCPM_Store__c.Leads__r$CCPM_leadSubStatus__c</field>
+    </columns>
+    <columns>
+        <field>CCPM_Store__c.Leads__r$CCPM_SMSResponseReceivedDateTime__c</field>
+    </columns>
+    <columns>
+        <field>CCPM_Store__c.Leads__r$CCPM_leadOwner__c</field>
+    </columns>
+    <columns>
+        <field>CCPM_Store__c.Leads__r.Activities$Description</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CCPM_Store__c.Leads__r$CCPM_previousLeadStatus__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Responded-Action Required</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_Store__c.Leads__r$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Contacted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_Store__c.Leads__r$LastModifiedBy</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Heroku Connect,Sudhakara</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_Store__c.Leads__r.Activities$CCPM_communicationDirection__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_Store__c.Leads__r.Activities$Subject</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Text Message Received</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CCPM_Store__c.Leads__r.Activities$Description</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>X</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Update to Responded Opted Out</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Stores_with_Leads_and_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CCPM_Store__c.Leads__r$CCPM_SMSResponseReceivedDateTime__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

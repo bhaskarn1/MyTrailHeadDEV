@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Global Settings for verizon lead &amp; prospect management</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CCPM_CustomerResponseTaskSubject__c</fullName>
+        <description>Customer Response Task Subject Used in Process Builder &apos;Process Customer Response Using Apex V2&apos;</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer Response Task Subject Used in Process Builder &apos;Process Customer Response Using Apex V2&apos;</inlineHelpText>
+        <label>Customer Response Task Subject</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_DataIntegrationQueue__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Data Integration User Queue</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_HQTelesale__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>HQ-Telesales</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_HotFixDeploymentDateTime__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>HotFixDeploymentDateTime</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_IphoneXUrl__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Iphone X Url</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_Pixelfuturedevice__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Pixel - future device</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_SMSFailCounter__c</fullName>
+        <description>Keeps the value of Max time&apos;s the SMS can be resent.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Keeps the value of Max time&apos;s the SMS can be resent.</inlineHelpText>
+        <label>SMS Fail Counter</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_cartClosedStatus__c</fullName>
+        <description>Contains all the closed status of the Carts</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Cart Closed Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_cartNewStatus__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Cart New Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_clientCertName_x__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>clientCertName_x</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_confirmingWithFamilyFirstInterval__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Interval for Event type- Confirming with Family First.</inlineHelpText>
+        <label>Event Confirm Family Interval(In Hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_contractTerminatingSoonInterval__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Interval for event type- Contract Terminating Soon.</inlineHelpText>
+        <label>Event Cntrct Terminate Interval(In Hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_customSwitchToAvoidUpdateTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Custom Switch To Avoid Update Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_dataIntegrationUserID__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Data Integration User ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_dataIntegrationUserProfileId__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Data Integration User Profile Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_daysOfLeadExpiry__c</fullName>
+        <description>Number of days after which Leads need to be expired</description>
+        <externalId>false</externalId>
+        <label>Days of Lead Expiry</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_encryptionAlgorithm__c</fullName>
+        <description>Algorithm used for Encrypting Data</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Algorithm used for Encrypting Data</inlineHelpText>
+        <label>EncryptionAlgorithm</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_endpoint_x__c</fullName>
+        <description>End Point URL for Vision</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>End Point URL for Vision</inlineHelpText>
+        <label>Endpoint_x</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_followUpSMSInterval__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Interval in minutes from date/time lead is created to send the follow-up SMS</inlineHelpText>
+        <label>Follow Up SMS Interval (In Min)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_followUpSMSNextStartInterval__c</fullName>
+        <description>If follow up SMS date/time is outside the business hours, an initial interval is added so that Initial SMS and Follow Up SMS will have different start time</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>If follow-up SMS date/time is outside the business hours, an initial interval is added so that Initial SMS and Follow Up SMS will have different start time</inlineHelpText>
+        <label>Follow Up SMS Next Start Interval</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_giftForUpcomingOccassionInterval__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Interval for event type: Gift for upcoming occassion.</inlineHelpText>
+        <label>Event Gift Occassion Interval(In Hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_heywireAPIAccountID__c</fullName>
+        <description>Stores the AdminAccountID for LiveText Heywire.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the AdminAccountID for LiveText Heywire.</inlineHelpText>
+        <label>Heywire API Account ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_heywireAPIAdminPassword__c</fullName>
+        <description>Stores the Admin Password for LiveText Heywire.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the Admin Password for LiveText Heywire.</inlineHelpText>
+        <label>Heywire API AdminPassword</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_heywireAPIEndpointURL__c</fullName>
+        <description>End Point URL for Live Text.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>End Point URL for Live Text.</inlineHelpText>
+        <label>Heywire API End point URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_initialSMSInterval__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Interval in minutes to send the initial sms from date/time lead (cart) was created in salesforce</inlineHelpText>
+        <label>Initial SMS Interval (In Min)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadCustomerAbandonedCartRecordType__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Lead Customer Abandoned Cart Record Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadExpiryRecordTypes__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Lead Expiry RecordTypes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadOpenStatus__c</fullName>
+        <description>Lead Open Statuses</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Lead Open Statuses</inlineHelpText>
+        <label>Lead Open Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadProspectAbandonedCartRecordType__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Lead Prospect Abandoned Cart Record Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadProspectRecordType__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Lead Prospect Record Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadReqActionSMSTimeInterval__c</fullName>
+        <description>Lead Action Required SMS Time Interval only in Hrs for the Schedule Job</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lead Action Required SMS Time Interval only in Hrs for the Schedule Job</inlineHelpText>
+        <label>Lead Action Required SMS Time Interval</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadRequiringActionReport__c</fullName>
+        <description>ID of Leads Requiring Action Report</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Lead Requiring Action Report</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadsByOwnerReport__c</fullName>
+        <description>ID of Leads by Owner Report</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Leads By Owner Report</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadsByStatusReport__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Leads by Status Report</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_liveTextNumberNonVerizon__c</fullName>
+        <description>Live Text Number to be used to send out SMS to non Verizon numbers.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Live Text Number to be used to send out SMS to non Verizon numbers.</inlineHelpText>
+        <label>Live Text Number Non Verizon</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_liveTextPhoneNumber__c</fullName>
+        <description>The number is used to send text messages in Heywire.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>The Heywire number from number from which text messages will be sent</inlineHelpText>
+        <label>Live Text Phone Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_noEventInterval__c</fullName>
+        <description>Interval for Event type: None</description>
+        <externalId>false</externalId>
+        <label>No Event Interval(In Hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_otherEventInterval__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Event Interval (In Hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_outgoingSMSReferenceId__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Outgoing SMS Reference Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_prospectSMSNextStartInterval__c</fullName>
+        <description>Delay Prospect SMS when not in Business hours to go 1 hour after business hours start</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Prospect SMS Next Start Interval</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_recordTypesWithFreeVzMsg__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Record Types with FreeVzMsg</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_recordTypesWithoutFreeVzMsg__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>RecordTypes without FreeVzMsg</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_removeScheduleBatchSize__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Remove Schedule Batch Size</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_salesRepProfileId__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Sales Rep Profile Record Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_sendSMSBatchChunk__c</fullName>
+        <description>Used to set the chunk size of batch class CCPM_sendSMSBatch.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to set the chunk size of batch class CCPM_sendSMSBatch.</inlineHelpText>
+        <label>Send SMS Batch Chunk</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_sendSMSBatchLimit__c</fullName>
+        <description>Sets the number of records to be pulled in the batch class CCPM_sendSMSBatch.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Sets the number of records to be pulled in the batch class CCPM_sendSMSBatch.</inlineHelpText>
+        <label>Send SMS Batch Limit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_sleepTimeBetweenSMSBody__c</fullName>
+        <description>Defines the interval between part 1 and part 2 sms body.</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the interval between part 1 and part 2 sms body.</inlineHelpText>
+        <label>Sleep Time Between Part 1 and 2(ms)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_staggerInitialSMSInterval__c</fullName>
+        <description>This field is used to stagger Initial SMS by X mins</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Stagger Initial SMS Interval (In Min)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_systemAdminProfileId__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>System Admin Profile Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_taskInteractionHistoryRecordTypeId__c</fullName>
+        <description>Provides the Interaction History Record Type ID for task</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Record Type ID for task of type Interaction History</inlineHelpText>
+        <label>Task Interaction History Record Type Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_taskToDoRecordTypeId__c</fullName>
+        <description>Holds the record type for to-do tasks</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>Record Type ID for task of type To-Do</inlineHelpText>
+        <label>Task To Do Record Type Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_updateTriggerInitialTimeOnUpdate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Update Trigger Initial Time On Update</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ccpm_encryptedKey__c</fullName>
+        <description>key to encrypt data</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>key to encrypt data</inlineHelpText>
+        <label>EncryptedKey</label>
+        <length>16</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Global Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

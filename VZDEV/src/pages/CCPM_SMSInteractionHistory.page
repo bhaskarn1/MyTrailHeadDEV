@@ -1,0 +1,26 @@
+<!--
+*@name          CCPM_SMSInteractionHistory.vfp
+*@author        Paras Shah (Deloitte)
+*@date          01/24/2016
+*@description   Visualforce page for displaying SMS Message Interaction History
+
+Modification    Log:
+************************************************************************************
+Developer                        Date                                Description
+************************************************************************************
+Paras Shah(Deloitte)             01/24/2016                          Original Version
+-->
+<apex:page standardController="Lead">
+    <apex:includeLightning />
+
+    <div id="CCPM_SMSInteractionHistory" />
+    
+    <script>
+        $Lightning.use("c:CCPM_SMSInteractionHistoryApp", function() {
+          $Lightning.createComponent("c:CCPM_SMSInteractionHistoryContainer", {
+              recordId: "{!Lead.Id}"
+              },"CCPM_SMSInteractionHistory",function(cmp) {});
+        });
+    </script>
+    
+</apex:page>

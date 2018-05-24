@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <isVersionDefault>true</isVersionDefault>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Case.Status</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Resolution time</milestoneName>
+        <minutesToComplete>432000</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <name>Service Level Agreement</name>
+    <versionMaster>552410000006Xcl</versionMaster>
+    <versionNumber>1</versionNumber>
+</EntitlementProcess>

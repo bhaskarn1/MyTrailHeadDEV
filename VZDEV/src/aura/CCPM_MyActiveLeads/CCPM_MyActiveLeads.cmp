@@ -1,0 +1,232 @@
+<aura:component controller="CCPM_myActiveLeadsApexController" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" >
+    <ltng:require styles="{!join(',',$Resource.Dynamic_DataTable+'/css/datatables.min.css',$Resource.Dynamic_DataTable+'/css/ldpriorityTable.css')}" afterScriptsLoaded="{!c.init}"/>
+    
+    <aura:attribute name="lstSobject" type="Lead[]" access="global"/>
+    <aura:attribute name="selectedTabToSort" type="string" default=""/>
+    <aura:attribute name="orderToConsider" type="string" default=""/>
+    <aura:attribute name="sqlLimit" type="string" default=""/>
+    <aura:attribute name="offSet" type="string" default="0"/>
+    <aura:attribute name="maxSize" type="Integer"/>
+    
+    
+    <div class="slds-card">
+        
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                
+                <div class="slds-media__body">
+                    <h2>
+                        <span class="slds-card__header-link slds-truncate">
+                            <span class="slds-text-heading_small">My Active Leads</span>
+                        </span>
+                    </h2>
+                </div>
+            </header>
+            <div class="slds-no-flex" onclick="{!c.init}">
+                <span class="ld-std-lineht">
+                <lightning:buttonIcon class="slds-icon_small"  iconName="utility:refresh" variant="bare" alternativeText="Refresh" iconClass="dark">
+                      </lightning:buttonIcon>   
+                
+                </span>
+            </div>
+        </div>
+        <div class="slds-card__body">
+            
+            <table id="myActiveLeads" class="slds-table slds-table_bordered  " cellspacing="0" width="100%">
+                <thead>
+                    <tr class=" slds-text-heading--small ld-table-hd">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Name">
+                                <div onclick="{!c.sortBySelectedColumn}" class="ld-header-column"  title="Name">
+                                    Name 
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='Name', v.orderToConsider=='ASC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" title="Name" iconName="utility:up" size="xx-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='Name', v.orderToConsider=='DESC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" title="Name" iconName="utility:down" size="xx-small"/>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Status">
+                                <div onclick="{!c.sortBySelectedColumn}" class="ld-header-column" title="Status">
+                                    Status 
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='Status', v.orderToConsider=='ASC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:up" size="xx-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='Status', v.orderToConsider=='DESC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:down" size="xx-small"/>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="ld-lead-column-s-hide">
+                            <div class="slds-truncate" title="MTN">
+                                <div  class="" id="MTN">
+                                    MTN  
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="ld-lead-column-xs-hide">
+                            <div class="slds-truncate" title="Type">
+                                <div onclick="{!c.sortBySelectedColumn}" class="ld-header-column" title="CCPM_Type__c">
+                                    Type  
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='CCPM_Type__c', v.orderToConsider=='ASC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:up" size="xx-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='CCPM_Type__c', v.orderToConsider=='DESC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:down" size="xx-small"/>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col"  class="ld-lead-column-hide">
+                            <div class="slds-truncate" title="Event Type">
+                                <div onclick="{!c.sortBySelectedColumn}" class="ld-header-column" title="CCPM_eventType__c">
+                                    Event Type  
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='CCPM_eventType__c', v.orderToConsider=='ASC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:up" size="xx-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='CCPM_eventType__c', v.orderToConsider=='DESC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:down" size="xx-small"/>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="ld-lead-column-l-hide">
+                            <div class="slds-truncate" title="Campaign">
+                                <div id="Campaign">
+                                    Campaign 
+                                   <!-- <aura:if isTrue="{!and(v.selectedTabToSort=='Campaign', v.orderToConsider=='ASC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:up" size="xx-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='Campaign', v.orderToConsider=='DESC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:down" size="xx-small"/>
+                                    </aura:if> -->
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="ld-lead-column-hide">
+                            <div class="slds-truncate" title="Follow-Up Date">
+                                <div onclick="{!c.sortBySelectedColumn}" class="ld-header-column" title="CCPM_SMSFollowUpDate__c">
+                                    Follow-Up Date
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='CCPM_SMSFollowUpDate__c', v.orderToConsider=='ASC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:up" size="xx-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='CCPM_SMSFollowUpDate__c', v.orderToConsider=='DESC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:down" size="xx-small"/>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </th>
+                        <th scope="col" class="ld-lead-column-m-hide">
+                            <div class="slds-truncate" title="Lead Owner">
+                                <div onclick="{!c.sortBySelectedColumn}" class="ld-header-column" title="owner.name">
+                                    Lead Owner
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='owner.name', v.orderToConsider=='ASC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:up" size="xx-small"/>
+                                    </aura:if>
+                                    <aura:if isTrue="{!and(v.selectedTabToSort=='owner.name', v.orderToConsider=='DESC')}">
+                                        <lightning:icon class="slds-float_right slds-m-right_large" iconName="utility:down" size="xx-small"/>
+                                    </aura:if>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.lstSobject}" var="item" indexVar="rowIndex">
+                        <tr class="slds-hint-parent  ld-tbl-row">
+                            <td scope="row" class="ld-action-table"  >
+                                <span  id="{!'ActiveLdActionColumn'+ rowIndex}"  class="ld-lead-column-wrapper-show slds-m-right_small">
+                                    <lightning:buttonIcon class="ld-closed slds-icon_small" onclick="{!c.toggleColumnAccordion}"  value="{!rowIndex}"  iconName="utility:chevronright" variant="bare" alternativeText="More" iconClass="dark">
+                                    </lightning:buttonIcon>
+                                    <lightning:buttonIcon class="ld-opened" onclick="{!c.toggleColumnAccordion}"  value="{!rowIndex}"  iconName="utility:chevrondown" variant="bare" alternativeText="Hide" iconClass="dark">
+                                    </lightning:buttonIcon>
+                                </span>
+                                <div class="slds-truncate ld-short-resp" title="{!item.Name}">
+                                    <ui:outputURL value="{!'/'+ item.Id}"  label="{!item.Name}"/>
+                                
+                                </div>
+                            </td>
+                            <td scope="row"  >
+                                <div class="slds-truncate" title="{!item.Status}">
+                                    <aura:if isTrue="{!item.CCPM_leadSubStatus__c}">
+                                        {!item.Status} - {!item.CCPM_leadSubStatus__c}
+                                        <aura:set attribute="else">
+                                            {!item.Status}
+                                        </aura:set>
+                                    </aura:if>                                
+                                </div></td>
+                            <td scope="row"  class="ld-lead-column-s-hide">
+                                <div class="slds-truncate" title="{!item.CCPM_mobileNumber__c }">{!item.CCPM_mobileNumber__c }</div></td>
+                            <td scope="row" class="ld-lead-column-xs-hide" >
+                                <div class="slds-truncate" title="{!item.CCPM_Type__c}">{!item.CCPM_Type__c}</div></td>
+                            <td scope="row" class="ld-lead-column-hide" >
+                                <div class="slds-truncate" title="{!item.CCPM_eventType__c }">{!item.CCPM_eventType__c }</div>
+                            </td>
+                            <td scope="row" class="ld-lead-column-l-hide"  >
+                                <div class="slds-truncate" title="{!item.strCampaignName}">{!item.CampaignMembers[0].Campaign.Name}</div></td>
+                            <td scope="row" class="ld-lead-column-hide"  >
+                                <div class="slds-truncate" title="{!item.CCPM_SMSFollowUpDate__c }">
+                                  <!--  <lightning:formattedDateTime value="{!item.CCPM_SMSFollowUpDate__c }" year="numeric" month="numeric" day="numeric" />-->
+                                    <ui:outputDateTime value="{!item.CCPM_SMSFollowUpDate__c }" format="MM/DD/YYYY" /> 
+                                    
+                                </div>
+                            </td>
+                            <td scope="row" class="ld-lead-column-m-hide"  >
+                                <div class="slds-truncate" title="{!item.Owner.Name }">
+                                    {!item.Owner.Name}
+                                </div>
+                            </td>
+                        </tr>
+                        <tr  id="{!'activeLdHiddencolumn'+ rowIndex}" class="slds-hint-parent  ld-lead-xcolumn-hide ld-action-table">
+                            <td scope="col" colspan="8"  class="ld-sub-hdn-column"  >
+                                <div class="slds-truncate ld-lead-column-s-show">
+                                    <span class="dtr-title">MTN</span> 
+                                    <span class="dtr-data">{!item.CCPM_mobileNumber__c}</span>
+                                </div>
+                                <div class="slds-truncate ld-lead-column-xs-show">
+                                    <span class="dtr-title">Type</span> 
+                                    <span class="dtr-data">{!item.CCPM_Type__c}</span>
+                                </div>
+                                <div class="slds-truncate ld-lead-column-show">
+                                    <span class="dtr-title">Event Type</span> 
+                                    <span class="dtr-data">{!item.CCPM_eventType__c}</span>
+                                </div>
+                                <div class="slds-truncate ld-lead-column-l-show">
+                                    <span class="dtr-title">Campaign</span> 
+                                    <span class="dtr-data">{!item.CampaignMembers[0].Campaign.Name}</span>  
+                                </div>
+                                <div class="slds-truncate ld-lead-column-show">
+                                    <span class="dtr-title"> Follow-Up Date</span> 
+                                    <span class="dtr-data">
+                                       <!-- <lightning:formattedDateTime value="{!item.CCPM_SMSFollowUpDate__c }" year="numeric" month="numeric" day="numeric" />-->
+                                         <ui:outputDateTime value="{!item.CCPM_SMSFollowUpDate__c }" format="MM/DD/YYYY" /> 
+                                    </span> 
+                                </div>
+                                <div class="slds-truncate ld-lead-column-m-show">
+                                    <span class="dtr-title">Lead Owner</span> 
+                                    <span class="dtr-data">{!item.Owner.Name}</span>  
+                                </div>
+                                
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+            
+            
+        </div>
+        <div class="slds-text-align_right slds-p-bottom_small">
+            
+            <lightning:button variant="neutral" label="Previous" onclick="{! c.calculateOffset }" aura:id="Previous"/>
+            <lightning:button variant="neutral" class="slds-m-right_small" label="Next" onclick="{! c.calculateOffset }" aura:id="Next"/>
+            
+            <!--<button onclick="{!c.calculateOffset}" class="slds-button slds-button_neutral" id="Previous">Previous</button>
+            <button onclick="{!c.calculateOffset}" data-reactroot="" class="slds-button slds-button_neutral slds-m-right_small" id="Next">Next</button>-->
+        </div>
+        
+    </div>
+</aura:component>

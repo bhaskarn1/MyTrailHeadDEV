@@ -1,0 +1,192 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" 
+                controller="CCPM_sendSMSController" >
+    
+    <aura:attribute name="recordId" 
+                    type="Id" 
+                  access="public"
+            description="Gets the lead record Id"/>
+    
+    <aura:attribute name="lead" 
+                    type="Lead"
+                 default="{'sobjectType': 'Lead'}"/>
+    
+    <aura:attribute name="smsMap"
+                    type="Map"
+             description="Attribute to capture sms values and messages"/>
+    
+    <aura:attribute name="smsValues"
+                    type="List"
+             description="Attribute to capture sms picklist values"/>
+    
+    <aura:attribute name="smsMsgVal"
+                    type="String"
+             description="Attribute to capture sms message values"/>
+    
+    <aura:attribute name="selectedMessage"
+                    type="String"
+                  access="public"
+                required="false"
+             Description="Attribute that has the user selected predefined sms value"
+                 default="--None--"/>
+    
+    <aura:attribute name="recordTypeName"
+                    type="String"
+                  access="public"
+                required="false"
+             description="Attribute that holds the lead record type"
+                 default=""/>
+    
+    <aura:attribute name="messageLength"
+                    type="Integer"
+                  access="public"
+                required="false"
+             description="Attribute that holds the value of message length"
+                 default="0"/>  
+    
+    <aura:attribute name="charLimitReached"
+                    type="Boolean"
+                  access="public"
+                required="false"
+              description="Boolean to set up to true if character limit exceeds maxlength"
+                  default="false"/>
+    
+    <aura:attribute name="showFreeMsg"
+                    type="Boolean"
+                required="false"
+                 default="false"
+              description="Displays VZFreeMsg under text area if true"/>
+    
+    <aura:attribute name="msgLabelError"
+                    type="Boolean"
+                required="false"
+                 default="false"
+  description="Is set to true on click of send button when no value is selected in message label"/>
+    
+    <aura:attribute name="hideFields"
+                   	type="Boolean"
+                 default="true"
+             description="set to true when the lead is not eligible for SMS"/>
+    
+    <aura:attribute name="smsReqError"
+                    type="String"
+                    default=""
+                    description="Populate with error message upon callout"/>
+    
+    <aura:attribute name="subStatValues"
+                    type="List"
+             description="Attribute to capture sub status option values"/>
+    
+    <aura:attribute name="subStatError"
+                    type="Boolean"
+                 default="false"
+             description="set to true if no value is selected during sending sms"/>
+    
+    <aura:attribute name="customRepError"
+                    type="Boolean"
+                 default="false"
+             description="set to true if there is no value in SMS preview"/>
+    
+    <aura:attribute name="textLength"
+                    type="Integer"
+                    default=""/>
+    
+    <aura:attribute name="foulWordSet"
+                    type="set"
+                    description="Stores the set of foul words"/>
+    
+    <aura:attribute name="foulMsgError"
+                    type="String"
+                 default=""
+             description="Attribute to store error message when user enters foul text"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" /> 
+    
+    <div class="slds-scope">
+        
+        <aura:if isTrue="{!v.hideFields}">
+            <span style="color:red">{!v.recordTypeName}</span>
+        </aura:if> 
+        
+        <aura:if isTrue="{!v.hideFields == false}">    
+            
+            <lightning:select aura:id="smsValLabels" name="selectResp" label="Select SMS Response" 
+                              onchange="{!c.onSMSValueChange}" required="true">
+                <aura:iteration items="{!v.smsValues}" var="smsValues">
+                    <option value="{!smsValues}" text="{!smsValues}"></option>
+                </aura:iteration>
+            </lightning:select>
+            <aura:if isTrue="{!v.msgLabelError}">
+                <span style="color:red">Please select a SMS response.</span>
+            </aura:if>
+            <br/>
+            <aura:if isTrue="{!v.selectedMessage != '--None--'}">
+                
+                <span class="readOnlyText">
+                
+                <lightning:textarea aura:id="customReply" 
+                                    label="{!v.selectedMessage=='Custom Reply'?'Custom Reply':'SMS Preview'}" 
+                                    name="Preview" maxlength="{!v.textLength}" 
+                                    value="{!v.smsMsgVal}" onchange="{!c.lengthCheck}" 
+                                    disabled="{!v.selectedMessage != 'Custom Reply'}"/>
+                    </span>
+                <aura:if isTrue="{!v.recordTypeName == 'Customer'}">
+                    <div class="slds-clearfix">
+                        <div class="slds-clearfix">
+                            <aura:if isTrue="{!v.showFreeMsg == true}">
+                                <span class="slds-float_right">
+                                    <p>(FreeVZMsg) will be appended to the SMS</p> 
+                                </span> 
+                            </aura:if>
+                            <aura:if isTrue="{!v.selectedMessage == 'Custom Reply'}">
+                                <span class="slds-float_left">
+                                    <p>{!v.messageLength}/150</p>  
+                                </span>
+                            </aura:if>
+                        </div>
+                    </div>
+                    <aura:set attribute="else">
+                        <aura:if isTrue="{!v.selectedMessage == 'Custom Reply'}">
+                            <div class="slds-clearfix">
+                                <div class="slds-clearfix">
+                                    <div class="slds-float_left">
+                                        <p>{!v.messageLength}/160</p> 
+                                    </div> 
+                                </div>
+                            </div>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>
+                <aura:if isTrue="{!v.smsReqError != ''}">
+            		<div style="color:red">{!v.smsReqError}</div>
+            	</aura:if>
+                <aura:if isTrue="{!v.foulMsgError}">
+                    <span style="color:red">{!v.foulMsgError}</span>
+                </aura:if>
+                <aura:if isTrue="{!v.customRepError}">
+            		<span style="color:red">Please enter the SMS message</span>
+            	</aura:if>
+                <br/>
+            </aura:if> 
+            
+            <aura:if isTrue="{!v.charLimitReached}">
+                <span style="color:red">Maximum Message limit reached</span>
+            </aura:if>
+            
+            <lightning:select aura:id="subStatLabels" name="selectSubStat" label="Sub Status" 
+                              required="true" onchange="{!c.subStatusChange}">
+                <aura:iteration items="{!v.subStatValues}" var="statValue">
+                    <option value="{!statValue}" text="{!statValue}"></option>
+                </aura:iteration>
+            </lightning:select>
+            <aura:if isTrue="{!v.subStatError}">
+            	<span style="color:red">Please select a sub status value</span>
+            </aura:if>
+            <br/>
+            <lightning:button class="slds-button slds-button_neutral" onclick="{!c.sendSMS}" 
+                              label="Save sub-status and Send" 
+                              disabled="{!v.msgLabelError == true}"/>
+            <br/>
+        </aura:if> 
+        <br/>
+    </div>
+</aura:component>

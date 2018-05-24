@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RE Action Component</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RE Action Components</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action --></label>
+        <name>CCPM_Action__c</name>
+        <relationshipLabel><!-- Action Components --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RE Action Component ID --></label>
+        <name>CCPM_RE_Action_Component_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>CCPM_active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field API Name --></label>
+        <name>CCPM_fieldAPIName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Value --></label>
+        <name>CCPM_fieldValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merge Copy If Null Or Blank --></label>
+        <name>CCPM_mergeCopyIfNullOrBlank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merge Copy --></label>
+        <name>CCPM_mergeCopy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>CCPM_order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variable Name --></label>
+        <name>CCPM_variableName__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Order cannot be blank. --></errorMessage>
+        <name>Order_is_required</name>
+    </validationRules>
+</CustomObjectTranslation>

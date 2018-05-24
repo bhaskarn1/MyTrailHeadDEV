@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Leads__r.Activities$Description</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$LastName</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$Status</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$CCPM_SMSResponseReceivedDateTime__c</field>
+    </columns>
+    <columns>
+        <field>Account.Leads__r$CCPM_Type__c</field>
+    </columns>
+    <description>Responses Received 11.22</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Task.CCPM_interactionHistory</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$CCPM_communicationDirection__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Leads__r.Activities$Description</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>X,E,x,e</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <name>Responses Received - Cynthia</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CCPM_AccountsWithLeadsAndActivities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account.Leads__r$CCPM_SMSResponseReceivedDateTime__c</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

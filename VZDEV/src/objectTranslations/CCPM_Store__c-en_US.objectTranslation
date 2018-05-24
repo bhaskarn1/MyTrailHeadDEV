@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Store</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Stores</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active ? --></label>
+        <name>CCPM_IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeZone --></label>
+        <name>CCPM_TimeZone__c</name>
+        <picklistValues>
+            <masterLabel>AKST</masterLabel>
+            <translation><!-- AKST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CST</masterLabel>
+            <translation><!-- CST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EST</masterLabel>
+            <translation><!-- EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HAST</masterLabel>
+            <translation><!-- HAST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MST</masterLabel>
+            <translation><!-- MST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PST</masterLabel>
+            <translation><!-- PST --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>CCPM_city__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>CCPM_country__c</name>
+        <picklistValues>
+            <masterLabel>USA</masterLabel>
+            <translation><!-- USA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- District --></label>
+        <name>CCPM_district__c</name>
+    </fields>
+    <fields>
+        <label><!-- Friday (Open From) --></label>
+        <name>CCPM_fridayOpenFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Friday (Open Till) --></label>
+        <name>CCPM_fridayOpenTill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long Code --></label>
+        <name>CCPM_longcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market --></label>
+        <name>CCPM_market__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monday(Open From) --></label>
+        <name>CCPM_mondayOpenFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monday(Open Till) --></label>
+        <name>CCPM_mondayOpenTill__c</name>
+    </fields>
+    <fields>
+        <label><!-- PeopleSoft Location Code --></label>
+        <name>CCPM_peopleSoftLocationCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>CCPM_phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommended Visiting Hours --></label>
+        <name>CCPM_recommendedVisitingHours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Saturday(Open From) --></label>
+        <name>CCPM_saturdayOpenFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Saturday(Open Till) --></label>
+        <name>CCPM_saturdayOpenTill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>CCPM_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province --></label>
+        <name>CCPM_state__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Ecode --></label>
+        <name>CCPM_storeEcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store ID --></label>
+        <name>CCPM_storeID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Store Location --></label>
+        <name>CCPM_storeLocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>CCPM_street__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sunday(Open From) --></label>
+        <name>CCPM_sundayOpenFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sunday(Open Till) --></label>
+        <name>CCPM_sundayOpenTill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>CCPM_territory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thursday(open From) --></label>
+        <name>CCPM_thursdayOpenFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thursday(open Till) --></label>
+        <name>CCPM_thursdayOpenTill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tuesday(Open From) --></label>
+        <name>CCPM_tuesdayOpenFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tuesday(Open Till) --></label>
+        <name>CCPM_tuesdayOpenTill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wednesday(Open From) --></label>
+        <name>CCPM_wednesdayOpenFrom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wednesday(Open Till) --></label>
+        <name>CCPM_wednesdayOpenTill__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>CCPM_zipcode__c</name>
+    </fields>
+    <layouts>
+        <layout>CCPM Store Layout</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Market Information --></label>
+            <section>Market Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCPM Store Layout - Sales Rep</layout>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Market Information --></label>
+            <section>Market Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,13 @@
+.THIS .customclasscc {
+    height: 32px;
+    width: 139px;
+    line-height: 19px;
+    margin-right: 8px;
+}
+
+.THIS .customclasscc .subtextcc {
+       line-height: 0;
+    font-size: 10px;
+    margin-bottom: 41px;
+    margin-top: 3px;
+}

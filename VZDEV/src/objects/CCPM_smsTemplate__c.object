@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>CCPM_campaignLeadType__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CCPM_segmentation__r.CCPM_campaign__r.CCPM_leadType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaign Lead Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_campaignName__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(CCPM_campaign__c)) ,  CCPM_campaign__r.RecordType.Name , 
+   CCPM_segmentation__r.CCPM_campaign__r.RecordType.Name  
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Campaign Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_campaign__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Campaign</label>
+        <referenceTo>Campaign</referenceTo>
+        <relationshipLabel>SMS Templates</relationshipLabel>
+        <relationshipName>CCPM_smsTemplates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_customerMessage__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will be used to store the Event SMS to sent to the Customers</inlineHelpText>
+        <label>Customer Message</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_doNotOverrideEcode__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>By Checking this field, The Employee Ecode in SMS Message is not Overridden to Store Ecode in case the Employee Ecode is not available.</inlineHelpText>
+        <label>Do Not Override Ecode</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_endDate__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is the text value of the field SMS Follow up End Date</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_eventCampaignId__c</fullName>
+        <externalId>false</externalId>
+        <formula>CCPM_segmentation__r.CCPM_campaign__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Event Campaign Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_eventMessageEndDate__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is the text value of the field SMS Event End Date. Please enter the date in &quot;YYYY-MM-DD HH:MM:SS&quot; format.</inlineHelpText>
+        <label>Event Message End Date</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_eventMessageStartDate__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is the text value of the field SMS Event Start Date. Please enter the date in &quot;YYYY-MM-DD HH:MM:SS&quot; format.</inlineHelpText>
+        <label>Event Message Start Date</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_eventName__c</fullName>
+        <externalId>false</externalId>
+        <formula>CCPM_segmentation__r.CCPM_campaign__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Event Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_followUpMessageType__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(ISBLANK( CCPM_campaign__c)) , &quot;CampaignFollowUp&quot;, &quot;FollowUp&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FollowUp Message Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_followupMessage__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Followup Message</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_initialMessageType__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CCPM_campaignName__c = &quot;CRM Campaign&quot;, &quot;CampaignInitialSMSPart1&quot;, 
+ IF(OR(CCPM_campaignName__c = &quot;Event Type&quot;, CCPM_campaignLeadType__c = &quot;Prospect Abandoned Cart Digital&quot;, CCPM_campaignLeadType__c = &quot;Prospect Abandoned Cart Retail&quot;), &quot;NewProspectSMS1&quot;, 
+  IF(OR(CCPM_campaignLeadType__c = &quot;Customer Abandoned Cart Digital&quot;, CCPM_campaignLeadType__c = &quot;Customer Abandoned Cart Retail&quot;), &quot;InitialSMSPart1&quot;, 
+ IF(CCPM_campaignLeadType__c = &quot;Customer Abandoned Visit&quot;, &quot;AbandonedVisitInitialSMSPartI&quot;,  IF(CCPM_campaignLeadType__c = &quot;Customer Quotes&quot;, &quot;CustomerQuoteSMSPart1&quot;, &quot;&quot;) 
+) 
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Initial Message Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_initialMessage__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Initial Message</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_isActive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_leadType__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>true</externalId>
+        <label>Lead Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_messageType__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Message Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCPM_prospectMessage__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will be used to store the Event SMS to sent to the Prospects.</inlineHelpText>
+        <label>Prospect Message</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCPM_segmentation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Segmentation</label>
+        <referenceTo>CCPM_segmentation__c</referenceTo>
+        <relationshipLabel>SMS Templates</relationshipLabel>
+        <relationshipName>CCPM_smsTemplates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCPM_startDate__c</fullName>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is the text value of the field SMS Follow up Start Date</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>SMS Template</label>
+    <listViews>
+        <fullName>Event_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_eventName__c</columns>
+        <columns>CCPM_eventMessageStartDate__c</columns>
+        <columns>CCPM_eventMessageEndDate__c</columns>
+        <columns>CCPM_customerMessage__c</columns>
+        <columns>CCPM_prospectMessage__c</columns>
+        <columns>CCPM_segmentation__c</columns>
+        <columns>CCPM_isActive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CCPM_smsTemplate__c.CCPM_eventMessageTemplate</value>
+        </filters>
+        <label>Event Templates</label>
+    </listViews>
+    <listViews>
+        <fullName>Message_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>CCPM_initialMessage__c</columns>
+        <columns>CCPM_followupMessage__c</columns>
+        <columns>CCPM_startDate__c</columns>
+        <columns>CCPM_endDate__c</columns>
+        <columns>CCPM_campaignLeadType__c</columns>
+        <columns>CCPM_campaign__c</columns>
+        <columns>CCPM_isActive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>CCPM_smsTemplate__c.CCPM_messageTemplate</value>
+        </filters>
+        <label>Message Templates</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SMSTEMP-{000000}</displayFormat>
+        <label>SMS Template Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SMS Templates</pluralLabel>
+    <recordTypes>
+        <fullName>CCPM_eventMessageTemplate</fullName>
+        <active>true</active>
+        <label>Event Message Template</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CCPM_messageTemplate</fullName>
+        <active>true</active>
+        <label>Message Template</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

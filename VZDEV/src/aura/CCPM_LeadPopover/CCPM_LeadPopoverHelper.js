@@ -1,0 +1,5 @@
+({
+	getLivetextNumber : function(component,objLead) {
+		
+	}
+})

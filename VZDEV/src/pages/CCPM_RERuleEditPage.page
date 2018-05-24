@@ -1,0 +1,132 @@
+<apex:page controller="CCPM_RERuleController" tabStyle="CCPM_Rule__c">
+<apex:pageMessages escape="false"/>
+<apex:form id="mainform">
+    
+    <apex:pageBlock id="mainBlock">
+        <apex:pageBlockButtons id="mainButtonsBlock" >
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton onclick="history.go(-1);return false;" value="Cancel" />
+        </apex:pageBlockButtons>
+        
+        <apex:pageBlockSection title="Rule Details" id="TriggerRuleSection" >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Rule Name"/>
+                <apex:outputPanel >
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        <apex:inputField value="{!rulePackage.objRule.Name}" style="width:230px"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Active"/>
+                <apex:inputField value="{!rulePackage.objRule.CCPM_active__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Object"/ > 
+                <apex:outputField value="{!rulePackage.objRule.CCPM_primaryObject__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Start Date"/>
+                <apex:outputPanel >
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        <apex:inputField value="{!rulePackage.objRule.CCPM_startDate__c}"/>
+                    </div>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSectionItem >
+            </apex:pageBlockSectionItem>
+            
+            
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="End Date"/>
+                <apex:inputField value="{!rulePackage.objRule.CCPM_endDate__c}"/>
+            </apex:pageBlockSectionItem>
+            
+            <apex:pageBlockSection title="Merge details" columns="1" rendered="{!strRuleRecordType == 'Batch Merge Rule'}">
+            
+	            <apex:pageBlockSectionItem >
+	            	<apex:outputLabel value="Existing Record"/>
+	                <apex:inputField value="{!rulePackage.objRule.CCPM_existingRecord__c}"/>
+	            </apex:pageBlockSectionItem>
+	            
+	            <apex:pageBlockSectionItem >
+	            	<apex:outputLabel value="New Record"/>
+	                <apex:inputField value="{!rulePackage.objRule.CCPM_newRecord__c}"/>
+	            </apex:pageBlockSectionItem>
+	            
+	            <apex:pageBlockSectionItem >
+	            	<apex:outputLabel value="Winning Record"/>
+	                <apex:inputField value="{!rulePackage.objRule.CCPM_winningRecord__c}"/>
+	            </apex:pageBlockSectionItem>
+	            
+	        </apex:pageBlockSection>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="Criteria Details" columns="1" id="criteriaPanel" rendered="{!strRuleRecordType == 'Trigger Rule'}">
+            <apex:outputText value="Use <Today> for current date. Add or reduce days by using formula '<Today> + n' or '<Today> - n' where n is Number of days." escape="true"/>
+            <apex:actionFunction name="checkForNull" rerender="criteriaPanel"/>
+            <apex:pageBlockTable value="{!rulePackage.mapCriteria}" var="cri" id="criteriaTable">
+                <apex:column headerValue="Action" style="width:5%;text-align:center">
+                    <apex:commandLink value="Del" style="color:red" action="{!removeCriteriaRow}" reRender="criteriaPanel" immediate="true">
+                        <apex:param value="{!cri}" name="intCRowNum" assignTo="{!intCRowNum}"/>
+                    </apex:commandLink> 
+                </apex:column>
+                <apex:column headerValue="Field Name " style="width:15%">
+                    <apex:selectList value="{!rulePackage.mapCriteria[cri].CCPM_fieldName__c}" size="1" >  
+                        <apex:actionSupport event="onchange" action="{!setFieldType}" reRender="criteriaPanel" >
+                            <apex:param value="{!cri}" name="intCRowNum" assignTo="{!intCRowNum}"/>
+                        </apex:actionSupport>
+                        <apex:selectOptions value="{!fieldTypes}" />
+                    </apex:selectList>
+                </apex:column>              
+                <apex:column headerValue="Operator" style="width:15%;text-align:left">
+                    <apex:inputField value="{!rulePackage.mapCriteria[cri].CCPM_fieldType__c}" style="display:none"/>
+                    <apex:inputField value="{!rulePackage.mapCriteria[cri].CCPM_operator__c}" style="width:80%" onchange="checkForNull()"/>
+                </apex:column>
+                <apex:column headerValue="Field Value" style="width:15%;text-align:left">
+                    <apex:outputPanel rendered="{!AND(rulePackage.mapCriteria[cri].CCPM_operator__c <> 'Is Null', rulePackage.mapCriteria[cri].CCPM_operator__c <> 'Is Not Null')}">
+                    <div class="requiredInput">
+                        <div class="requiredBlock"></div>
+                        
+                        <apex:inputField value="{!rulePackage.mapCriteria[cri].CCPM_valueText__c}" style="width:70%;" rendered="{!rulePackage.mapCriteria[cri].CCPM_fieldType__c <> 'Double'}"/>
+                        <apex:inputField value="{!rulePackage.mapCriteria[cri].CCPM_valueDouble__c}" style="width:70%;" rendered="{!rulePackage.mapCriteria[cri].CCPM_fieldType__c == 'Double'}"/>
+                        <apex:inputField value="{!rulePackage.mapCriteria[cri].CCPM_valueDate__c}" rendered="{!rulePackage.mapCriteria[cri].CCPM_fieldType__c == 'Date'}"/>
+                        
+                        &nbsp;&nbsp;({!rulePackage.mapCriteria[cri].CCPM_fieldType__c})
+                    </div>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column headerValue="Active" style="width:5%">
+                    <apex:inputField value="{!rulePackage.mapCriteria[cri].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:commandButton value="Add" action="{!rulePackage.addCriteriaRow}" reRender="criteriaPanel"/>
+        </apex:pageBlockSection> 
+        
+        <apex:pageBlockSection title="Rule Action Details" columns="1" id="ruleValuePanel">
+            <apex:pageBlockTable style="width:30%;" value="{!rulePackage.mapRuleAction}" var="ruleAction" id="ruleValueTable">
+                <apex:column headerValue="Action" style="width:15%;text-align:center">
+                    <apex:commandLink value="Del" style="color:red" action="{!removeRuleActionRow}" reRender="ruleValuePanel" immediate="true">
+                        <apex:param value="{!ruleAction}" name="intRARowNum" assignTo="{!intRARowNum}"/>
+                    </apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="Value Name" style="width:70%;text-align:left">
+                    <apex:inputField value="{!rulePackage.mapRuleAction[ruleAction].CCPM_action__c}" />
+                </apex:column>
+                <apex:column headerValue="Active" style="width:15%;text-align:center">
+                    <apex:inputField value="{!rulePackage.mapRuleAction[ruleAction].CCPM_active__c}" />
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:commandButton value="Add" action="{!rulePackage.addRuleActionRow}" reRender="ruleValuePanel"/>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    
+</apex:form>
+</apex:page>

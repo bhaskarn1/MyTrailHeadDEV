@@ -1,0 +1,13 @@
+<apex:page standardController="Lead">
+   <apex:includeLightning />
+
+    <div id="CCPM_leadStatusDescComp" />
+    
+    <script>
+        $Lightning.use("c:CCPM_leadStatusDescApp", function() {
+          $Lightning.createComponent("c:CCPM_leadStatusDescComp", {
+              recordId: "{!Lead.Id}"
+              },"CCPM_leadStatusDescComp",function(cmp) {});
+        });
+    </script>
+</apex:page>

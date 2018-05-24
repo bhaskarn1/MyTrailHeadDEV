@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>Account</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Account.Leads__r$Id</field>
+        </columns>
+        <columns>
+            <field>Account.Leads__r$Name</field>
+        </columns>
+        <columns>
+            <field>Account$CCPM_SMSOptOut__c</field>
+        </columns>
+        <columns>
+            <field>Account.Leads__r$CCPM_createdDate__c</field>
+        </columns>
+        <columns>
+            <field>Account.Leads__r$CCPM_isInitialSMSSent__c</field>
+        </columns>
+        <columns>
+            <field>Account.Leads__r$CCPM_initialSMSSentDateTime__c</field>
+        </columns>
+        <columns>
+            <field>Account.Leads__r.Activities$Description</field>
+        </columns>
+        <filter>
+            <criteriaItems>
+                <column>Account$CCPM_SMSOptOut__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>0</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Account.Leads__r$Status</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>notEqual</operator>
+                <value>Completed,Expired,Rejected</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Account.Leads__r.Activities$Description</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>contains</operator>
+                <value>come visit us</value>
+            </criteriaItems>
+            <criteriaItems>
+                <column>Account.Leads__r.Activities$CCPM_communicationDirection__c</column>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Outbound</value>
+            </criteriaItems>
+        </filter>
+        <format>Tabular</format>
+        <name>Accounts with Leads and Activiti block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>CCPM_AccountsWithLeadsAndActivities__c</reportType>
+        <scope>organization</scope>
+        <sortColumn>Account.Leads__r$CCPM_createdDate__c</sortColumn>
+        <sortOrder>Desc</sortOrder>
+        <timeFrameFilter>
+            <dateColumn>Account.Leads__r$CCPM_createdDate__c</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Account</joinTable>
+    </blockInfo>
+    <description>Is the Initial Part 1 SMS Sent to leads that have a DNS flag set to false? (aka leads that are able to be responded)</description>
+    <format>MultiBlock</format>
+    <name>Audit Req 4 Initial SMS sent, DNS False</name>
+    <reportType>CCPM_AccountsWithLeadsAndActivities__c</reportType>
+    <showDetails>true</showDetails>
+</Report>

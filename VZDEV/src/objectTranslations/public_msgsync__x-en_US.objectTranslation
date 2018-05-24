@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Heroku msgsync</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Heroku msgsync</value>
+    </caseValues>
+    <fields>
+        <label><!-- leadrecord --></label>
+        <name>leadrecord__c</name>
+    </fields>
+    <fields>
+        <label><!-- lm_livetextnumber --></label>
+        <name>lm_livetextnumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- lm_requestid --></label>
+        <name>lm_requestid__c</name>
+    </fields>
+    <fields>
+        <label><!-- lm_responsecode --></label>
+        <name>lm_responsecode__c</name>
+    </fields>
+    <fields>
+        <label><!-- lm_responsemsg --></label>
+        <name>lm_responsemsg__c</name>
+    </fields>
+    <fields>
+        <label><!-- lm_smsfailcounter --></label>
+        <name>lm_smsfailcounter__c</name>
+    </fields>
+    <fields>
+        <label><!-- msgbody --></label>
+        <name>msgbody__c</name>
+    </fields>
+    <fields>
+        <label><!-- msgstatus --></label>
+        <name>msgstatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- msgtimezone --></label>
+        <name>msgtimezone__c</name>
+    </fields>
+    <fields>
+        <label><!-- msgtonumber --></label>
+        <name>msgtonumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- msgtype --></label>
+        <name>msgtype__c</name>
+    </fields>
+    <fields>
+        <label><!-- scheduleddatetime --></label>
+        <name>scheduleddatetime__c</name>
+    </fields>
+    <fields>
+        <label><!-- sfid --></label>
+        <name>sfid__c</name>
+    </fields>
+    <fields>
+        <label><!-- smssentactualtime --></label>
+        <name>smssentactualtime__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
